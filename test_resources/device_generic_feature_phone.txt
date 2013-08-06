@@ -1,0 +1,402 @@
+Generic Feature Phone	ALCATEL_2005D/1.0 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_2010D/1.0 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_3040D/1.0 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_one_touch_385D/1.0 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_one_touch_602/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_one_touch_602D/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_one_touch_665/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q03C
+Generic Feature Phone	ALCATEL_one_touch_810D/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q05A
+Generic Feature Phone	ALCATEL_one_touch_818D/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q05A
+Generic Feature Phone	BenQ-E61/1.00/WAP2.0 UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0
+Generic Feature Phone	BenQ-EF91/1.012 Browser/Teleca/Q04C1 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	BenQ-SL91/18 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.1.k.10 (GUI) MMP/2.0
+Generic Feature Phone	BENQ UP.Browser/6.3.0.4.c.1.102 (GUI) MMP/2.0
+Generic Feature Phone	BmobileQS810/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Dorado WAP-Browser/1.0.0
+Generic Feature Phone	Dorado WAP-Browser/1.0.0/powerplay/2
+Generic Feature Phone	EL380/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL390/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL399/2.0 (03.15) Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	EL480/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL500/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL550/BSI AU.Browser/2.0 QO3C1 MMP/1.0
+Generic Feature Phone	EL580/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL680/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EL340Dual
+Generic Feature Phone	EL430Dual
+Generic Feature Phone	EL460Dual
+Generic Feature Phone	EL530Dual
+Generic Feature Phone	EL540Dual
+Generic Feature Phone	EL560Dual
+Generic Feature Phone	EL600Dual
+Generic Feature Phone	ES1/Profile/MIDP.2.0Configuration/CLDC.1.0
+Generic Feature Phone	EX300/B000 Browser/NetFront/3.5 MMS/Obigo-MMS/Q05A SyncML/HW-SyncML/1.0 Java/HWJa/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Player/QTV-Player/5.3
+Generic Feature Phone	Fly_E146/WapBrowser2.0/MIDP-2.0Configuration/CLDC-1.1
+Generic Feature Phone	Huawei/1.0/G6150/Browser/obigo-browser/q03c
+Generic Feature Phone	Huawei/1.0/G6600/Browser/obigo-browser/q03c
+Generic Feature Phone	HUAWEI/1.0/G7002/SW1.0.0/WAP2.0/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Huawei/1.0/HUAWEI_G6608/Obigo Browser/Q03C Browser/Q03C MMS/1.0/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Huawei/G7010/1.0/Browser/obigo-browser/q03c
+Generic Feature Phone	HXJ5001_11B (MRE\\2.5.00(3072) resolution\\272480 chipset\\MT6250 touch\\1 tpannel\\1 camera\\1 gsensor\\0 keyboard\\reduced) XFJ5001_ROM12 Release/2013.05.09 WAP Browser/MAUI (HTTPS) Profile/  Q03C1-2.40 en-US
+Generic Feature Phone	Ice
+Generic Feature Phone	KCI-S2100-VMUB/ACP1000 UP.Browser/7.2.7.2.564 (GUI) MMP/2.0
+Generic Feature Phone	Lemon_S459/1.00; Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	LENOVO-A210/S015 Nucleus/1.15 MTK/53 Release/09.01.2011 Browser/Obigo03C
+Generic Feature Phone	LENOVO-P780/176A
+Generic Feature Phone	Maui Browser
+Generic Feature Phone	MAUI WAP Browser
+Generic Feature Phone	MAUI_WAP_Browser
+Generic Feature Phone	Maxon O2-X1 ver1.0
+Generic Feature Phone	MicromaxX444/Q03C MAUI-browser; Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Micromax X450/Q03C MAUI-browser/MIDP-2.0Configuration/CLDC-1.1
+Generic Feature Phone	MIKI50_6464_11B_24MP_HW (MRE/3.0.00(800);MAUI/6250A_IPRO_V14_130510;BDATE/2013/05/10 21:44;LCD/240320;CHIP/MT6250;KEY/Normal;TOUCH/0;CAMERA/1;SENSOR/0;DEV/MIKI50_6464_11B_24MP_HW;WAP Browser/MAUI (HTTPS);GMOBI/001;MBOUNCE/002;MOMAGIC/003;INDEX/004;SPICEI2I/005;GAMELOFT/006;MOBIM/0) Q70A_6250A_IPRO_V14_130510 Release/2013.05.10 WAP Browser/MAUI (HTTPS) Profile/  Q03C1-2.40 de-DE
+Generic Feature Phone	mobistel EL400Dual
+Generic Feature Phone	modu T/1.0 Browser/Obigo/Q7 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Mot-EX211/18.01 Browser/Obigo/Q03C MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Mot-EX300/B000 Browser/NetFront/3.5 MMS/Obigo-MMS/Q05A SyncML/HW-SyncML/1.0 Java/HWJa/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Player/QTV-Player/5.3
+Generic Feature Phone	motorazrV8/R601_G_80.42.0FRP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.42.39RP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.44.2BRP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.46.1BRP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.53.3BRP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.54.5DR_AP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.55.0ARP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	motorazrV8/R601_G_80.56.1BRP Mozilla/4.0 (compatible; MSIE 6.0 Linux; Motorola V8;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	MOTOROKR Z6/R60_G_80.33.03R Mozilla/4.0 (compatible; MSIE 6.0 Linux; MOTOROKR Z6;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	MOTOROKR Z6/R60_G_80.xx.yyI Mozilla/4.0 (compatible; MSIE 6.0 Linux; MOTOROKR Z6;nnn) Profile/MIDP-2.0 Configuration/CLDC-1.1 Opera 8.50[yy]
+Generic Feature Phone	Mot-WX306/16.2 Browser/Obigo/Q03C MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Mot-WX395/1.0 ObigoInternetBrowser/Q03C
+Generic Feature Phone	Mozilla/4.0(Vodafone/1.0/Vodafone547/VF_GER_DE_P107A4V1.2.0/Obigo Q03C/MIDP-2.0 Configuration/CLDC-1.1)
+Generic Feature Phone	Mozilla/5.0 (PDA; NF35WMPRO/1.0; like Gecko) NetFront/3.5 Toshiba/TG01
+Generic Feature Phone	Mozilla/5.0 (PUMA Phone M1/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1; 240x320) AppleWebKit/420+ (KHTML, like Gecko) Safari/420+
+Generic Feature Phone	MTK_MAUI_01/07 Release/22.11.2007 Browser/wap2.0 Sync/SyncClient1.1
+Generic Feature Phone	N7010 Onda WAP2.0/MIDP2.0/CLDC1.1
+Generic Feature Phone	NEWGEN-TOPAZ/REV 2.4.0/Teleca Q03B1
+Generic Feature Phone	O2-X1i/6.1.0.7 UP.Browser/6.1.0.7.8.c.1.100 (GUI) MMP/1.0
+Generic Feature Phone	Panasonic-GAD87/A51
+Generic Feature Phone	Panasonic-X70/1.0
+Generic Feature Phone	PG-3500/R01 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	PHILIPS362-1 ObigoInternetBrowser/2.0
+Generic Feature Phone	PHILIPS568/1.0 UP.Browser/6.1.0.7.8 (GUI) MMP/1.0
+Generic Feature Phone	PHILIPS760 ObigoInternetBrowser/2.0
+Generic Feature Phone	Pirelli D910.0.3.91 FS_D910.0.2.73_ACR
+Generic Feature Phone	Pirelli D910.0.3.99a FS_D910.0.2.78a_ACR
+Generic Feature Phone	Pirelli D910.0.3.99c FS_D910.0.2.81_ACR
+Generic Feature Phone	PORSCHE-DESIGN-P-9521/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.f.1.172 (GUI)
+Generic Feature Phone	portalmmm/2.0 S342i(c10;TB)
+Generic Feature Phone	PUMA-Phone/1.0/V666SG/SGG001 Browser/Myriad-Browser/9.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 mobile/PUMA-Phone-M1/1.0 ScreenSize/240x320
+Generic Feature Phone	QCI-31/1.0 UP.Browser/6.1.0.6.d.2.100 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-MC2007/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SAGEM-my301X/1.0/ MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.g.2.106 (GUI) MMP/2.0
+Generic Feature Phone	SAGEM-my401X/1.0/ MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.g.2.107 (GUI) MMP/2.0
+Generic Feature Phone	SAGEM-my411V/1.0/ MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.6.c.1.317 (GUI)
+Generic Feature Phone	Sagem-my511X/1.0/ MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.6.c.1.386 (GUI)
+Generic Feature Phone	Sagem-my521X/1.0/ MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.6.c.1.414 (GUI)
+Generic Feature Phone	Sagem-my721X/1.0/ETN_EF MIDP-2.0 Configuration/CLDC-1.L Browser/UP.Browser/7.2.7.1.352 (GUI)
+Generic Feature Phone	SAGEM-myC3-2/1.0 UP.Browser/6.1.0.6.1.c.5 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-myV-55/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.0 UP.Browser/6.2.2.6.d.3.100 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-myV-65/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.0 UP.Browser/6.2.2.3.e.2 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-myX5-2/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0 UP.Browser/6.2.2.6.d.3.100 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-myX5-2v/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0 UP.Browser/6.2.3.3.g.2.103 (GUI) MMP/2.0
+Generic Feature Phone	SAGEM-myX-6/1.0 UP.Browser/6.1.0.6.1.c.4 (GUI) MMP/1.0
+Generic Feature Phone	SAGEM-VF527/1.0/EVN_PL MIDP/2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.6.c.1.416 (GUI)
+Generic Feature Phone	SAGEM-VF533/1.0/EVN_ZJ MIDP/2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.7.1.423 (GUI)
+Generic Feature Phone	SAGEM-VF533/1.0/EVN_ZO MIDP/2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.7.1.423 (GUI)
+Generic Feature Phone	SAGEM-VF533/1.0/EVN_ZP MIDP/2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.2.7.1.423 (GUI)
+Generic Feature Phone	sam375/1.0[TF268435460815007800000000015803012373] UP.Browser/6.2.3.8 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	sam-r261 UP.Browser/6.2.3.8 (GUI) MMP/2.0
+Generic Feature Phone	sam-r631 UP.Browser/6.2.3.8 (GUI) MMP/2.0
+Generic Feature Phone	Samsung-SGH-B320/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Samsung-SGH-B320/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Samsung/SGH-i450/DZGL3 Series60/3.1 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SamsungSGH-ZV30/1.0 SHP/VPP/R5 NetFront/3.2 SMM-MMS/1.2.0 profile/MIDP-2.0 configuration/CLDC-1.1
+Generic Feature Phone	SCH-U365/1.0 NetFront/3.0.22.2.23 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHB100/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHB220B/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHB300/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHB320/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHB500/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHC130/1.0
+Generic Feature Phone	SEC-SGHC200
+Generic Feature Phone	SEC-SGHC210/1.0
+Generic Feature Phone	SEC-SGHC230/1.0
+Generic Feature Phone	SEC-SGHC250/1.0
+Generic Feature Phone	SEC-SGHC260/1.0
+Generic Feature Phone	SEC-SGHC260M/1.0
+Generic Feature Phone	SEC-SGHC300/1.0
+Generic Feature Phone	SEC-SGHC300/1.0 RAINBOW/3.01
+Generic Feature Phone	SEC-SGHC520/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHD410
+Generic Feature Phone	SEC-SGHD520/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHD800/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHD830/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHD840/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE210/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE300
+Generic Feature Phone	SEC-SGHE300 UP.Link/6.3.0.0.0
+Generic Feature Phone	SEC-SGHE310/1.0
+Generic Feature Phone	SEC-SGHE530/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHE570/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE570/BOGA2 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE600
+Generic Feature Phone	SEC-SGHE610
+Generic Feature Phone	SEC-SGHE620/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHE710
+Generic Feature Phone	SEC-SGHE710i
+Generic Feature Phone	SEC-SGHE720/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHE720 UNTRUSTED/1.0
+Generic Feature Phone	SEC-SGHE770/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE810
+Generic Feature Phone	SEC-SGHE810C/1.0
+Generic Feature Phone	SEC-SGHE840/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE840-ORANGE/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE870/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE900/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE900/BOFI2 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE900/BOFJ1 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHE950/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHF200/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHF210/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHF300/1.0 NetFront/3.2
+Generic Feature Phone	SEC-SGHJ600/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHM300/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHM310/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHM310/M310BOHE3_HH1 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHM600/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHM620/1.0 Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	SEC-SGHP300/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHP310/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHP400
+Generic Feature Phone	SEC-SGHP510/1.0 UP.Browser/6.2.2.6 (GUI) MMP/1.0
+Generic Feature Phone	SEC-SGHP520/1.0 NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHP730
+Generic Feature Phone	SEC-SGHP900/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHS300
+Generic Feature Phone	SEC-SGHS300M
+Generic Feature Phone	SEC-SGHU100/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHU300/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHU600/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHU600B-ORANGE/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHV200
+Generic Feature Phone	SEC-SGHX160/1.0
+Generic Feature Phone	SEC-SGHX200/1.0
+Generic Feature Phone	SEC-SGHX210/1.0
+Generic Feature Phone	SEC-SGHX430
+Generic Feature Phone	SEC-SGHX450
+Generic Feature Phone	SEC-SGHX500/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHX510/1.0
+Generic Feature Phone	SEC-SGHX520X/1.0
+Generic Feature Phone	SEC-SGHX530/1.0
+Generic Feature Phone	SEC-SGHX610
+Generic Feature Phone	SEC-SGHX630/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHX660/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHX660/EJ3 TSS/2.5
+Generic Feature Phone	SEC-SGHX680/1.0 TSS/2.5
+Generic Feature Phone	SEC-SGHX800/1.0 NetFront/3.2
+Generic Feature Phone	SEC-SGHX820/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SEC-SGHX830/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SendoSV663/10
+Generic Feature Phone	SGH-F310/1.0 NetFront/3.3
+Generic Feature Phone	SGH-Z107 SHP/VPP/R5 SMB3.1 SMM-MMS/1.1.0 profile/MIDP-2.0 configuration/CLDC-1.0
+Generic Feature Phone	SGH-Z370/1.0 NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SGH-Z500 SHP/VPP/R5 SMB3.1 SMM-MMS/1.2.0 profile/MIDP-2.0 configuration/CLDC-1.1
+Generic Feature Phone	SGH-Z510/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SGH-Z630/1.0 NetFront/3.3 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SGH-Z710/1.0 NetFront/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SHARP-TM-200/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.0 UP.Browser/6.2.3.3.f.1.102 (GUI) MMP/2.0
+Generic Feature Phone	SHARP-TQ-GX10i/1.1 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.6.1.d.2 (GUI) MMP/1.0
+Generic Feature Phone	SHARP-TQ-GX20/1.1 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.2.2.4.c.1.100 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A31/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A31/09 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A60/16 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A60/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A60/23 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A60/25 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A60/27 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A62/02 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A62/06 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A62/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A65/05 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A65/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A75/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A75/34 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A75/35 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-A75/35 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 UP.Link/6.6.4.0.0
+Generic Feature Phone	SIE-A75/40 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-AF51/12 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-AL21/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-AP75/6.1.0.7 UP.Browser/6.1.0.7.8.c.1.103 (GUI) MMP/1.0
+Generic Feature Phone	SIE-AX72/02 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-AX75/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3.102 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C55/10 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C55/14 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C55/18 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C55/19 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C55/21 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C55/24 UP.Browser/5.0.3.3 (GUI)
+Generic Feature Phone	SIE-C60/04 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/10 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/12 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/20 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/23 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/25 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/26 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C60/27 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-C62/73
+Generic Feature Phone	SIE-C65/04 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C65/06 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C65/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C65/43 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C6V/15 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C6V/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C72/16 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C72/19 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C72/20 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C72/22 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C75/11 UP.Browser/7.0.2.2.d.5(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C75/13 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C75/22 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-C75/24 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CF62/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CF62/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CF62/21 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CF62/23 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CF62/24 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CF75/07 UP.Browser/7.0.2.2.d.5(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CF75/22 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CFX65/4.030 Obigo/Q03C1 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CFX65/9 Obigo/Q03C1 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CL75/01 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.9.d.1 (GUI) MMP/2.0
+Generic Feature Phone	SIE-CX65/04 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX65/14 UP.Browser/7.0.0.1.c.2 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX65/36 UP.Browser/7.0.2.2.156(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX65/50 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX6V/15 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX70/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX70/43 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX70/50 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX75/05 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX75/06 Profile/MIDP-2.0 Configuration/CLDC-2.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-CX75/09 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-CX75/09 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Link/5.1.2.16
+Generic Feature Phone	SIE-CX75/13 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-E71/32 UP.Browser/7.1.0.k.1(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.k.1 (GUI) MMP/2.0
+Generic Feature Phone	SIE-E71/41 UP.Browser/7.1.0.k.6(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.k.6 (GUI) MMP/2.0
+Generic Feature Phone	SIE-EF81/48 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.1.3.h (GUI) MMP/2.0
+Generic Feature Phone	SIE-EF81/58 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.1.k.10 (GUI) MMP/2.0
+Generic Feature Phone	SIE-M50/09 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-M50/14 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-M50I/81 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-M55/04 UP.Browser/6.1.0.5.c.4 (GUI) MMP/1.0
+Generic Feature Phone	SIE-M55/07 UP.Browser/6.1.0.5.c.5 (GUI) MMP/1.0
+Generic Feature Phone	SIE-M55/10 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-M55/11 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-M55/91 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-M65/06 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M65/09 UP.Browser/7.0.0.1.181 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M65/16 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M65/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M65/43 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M65/44 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M6V/50 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M75/12 UP.Browser/7.0.2.2.d.5(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-M81/45 UP.Browser/7.1.0.e.24(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.24 (GUI) MMP/2.0
+Generic Feature Phone	SIE-MC60/04 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-MC60/07 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-MC60/10 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-MC60/13 Profile/MIDP-1.0 Configuration/CLDC-1.0 UP.Browser/6.1.0.7.3 (GUI) MMP/1.0
+Generic Feature Phone	SIE-ME45/21 UP.Browser/5.0.2.1.103 (GUI)
+Generic Feature Phone	SIE-ME45/23 UP.Browser/5.0.2.2 (GUI)
+Generic Feature Phone	SIE-ME45/24 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-ME45/28 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-ME45/30 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-ME75/19 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-ME75/22 UP.Browser/7.0.2.2.d.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIEMENS/CFX65
+Generic Feature Phone	SIE-MT50/07 UP.Browser/5.0.2.2 (GUI)
+Generic Feature Phone	SIE-MT50/09 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-MT50/16 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-S45/05 UP.Browser/5.0.1.1.102 (GUI)
+Generic Feature Phone	SIE-S45/10 UP.Browser/5.0.1.1.102 (GUI)
+Generic Feature Phone	SIE-S45/21 UP.Browser/5.0.2.1.103 (GUI)
+Generic Feature Phone	SIE-S45/23 UP.Browser/5.0.2.2 (GUI)
+Generic Feature Phone	SIE-S45/30 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-S45i/03 UP.Browser/5.0.3.1.105 (GUI)
+Generic Feature Phone	SIE-S45i/04 UP.Browser/5.0.3.1.105 (GUI)
+Generic Feature Phone	SIE-S55/04 UP.Browser/6.1.0.5.119 (GUI) MMP/1.0
+Generic Feature Phone	SIE-S55/11 UP.Browser/6.1.0.5.c.2 (GUI) MMP/1.0
+Generic Feature Phone	SIE-S55/16 UP.Browser/6.1.0.5.c.4 (GUI) MMP/1.0
+Generic Feature Phone	SIE-S55/20 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-S55/91 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-S55/91 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0 UP.Link/5.1.2.16
+Generic Feature Phone	SIE-S65/11 UP.Browser/7.0.0.1.c.2 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/12 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/14 UP.Browser/7.0.0.1.c.2 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/16 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/30 UP.Browser/7.0.2.2.d.1.103(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/43 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/50 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S65/58 UP.Browser/7.0.2.2.d.4(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S68/20 UP.Browser/7.1.0.e.12(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.12 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S68/31 UP.Browser/7.1.0.e.15(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S68/31 UP.Browser/7.1.0.e.15(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.15 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S68/34 UP.Browser/7.1.0.e.15(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.15 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S68/38 UP.Browser/7.1.0.e.18(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.18 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S68/40 UP.Browser/7.1.0.e.20(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.20 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S68/52 UP.Browser/7.1.0.e.26(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.26 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S6V/25 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S75/12 UP.Browser/7.1.0.e.8(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.8 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S75/13 UP.Browser/7.1.0.e.8(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-S75/17 UP.Browser/5.0.2.3.100 (GUI)
+Generic Feature Phone	SIE-S75/29 UP.Browser/7.1.0.e.14(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.14 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S75/31 UP.Browser/7.1.0.e.15(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.15 (GUI) MMP/2.0
+Generic Feature Phone	SIE-S75/40 UP.Browser/7.1.0.e.20(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.20 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SF65 ObigoInternetBrowser/2.0
+Generic Feature Phone	SIE-SK65/40 UP.Browser/7.0.0.1.c.3 (GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-SK6R/46 UP.Browser/7.0.2.2.d.1.100(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-SL55/14 UP.Browser/6.1.0.5.c.5 (GUI) MMP/1.0
+Generic Feature Phone	SIE-SL55/16 UP.Browser/6.1.0.5.c.6 (GUI) MMP/1.0
+Generic Feature Phone	SIE-SL75/10 UP.Browser/7.1.0.e.7(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.7 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL75/13 UP.Browser/7.1.0.e.8(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-SL75/13 UP.Browser/7.1.0.e.8(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.8 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL75/16 UP.Browser/7.1.0.e.10(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.10 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL75/31 UP.Browser/7.1.0.e.15(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.15 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL75/35 UP.Browser/7.1.0.e.16(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.16 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL75/52 UP.Browser/7.1.0.e.26(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.26 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SL7C/47 UP.Browser/7.1.0.e.24(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Browser/UP.Browser/7.1.0.e.24 (GUI) MMP/2.0
+Generic Feature Phone	SIE-SP65/47 UP.Browser/7.0.2.2.d.1(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	SIE-SP65/49 UP.Browser/7.0.2.2.d.3(GUI) MMP/2.0 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Sonim XP5300-MAUI WAP Browser
+Generic Feature Phone	SP710/Teleca/1.1.14 Profile/MIDP-1.0 Configuration/CLDC-1.0
+Generic Feature Phone	VertuAscentTi/2.0 (501.01) Profile/MIDP-2.1 Configuration/CLDC-1.1
+Generic Feature Phone	VertuAscentTi/2.0 (501.02) Profile/MIDP-2.1 Configuration/CLDC-1.1
+Generic Feature Phone	Vertu Ascent Ti./2.0 (700.04) IMEI/356282010337776 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vertu Ascent Ti./2.0 (701.07) IMEI/356282010456774 Profile/MIDP-2.1 Configuration/CLDC-1.1
+Generic Feature Phone	VertuAscentX/2.0 (501.00) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ IMEI/351509040033594
+Generic Feature Phone	VertuConstellationF/2.0 (501.12) Profile/MIDP-2.1 Configuration/CLDC-1.1 Mozilla/5.0 AppleWebKit/420+ (KHTML, like Gecko) Safari/420+ IMEI/356052030475389
+Generic Feature Phone	Vertu Ltd/2.0 (503.03) Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vertu Ltd/2.0 (504.01) Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vertu Signature/2.0 (503.03) IMEI/355711020302926 Profile/MIDP-2.1 Configuration/CLDC-1.1
+Generic Feature Phone	Vodafone/1.0/0Vodafone710/B616 Browser/Obigo-Browser/Q04A MMS/Obigo-MMS/Q04A SyncML/HW-SyncML/1.0 Java/QVM/4.1 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vodafone/1.0/0Vodafone736/B717 Browser/Obigo-Browser/Q05A MMS/Obigo-MMS/Q05A SyncML/HW-SyncML/1.0 Java/HWJa/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Player/QTV-Player/5.3
+Generic Feature Phone	Vodafone/1.0/0Vodafone830/B115SP01 Browser/Obigo-Browser/Q05A MMS/Obigo-MMS/Q05A SyncML/HW-SyncML/1.0 Java/HWJa/1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 Player/QTV-Player/5.3
+Generic Feature Phone	Vodafone/1.0/903SH/SHG001 Browser/UP.Browser/7.0.2.1 Profile/MIDP-2.0 Configuration/CLDC-1.1 Ext-J-Profile/JSCL-1.2.2 Ext-V-Profile/VSCL-2.0.0
+Generic Feature Phone	Vodafone/1.0/SamsungC3050/C3050BUII1 Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungC3050/C3050BUJK1 Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungC3050/C3050BUKC1 Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungS3500/S3500AMID3 Browser/NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vodafone/1.0/SamsungS3500/S3500BUIB3 Browser/NetFront/3.4 Profile/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vodafone/1.0/SamsungSGHM300V/M300BUGF3/Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHM300V/M300BUGG2/Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHM300V/M300NDGG3/Browser/Openwave/6.2.3 Profile/MIDP-2.0 Configuration/CLDC-1.1 UP.Browser/6.2.3.3.c.1.101 (GUI) MMP/2.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHX510V/X510BUFJ8 Browser/Nokia/3.0.1 Profile/MIDP-2.0 Configuration/CLDC-1.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHX510V/X510BUFK3 Browser/Nokia/3.0.1 Profile/MIDP-2.0 Configuration/CLDC-1.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHX510V/X510BUGA3 Browser/Nokia/3.0.1 Profile/MIDP-2.0 Configuration/CLDC-1.0
+Generic Feature Phone	Vodafone/1.0/SamsungSGHX660V/X660BUEK4/Browser/TSS/2.5 Profile/MIDP-2.0 Configuration/CLDC-1.0
+Generic Feature Phone	Vodafone/1.0/Vodafone550/VF550-MTK6235-V02c-June032011-Vodafone-DE/Obigo Q03C/MIDP-2.0 Configuration/CLDC-1.1
+Generic Feature Phone	Vodafone541/2.0 Profile V010 06/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q03C
+Generic Feature Phone	Vodafone541/2.0 Profile V010 11/MIDP-2.0 Configuration/CLDC-1.1 ObigoInternetBrowser/Q03C
+Generic Feature Phone	Vodafone/SamsungSGHD800/FD1 Browser/NF/3.2 Profile/MIDP-2.0 Configuration/CLDC-1.1
