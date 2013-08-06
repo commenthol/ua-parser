@@ -649,6 +649,8 @@ device_parsers:
   # http://en.wikipedia.org/wiki/List_of_HTC_phones
   # this is quickly getting unwieldy
   ##########
+  - regex: '; (Amaze_4G) Build'
+    device_replacement: 'HTC $1'
   # example: Mozilla/5.0 (Linux; U; Android 2.3.2; fr-fr; HTC HD2 Build/FRF91) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
   - regex: 'HTC ([A-Z][a-z0-9]+) Build'
     device_replacement: 'HTC $1'
@@ -702,6 +704,8 @@ device_parsers:
     device_replacement: 'Samsung $1'
   - regex: '; (GT\-[BINPS]\d{4}.*) Build'
     device_replacement: 'Samsung $1'
+  - regex: '; (SPH-L710) Build'
+    device_replacement: 'Samsung $1'
 
   #########
   # SonyEricsson - must come before nokia since they also use symbian
@@ -737,18 +741,18 @@ device_parsers:
   # Kindle
   # http://amazonsilk.wordpress.com/useful-bits/silk-user-agent/
   ##########
-  - regex: '(KFOT Build)'
-    device_replacement: 'Kindle Fire'
+  - regex: '(KFOT Build|Kindle Fire)'
+    device_replacement: 'Amazon Kindle Fire'
   - regex: '(KFTT Build)'
-    device_replacement: 'Kindle Fire HD'
+    device_replacement: 'Amazon Kindle Fire HD'
   - regex: '(KFJWI Build)'
-    device_replacement: 'Kindle Fire HD 8.9" WiFi'
+    device_replacement: 'Amazon Kindle Fire HD 8.9" WiFi'
   - regex: '(KFJWA Build)'
-    device_replacement: 'Kindle Fire HD 8.9" 4G'
-  - regex: '(Kindle Fire)'
+    device_replacement: 'Amazon Kindle Fire HD 8.9" 4G'
   - regex: '(Kindle)'
+    device_replacement: 'Amazon Kindle'
   - regex: '(Silk)/(\d+)\.(\d+)(?:\.([0-9\-]+))?'
-    device_replacement: 'Kindle Fire'
+    device_replacement: 'Amazon Kindle Fire'
 
   #########
   # Devices from chinese manufacturer(s)
@@ -790,7 +794,7 @@ device_parsers:
   - regex: 'Nokia ([A-Za-z0-9\-]+)'
     device_replacement: 'Nokia $1'
   - regex: 'Lumia ([A-Za-z0-9\-]+)'
-    device_replacement: 'Lumia $1'
+    device_replacement: 'Nokia Lumia $1'
   - regex: 'Symbian'
     device_replacement: 'Nokia'
 
@@ -852,12 +856,10 @@ device_parsers:
   ##########
   # ipad and ipod must be parsed before iphone
   # cannot determine specific device type from ua string. (3g, 3gs, 4, etc)
-  - regex: '(iPad) Simulator;'
-  - regex: '(iPad);'
+  - regex: '(iPad|iPhone|iPod|iPod)(?:;| Simulator;)'
+    device_replacement: 'Apple $1'
   - regex: '(iPod) touch;'
-  - regex: '(iPod);'
-  - regex: '(iPhone) Simulator;'
-  - regex: '(iPhone);'
+    device_replacement: 'Apple $1'
 
   ##########
   # Acer
