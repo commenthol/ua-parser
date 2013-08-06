@@ -4,7 +4,10 @@ use Test::More;
 use FindBin qw($Bin);
 
 my $source;
-my @sources = qw{test_device.yaml test_device_generic_feature_phone.yaml test_device_spider.yaml};
+my @sources = qw{
+test_device.yaml
+test_device_generic.yaml
+};
 
 eval {
 	require($Bin . '/utils.pl');
