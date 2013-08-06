@@ -10,8 +10,15 @@ Device.prototype.toString = function() {
 
 exports.makeParser = function(regexes) {
   var parsers = regexes.map(function (obj) {
-    var regexp = new RegExp(obj.regex),
+    var regexp,
         deviceRep = obj.device_replacement;
+     
+    if (obj.regex_flag) {
+        regexp = new RegExp(obj.regex, obj.regex_flag);
+    }
+    else {
+        regexp = new RegExp(obj.regex);
+    }
 
     function parser(str) {
       var m = str.match(regexp);

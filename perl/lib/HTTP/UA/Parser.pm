@@ -7,68 +7,68 @@ my ($REGEX,$PATH);
 my $PACKAGE = __PACKAGE__;
 
 sub new {
-    my ($class,$op) = @_;
-    my ($ua,$path);
-    if (ref $op eq 'HASH'){
-	$path = $op->{regex};
-	$ua = $op->{ua};
-    } else { $ua = $op; }
-    
-    if (!$REGEX){
-	if ($path){
-	    $REGEX ||= LoadFile( $path );
-	} else {
-	    $PATH = HTTP::UA::Parser::Utils::getPath();
-	    my $regFile;
-	    if (-e ($regFile = $PATH.'../../../../../../regexes.yaml')){}
-	    elsif (-e ($regFile = $PATH.'/regexes.yaml')){}
-	    else {
-		die
-		"Can't find regexes.yaml file\n".
-		"you can download/update it using command line by typing\n".
-		"    % ua_parser -u\n".
-		"or simply download it from\n".
-		"https://raw.github.com/tobie/ua-parser/master/regexes.yaml".
-		"and include it as an option when construct new HTTP::UA::Parser class\n".
-		"ex ->new({regex => '/full/path/to/regexes.yaml'})";
-	    }
-	    $REGEX = LoadFile( $regFile );
+	my ($class,$op) = @_;
+	my ($ua,$path);
+	if (ref $op eq 'HASH'){
+		$path = $op->{regex};
+		$ua = $op->{ua};
+	} else { $ua = $op; }
+	
+	if (!$REGEX){
+		if ($path){
+			$REGEX ||= LoadFile( $path );
+		} else {
+			$PATH = HTTP::UA::Parser::Utils::getPath();
+			my $regFile;
+			if (-e ($regFile = $PATH.'../../../../../../regexes.yaml')){}
+			elsif (-e ($regFile = $PATH.'/regexes.yaml')){}
+			else {
+			die
+			"Can't find regexes.yaml file\n".
+			"you can download/update it using command line by typing\n".
+			"    % ua_parser -u\n".
+			"or simply download it from\n".
+			"https://raw.github.com/tobie/ua-parser/master/regexes.yaml".
+			"and include it as an option when construct new HTTP::UA::Parser class\n".
+			"ex ->new({regex => '/full/path/to/regexes.yaml'})";
+			}
+			$REGEX = LoadFile( $regFile );
+		}
 	}
-    }
-    
-    my $self = {
-        user_agent => $ua || $ENV{HTTP_USER_AGENT},
-	path => $PATH
-    };
-    
-    return bless($self,$class);
+	
+	my $self = {
+		user_agent => $ua || $ENV{HTTP_USER_AGENT},
+		path => $PATH
+	};
+	
+	return bless($self,$class);
 }
 
 sub parse {
-    my $self = shift;
-    $self->{user_agent} = $_[0];
-    $self->{os} = undef;
-    $self->{ua} = undef;
-    $self->{device} = undef;
-    return $self;
+	my $self = shift;
+	$self->{user_agent} = $_[0];
+	$self->{os} = undef;
+	$self->{ua} = undef;
+	$self->{device} = undef;
+	return $self;
 }
 
 sub os {
-    my ($self) = @_;
-    $self->{os} ||= HTTP::UA::Parser::OS->parse($self->{user_agent});
-    return $self->{os};
+	my ($self) = @_;
+	$self->{os} ||= HTTP::UA::Parser::OS->parse($self->{user_agent});
+	return $self->{os};
 }
 
 sub ua {
-    my ($self) = @_;
-    $self->{ua} ||= HTTP::UA::Parser::UA->parse($self->{user_agent});
-    return $self->{ua};
+	my ($self) = @_;
+	$self->{ua} ||= HTTP::UA::Parser::UA->parse($self->{user_agent});
+	return $self->{ua};
 }
 
 sub device {
-    my ($self) = @_;
-    $self->{device} ||= HTTP::UA::Parser::Device->parse($self->{user_agent});
-    return $self->{device};
+	my ($self) = @_;
+	$self->{device} ||= HTTP::UA::Parser::Device->parse($self->{user_agent});
+	return $self->{device};
 }
 
 ##=============================================================================
@@ -79,40 +79,40 @@ package HTTP::UA::Parser::UA;
 sub new {HTTP::UA::Parser::Base::new(@_)}
 
 sub parse {
-    my $self = shift;
-    my $ua = shift;
-    my $regexes = $REGEX->{user_agent_parsers};
-    my $parser = $self->makeParser($regexes);
-    return $parser->($ua);
+	my $self = shift;
+	my $ua = shift;
+	my $regexes = $REGEX->{user_agent_parsers};
+	my $parser = $self->makeParser($regexes);
+	return $parser->($ua);
 }
 
 sub makeParser {
-    my $self = shift;
-    my $regexes = shift;
-    return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
+	my $self = shift;
+	my $regexes = shift;
+	return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
 }
 
 sub _makeParsers {
-    
-    my ($obj) = shift;
-    my $regexp = $obj->{regex};
-    my $famRep = $obj->{family_replacement};
-    my $majorRep = $obj->{v1_replacement};
-    my $minorRep = $obj->{v2_replacement};
-    my $patchRep = $obj->{v3_replacement};
-    
-    my $parser = sub {
-        my $str = shift;
-        my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
-        if (!@m) { return undef; }
-        my $family = defined $famRep ? HTTP::UA::Parser::Utils::replace($famRep,qr/\$1/,$m[0]) : $m[0];
-        my $major = defined $majorRep ?  $majorRep : $m[1];
-        my $minor = defined $minorRep ?  $minorRep : $m[2];
-        my $patch = defined $patchRep ?  $patchRep : $m[3];
-        return ($family, $major, $minor, $patch);
-    };
-    
-    return $parser;
+	
+	my ($obj) = shift;
+	my $regexp = $obj->{regex};
+	my $famRep = $obj->{family_replacement};
+	my $majorRep = $obj->{v1_replacement};
+	my $minorRep = $obj->{v2_replacement};
+	my $patchRep = $obj->{v3_replacement};
+	
+	my $parser = sub {
+		my $str = shift;
+		my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
+		if (!@m) { return undef; }
+		my $family = defined $famRep ? HTTP::UA::Parser::Utils::replace($famRep,qr/\$1/,$m[0]) : $m[0];
+		my $major = defined $majorRep ?  $majorRep : $m[1];
+		my $minor = defined $minorRep ?  $minorRep : $m[2];
+		my $patch = defined $patchRep ?  $patchRep : $m[3];
+		return ($family, $major, $minor, $patch);
+	};
+	
+	return $parser;
 }
 
 ##=============================================================================
@@ -123,42 +123,42 @@ package HTTP::UA::Parser::OS;
 sub new {HTTP::UA::Parser::Base::new(@_)}
 
 sub parse {
-    my $self = shift;
-    my $ua = shift;
-    my $regexes = $REGEX->{os_parsers};
-    my $parser = $self->makeParser($regexes);
-    return $parser->($ua);
+	my $self = shift;
+	my $ua = shift;
+	my $regexes = $REGEX->{os_parsers};
+	my $parser = $self->makeParser($regexes);
+	return $parser->($ua);
 }
 
 sub makeParser {
-    my $self = shift;
-    my $regexes = shift;
-    return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
+	my $self = shift;
+	my $regexes = shift;
+	return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
 }
 
 sub _makeParsers {
-    
-    my ($obj) = shift;
-    my $regexp = $obj->{regex};
-    my $famRep = $obj->{os_replacement};
-    my $majorRep = $obj->{os_v1_replacement};
-    my $minorRep = $obj->{os_v2_replacement};
-    my $patchRep = $obj->{os_v3_replacement};
-    my $patchMinorRep = $obj->{os_v4_replacement};
-    
-    my $parser = sub {
-        my $str = shift;
-        my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
-        if (!@m) { return undef; }
-        my $family = $famRep ? HTTP::UA::Parser::Utils::replace($famRep,qr/\$1/,$m[0]) : $m[0];
-        my $major = defined $majorRep ? $majorRep : $m[1];
-        my $minor = defined $minorRep ? $minorRep : $m[2];
-        my $patch = defined $patchRep ? $patchRep : $m[3];
-        my $patchMinor = defined $patchMinorRep ? $patchMinorRep : $m[4];
-        return ($family, $major, $minor, $patch, $patchMinor);
-    };
-    
-    return $parser;
+	
+	my ($obj) = shift;
+	my $regexp = $obj->{regex};
+	my $famRep = $obj->{os_replacement};
+	my $majorRep = $obj->{os_v1_replacement};
+	my $minorRep = $obj->{os_v2_replacement};
+	my $patchRep = $obj->{os_v3_replacement};
+	my $patchMinorRep = $obj->{os_v4_replacement};
+	
+	my $parser = sub {
+		my $str = shift;
+		my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
+		if (!@m) { return undef; }
+		my $family = $famRep ? HTTP::UA::Parser::Utils::replace($famRep,qr/\$1/,$m[0]) : $m[0];
+		my $major = defined $majorRep ? $majorRep : $m[1];
+		my $minor = defined $minorRep ? $minorRep : $m[2];
+		my $patch = defined $patchRep ? $patchRep : $m[3];
+		my $patchMinor = defined $patchMinorRep ? $patchMinorRep : $m[4];
+		return ($family, $major, $minor, $patch, $patchMinor);
+	};
+	
+	return $parser;
 }
 
 ##=============================================================================
@@ -169,31 +169,32 @@ package HTTP::UA::Parser::Device;
 sub new {HTTP::UA::Parser::Base::new(@_)}
 
 sub makeParser {
-    my $self = shift;
-    my $regexes = shift;
-    return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
+	my $self = shift;
+	my $regexes = shift;
+	return HTTP::UA::Parser::Utils::makeParser($regexes,\&_makeParsers);
 }
 
 sub parse {
-    my $self = shift;
-    my $ua = shift;
-    my $regexes = $REGEX->{device_parsers};
-    my $parser = $self->makeParser($regexes);
-    return $parser->($ua);
+	my $self = shift;
+	my $ua = shift;
+	my $regexes = $REGEX->{device_parsers};
+	my $parser = $self->makeParser($regexes);
+	return $parser->($ua);
 }
 
 sub _makeParsers {
-    my ($obj) = shift;
-    my $regexp = $obj->{regex};
-    my $deviceRep = $obj->{device_replacement};
-    my $parser = sub {
-        my $str = shift;
-        my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
-        if (!@m) { return undef; }
-        my $family = $deviceRep ? HTTP::UA::Parser::Utils::replace($deviceRep,qr/\$1/,$m[0]) : $m[0];
-        return ($family);
-    };
-    return $parser;
+	my ($obj) = shift;
+	my $regexp = $obj->{regex};
+	my $regexp_flag = $obj->{regex_flag};
+	my $deviceRep = $obj->{device_replacement};
+	my $parser = sub {
+		my $str = shift;
+		my @m = HTTP::UA::Parser::Utils::exe($regexp , $str, $regexp_flag);
+		if (!@m) { return undef; }
+		my $family = $deviceRep ? HTTP::UA::Parser::Utils::replace($deviceRep,qr/\$1/,$m[0]) : $m[0];
+		return ($family);
+	};
+	return $parser;
 }
 ##=============================================================================
 ## Stringify Package
@@ -201,44 +202,44 @@ sub _makeParsers {
 package HTTP::UA::Parser::Base;
 
 sub new {
-    my $class = shift;
-    my $self = {
+	my $class = shift;
+	my $self = {
 	family => $_[0] || 'Other',
 	major => $_[1],
 	minor => $_[2],
 	patch => $_[3],
 	patchMinor => $_[4]
-    };
-    return bless($self, __PACKAGE__ );
+	};
+	return bless($self, __PACKAGE__ );
 }
 
 sub toVersionString {
-    my $self  = shift;
-    my $output = '';
-    if (defined $self->{major}){
+	my $self  = shift;
+	my $output = '';
+	if (defined $self->{major}){
 	$output .= $self->{major};
 	if (defined $self->{minor}){
-	    $output .= '.' . $self->{minor};
-	    if (defined $self->{patch}) {
+		$output .= '.' . $self->{minor};
+		if (defined $self->{patch}) {
 		if (HTTP::UA::Parser::Utils::startsWithDigit($self->{patch})) { $output .= '.'; }
 		$output .= $self->{patch};
 		if (defined $self->{patchMinor}) {
-		    if (HTTP::UA::Parser::Utils::startsWithDigit($self->{patchMinor})) { $output .= '.'; }
-		    $output .= $self->{patchMinor};
+			if (HTTP::UA::Parser::Utils::startsWithDigit($self->{patchMinor})) { $output .= '.'; }
+			$output .= $self->{patchMinor};
 		}
-	    }
+		}
 	}
-    }
-    return $output;
+	}
+	return $output;
 }
 
 sub toString {
-    my $self = shift;
-    my $suffix = $self->toVersionString();
-    if ($suffix){
+	my $self = shift;
+	my $suffix = $self->toVersionString();
+	if ($suffix){
 	$suffix = ' ' . $suffix;
-    }
-    return $self->family . $suffix;
+	}
+	return $self->family . $suffix;
 }
 
 sub family	{	shift->{family}		}
@@ -253,73 +254,80 @@ sub patchMinor	{	shift->{patchMinor}	}
 package HTTP::UA::Parser::Utils;
 
 sub makeParser {
-    my $regexes = shift;
-    my $makeParser = shift || \&_makeparser;
-    my @parsers = map {
-        $makeParser->($_);
-    } @{$regexes};
-    
-    my $parser = sub {
-	my $ua = shift;
-	my @obj;
-	foreach my $parser (@parsers){
-	    @obj = $parser->($ua);
-	    return HTTP::UA::Parser::Base->new(@obj) if $obj[0];
-	}
+	my $regexes = shift;
+	my $makeParser = shift || \&_makeparser;
+	my @parsers = map {
+		$makeParser->($_);
+	} @{$regexes};
 	
-	HTTP::UA::Parser::Base->new();
-    };
-    
-    return $parser;
+	my $parser = sub {
+		my $ua = shift;
+		my @obj;
+		foreach my $parser (@parsers){
+			@obj = $parser->($ua);
+			return HTTP::UA::Parser::Base->new(@obj) if $obj[0];
+		}
+		
+		HTTP::UA::Parser::Base->new();
+	};
+	
+	return $parser;
 }
 
 sub _makeParsers {
-    
-    my ($obj) = shift;
-    my $regexp = $obj->{regex};
-    my $famRep = $obj->{family_replacement};
-    my $majorRep = $obj->{v1_replacement};
-    my $minorRep = $obj->{v2_replacement};
-    my $patchRep = $obj->{v3_replacement};
-    
-    my $parser = sub {
-        my $str = shift;
-        my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
-        if (!@m) { return undef; }
-        my $family = defined $famRep ? replace($famRep,qr/\$1/,$m[0]) : $m[0];
-        my $major = defined $majorRep ?  $majorRep : $m[1];
-        my $minor = defined $minorRep ?  $minorRep : $m[2];
-        my $patch = defined $patchRep ?  $patchRep : $m[3];
-        return ($family, $major, $minor, $patch);
-    };
-    
-    return $parser;
+	
+	my ($obj) = shift;
+	my $regexp = $obj->{regex};
+	my $famRep = $obj->{family_replacement};
+	my $majorRep = $obj->{v1_replacement};
+	my $minorRep = $obj->{v2_replacement};
+	my $patchRep = $obj->{v3_replacement};
+	
+	my $parser = sub {
+		my $str = shift;
+		my @m = HTTP::UA::Parser::Utils::exe( $regexp , $str );
+		if (!@m) { return undef; }
+		my $family = defined $famRep ? replace($famRep,qr/\$1/,$m[0]) : $m[0];
+		my $major = defined $majorRep ?  $majorRep : $m[1];
+		my $minor = defined $minorRep ?  $minorRep : $m[2];
+		my $patch = defined $patchRep ?  $patchRep : $m[3];
+		return ($family, $major, $minor, $patch);
+	};
+	
+	return $parser;
 }
 
 sub replace {
-    my ($stringToReplace,$expr,$replaceWith) = @_;
-    $stringToReplace =~ s/$expr/$replaceWith/;
-    return $stringToReplace;
+	my ($stringToReplace,$expr,$replaceWith) = @_;
+	$stringToReplace =~ s/$expr/$replaceWith/;
+	return $stringToReplace;
 }
 
 sub exe {
-    my ($expr,$string) = @_;
-    my @m = $string =~ $expr;
-    return @m;
+	my ($expr, $string, $flag) = @_;
+	my @m;
+	$flag = $flag || '';
+	if ($flag eq "i") {
+		@m = $string =~ m{$expr}i;
+	}
+	else {
+		@m = $string =~ $expr;
+	}
+	return @m;
 }
 
 sub startsWithDigit {
-    my $str = shift;
-    return $str =~ /^\d/;
+	my $str = shift;
+	return $str =~ /^\d/;
 }
 
 sub getPath {
-    $PATH = $PACKAGE;
-    $PATH =~ s/::/\//g;
-    $PATH .= '.pm';
-    $PATH = $INC{$PATH};
-    $PATH =~ s/.pm$//;
-    return $PATH;
+	$PATH = $PACKAGE;
+	$PATH =~ s/::/\//g;
+	$PATH .= '.pm';
+	$PATH = $INC{$PATH};
+	$PATH =~ s/.pm$//;
+	return $PATH;
 }
 
 1;
@@ -338,25 +346,25 @@ Perl port of the ua-parser project - L<https://github.com/tobie/ua-parser>.
 
 =head1 SYNOPSIS
 
-    use HTTP::UA::Parser;
-    my $r = HTTP::UA::Parser->new();
-    
-    print $r->ua->toString();         # -> "Safari 5.0.1"
-    print $r->ua->toVersionString();  # -> "5.0.1"
-    print $r->ua->family;             # -> "Safari"
-    print $r->ua->major;              # -> "5"
-    print $r->ua->minor;              # -> "0"
-    print $r->ua->patch;              # -> "1"
-    
-    print $r->os->toString();         # -> "iOS 5.1"
-    print $r->os->toVersionString();  # -> "5.1"
-    print $r->os->family              # -> "iOS"
-    print $r->os->major;              # -> "5"
-    print $r->os->minor;              # -> "1"
-    print $r->os->patch;              # -> undef
-    
-    print $r->device->family;         # -> "iPhone"
-    
+	use HTTP::UA::Parser;
+	my $r = HTTP::UA::Parser->new();
+	
+	print $r->ua->toString();         # -> "Safari 5.0.1"
+	print $r->ua->toVersionString();  # -> "5.0.1"
+	print $r->ua->family;             # -> "Safari"
+	print $r->ua->major;              # -> "5"
+	print $r->ua->minor;              # -> "0"
+	print $r->ua->patch;              # -> "1"
+	
+	print $r->os->toString();         # -> "iOS 5.1"
+	print $r->os->toVersionString();  # -> "5.1"
+	print $r->os->family              # -> "iOS"
+	print $r->os->major;              # -> "5"
+	print $r->os->minor;              # -> "1"
+	print $r->os->patch;              # -> undef
+	
+	print $r->device->family;         # -> "iPhone"
+	
 =head1 Methods
 
 =head2 new()
@@ -414,21 +422,21 @@ returns versions patch part of os/browser
 returns version patch minor part of os/browser
 
 =back
-    
+	
 =head1 INSTALLATION
 
 From CPAN shell simply type
 
-    % perl -MCPAN -e 'install HTTP::UA::Parser'
+	% perl -MCPAN -e 'install HTTP::UA::Parser'
 
 Or from your local download, unpack and:
 
-    % perl Makefile.PL
-    % make && make test
-    
+	% perl Makefile.PL
+	% make && make test
+	
 Then install:
 
-    % make install
+	% make install
 
 =head1 AUTHOR
 
