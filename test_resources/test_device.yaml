@@ -899,3 +899,16 @@ test_cases:
   - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; de-de; Orange San Francisco Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17'
     family: 'ZTE Orange San Francisco'
 
+  # HbbTV - Multiple replacements would be nice here
+  - user_agent_string: 'Mozilla/5.0 (Unknown; Linux armv7l) AppleWebKit/537.1+ (KHTML, like Gecko) Safari/537.1+ HbbTV/1.1.1 ( ;LGE ;NetCast 4.0 ;03.20.30 ;1.0M ;)'
+    family: 'LGE ;NetCast 4.0 '
+    #family: 'LG NetCast 4.0' # this is nicer
+
+  - user_agent_string: 'HbbTV/1.1.1 (;Panasonic;VIERA 2012;1.261;0071-3103 2000-0000;)'
+    family: 'Panasonic;VIERA 2012'
+    #family: 'Panasonic VIERA 2012' # this is nicer
+
+  - user_agent_string: 'Opera/9.80 (Linux armv7l; HbbTV/1.1.1 (; Sony; KDL32W650A; PKG3.211EUA; 2013;); ) Presto/2.12.362 Version/12.11'
+    family: 'Sony; KDL32W650A'
+    #family: 'Sony KDL32W650A' # this is nicer
+ 

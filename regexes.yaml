@@ -1,6 +1,9 @@
 user_agent_parsers:
   #### SPECIAL CASES TOP ####
 
+  # Add HbbTV browsers (Browser in TVs, standardized in Europe and Australia)
+  - regex: '(HbbTV)/[0-9.]+ \(.*;.+; ?(.+) ?; ?(.+) ?;.*;\)'
+
   # must go before Firefox to catch SeaMonkey/Camino
   - regex: '(SeaMonkey|Camino)/(\d+)\.(\d+)\.?([ab]?\d+[a-z]*)'
 
@@ -403,6 +406,9 @@ user_agent_parsers:
 
 os_parsers:
 
+  # HbbTV Televisions (Smart TV standard for EU and AU)
+  - regex: 'HbbTV/[0-9.]+ \(.*;\ ?(.+)\ ?;.*;.*;.*;\)'
+
   ##########
   # Android
   # can actually detect rooted android os. do we care?
@@ -631,11 +637,16 @@ os_parsers:
     os_replacement: 'Solaris'
 
 device_parsers:
+
   ##########
   # incomplete!
   # multiple replacement placeholds i.e. ($1) ($2) help solve problem of single device with multiple representations in ua
   # e.g. HTC Dream S should parse to the same device as HTC_DreamS
   ##########
+
+  # HbbTV Televisions (Smart TV standard for EU and AU)
+  - regex: 'HbbTV/[0-9.]+ \(.*; ?(.+ ?; ?.+) ?;.*;.*;\)'
+    device_replacement: '$1'
 
   ##########
   # Acer
