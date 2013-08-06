@@ -49,7 +49,7 @@ function msg(name, actual, expected) {
   });
 });
 
-['test_device.yaml', 'test_device_generic_feature_phone.yaml', 'test_device_spider.yaml'].forEach(function(fileName) {
+['test_device.yaml', 'test_device_generic.yaml'].forEach(function(fileName) {
   var fixtures = readYAML(fileName).test_cases;
   suite(fileName, function() {
     fixtures.forEach(function(f) {
