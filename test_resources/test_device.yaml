@@ -517,7 +517,7 @@ test_cases:
     brand: 'Samsung'
     model: 'Galaxy'
     bc_family: 'Galaxy'
-   - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.1.2; en-; GT-N7000 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.1.2; en-; GT-N7000 Build/JZO54K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
     bc_family: 'GT-N7000'
     family: 'Samsung GT-N7000'
     brand: 'Samsung'
