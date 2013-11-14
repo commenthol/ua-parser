@@ -44,23 +44,24 @@ sub My_WriteMakefile {
 sub getRegexes {
     my $response;
     my $stream;
-    my $url = 'https://raw.github.com/tobie/ua-parser/master/regexes.yaml';
+    ##my $url = 'https://raw.github.com/tobie/ua-parser/master/regexes.yaml';
+    my $url = 'https://raw.github.com/commenthol/ua-parser/master/regexes.yaml';
     #trying curl
     print "Trying curl\n";
-    open $stream, "-|", "curl $url" or die;
+    open $stream, "-|", "curl $url";
     while(<$stream>) { $response .= "$_" };
     
     ##trying wget
     if (!$response){
 	print "Trying wget\n";
-	open $stream, "-|", "wget $url" or die;
+	open $stream, "-|", "wget $url";
 	while(<$stream>) { $response .= "$_" };
     }
     
     ##trying lwp-request
     if (!$response){
 	print "Trying lwp-request\n";
-	open $stream, "-|", "lwp-request $url" or die;
+	open $stream, "-|", "lwp-request $url";
 	while(<$stream>) { $response .= "$_" };
     }
     
