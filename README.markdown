@@ -1,3 +1,47 @@
+This is a fork from [ua-parser](http://github.com/tobie/ua-parser) which contains the following changes:
+
+The changes contain the currently open PR #285, #292, #293, #300, #301, #302, #303.
+
+Additionally the following changes were made to the `regexes.yaml` file:
+
+user_agent_parsers:
+
+- Vodafone browser removed and corrected to Openwave
+
+os_parsers:
+
+- Android matchers simplified
+- os detection within UCWEB and JUC browsers
+- Windows ME matcher case corrected
+- Windows 8.1 added and changed to 8.1 PR#292
+- Darwin OS matchers PR#293
+- Firefox OS Matcher rewritten
+- Mozilla WinXX matchers added
+- Improved detection of iOS
+- Match of GoogleTV patch version
+- Detection of gentoo and Linux Kernel Version
+
+device_parsers:
+
+- Complete rewrite of Brand Model matchers for Android and Windows Phones
+- Kindle Fire HDX added PR#303
+- Detection of Kindle Reader
+- Brand Model recognized for Sony PalmOS devices
+- FireFoxOS devices added (Alcatel One Touch 4012X, ZTE Open)
+- Detection of Siemens and SonyEricsson Feature Phones
+- Detection of Generic Tablets
+- Spider detection for GoogleBots changed to match before Android and iOS
+
+For full changes please check the [Changelog](changelog.md).
+
+**Note:**
+
+Currently only the `js`, `py` and `perl` parser support the presented `regexes.yaml` file.
+
+It is my aim to migrate all available changes into the mainline.
+
+----
+
 ua-parser [![Build Status](https://secure.travis-ci.org/tobie/ua-parser.png?branch=master)](https://travis-ci.org/tobie/ua-parser)
 =========
 
