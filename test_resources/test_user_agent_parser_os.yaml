@@ -212,8 +212,8 @@ test_cases:
 
   - user_agent_string: 'Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0'
     family: 'Firefox OS'
-    major:
-    minor:
+    major: '15'
+    minor: '0'
     patch:
     patch_minor:
 
@@ -236,13 +236,6 @@ test_cases:
     major: '6'
     minor: '0'
     patch: '1'
-    patch_minor:
-
-  - user_agent_string: 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)'
-    family: 'Kindle'
-    major: '1'
-    minor: '0'
-    patch:
     patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; Linux 2.6.10) NetFront/3.3 Kindle/1.0 (screen 600x800)'
@@ -859,7 +852,7 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Win 9x 4.90; PL; rv:1.7.5) Gecko/20041217'
-    family: 'Windows Me'
+    family: 'Windows ME'
     major:
     minor:
     patch:
@@ -868,107 +861,714 @@ test_cases:
   - user_agent_string: 'Mozilla/5.0 (Unknown; Linux armv7l) AppleWebKit/537.1+ (KHTML, like Gecko) Safari/537.1+ HbbTV/1.1.1 ( ;LGE ;NetCast 4.0 ;03.20.30 ;1.0M ;)'
     family: 'LG'
     major: '2013'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (DirectFB; Linux armv7l) AppleWebKit/534.26+ (KHTML, like Gecko) Version/5.0 Safari/534.26+ HbbTV/1.1.1 ( ;LGE ;NetCast 3.0 ;1.0 ;1.0M ;)'
     family: 'LG'
     major: '2012'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'Opera/9.80 (Linux armv7l; HbbTV/1.1.1 (; Sony; KDL32W650A; PKG3.211EUA; 2013;); ) Presto/2.12.362 Version/12.11'
     family: 'Sony'
     major: '2013'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'Opera/9.80 (Linux mips; U;  HbbTV/1.1.1 (; Sony; KDL40HX751; PKG1.902EUA; 2012;);; en) Presto/2.10.250 Version/11.60'
     family: 'Sony'
     major: '2012'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'Opera/9.80 (Linux mips; U;  HbbTV/1.1.1 (; Sony; KDL22EX320; PKG4.017EUA; 2011;);; en) Presto/2.7.61 Version/11.00'
     family: 'Sony'
     major: '2011'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
-# up market model
   - user_agent_string: 'HbbTV/1.1.1 (;Samsung;SmartTV2013;T-FXPDEUC-1102.2;;) WebKit'
     family: 'Samsung'
     major: '2013'
     minor: 'UE40F7000'
     patch:
-    patch_minor: 
+    patch_minor:
 
-# mid-range model
   - user_agent_string: 'HbbTV/1.1.1 (;Samsung;SmartTV2013;T-MST12DEUC-1102.1;;) WebKit'
     family: 'Samsung'
     major: '2013'
     minor: 'UE32F4500'
     patch:
-    patch_minor: 
+    patch_minor:
 
-# no way to differentiate models
   - user_agent_string: 'HbbTV/1.1.1 (;Samsung;SmartTV2012;;;) WebKit'
     family: 'Samsung'
     major: '2012'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'HbbTV/1.1.1 (;;;;;) Maple_2011'
     family: 'Samsung'
     major: '2011'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'Opera/9.80 (Linux mips ; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/3.2.1; en) Presto/2.6.33 Version/10.70'
     family: 'Philips'
     major: '2012'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'Opera/9.80 (Linux mips; U; HbbTV/1.1.1 (; Philips; ; ; ; ) CE-HTML/1.0 NETTV/4.1.3 PHILIPSTV/1.1.1; en) Presto/2.10.250 Version/11.60'
     family: 'Philips'
     major: '2013'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'HbbTV/1.1.1 (;Panasonic;VIERA 2011;f.532;0071-0802 2000-0000;)'
     family: 'Panasonic'
     major: '2011'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'HbbTV/1.1.1 (;Panasonic;VIERA 2012;1.261;0071-3103 2000-0000;)'
     family: 'Panasonic'
     major: '2012'
-    minor: 
+    minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'HbbTV/1.2.1 (;Panasonic;VIERA 2013;3.672;4101-0003 0002-0000;)'
     family: 'Panasonic'
     major: '2013'
-    minor: 
+    minor:
     patch:
-    patch_minor: 
+    patch_minor:
 
   - user_agent_string: 'HbbTV/1.1.1 (;;;;;) firetv-firefox-plugin 1.1.20'
     family: 'FireHbbTV'
     major: '1'
     minor: '1'
     patch: '20'
-    patch_minor: 
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.8 [en] (Win3.11; U)'
+    family: 'Windows 3.1'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Win3.11; rv:8.0) Gecko/20110608 Firefox/8.0'
+    family: 'Windows 3.1'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Win3.11; en-US; rv:21.56.11.90) Gecko/20500230 Firefox/3.5'
+    family: 'Windows 3.1'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 3.0; Win3.11; Trident/3.0)'
+    family: 'Windows 3.1'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla 1.2.1 (Win95)'
+    family: 'Windows 95'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/2.02E (Win95; U)'
+    family: 'Windows 95'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/3.01 (Win95; I)'
+    family: 'Windows 95'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/3.0 [en] (compatible; Win98; U)'
+    family: 'Windows 98'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (MSIE/6.0; compatible; Win98)'
+    family: 'Windows 98'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.5 [en-us] (WinME; I)'
+    family: 'Windows ME'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.75 [de] (WinME; I)'
+    family: 'Windows ME'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.78 [uk] (WinME; U)'
+    family: 'Windows ME'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/6.0 [de] (WinME; I)'
+    family: 'Windows ME'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.04 [en] (Win2000; I)'
+    family: 'Windows 2000'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.7 [en] (Win2000; I)'
+    family: 'Windows 2000'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 5.01; Win2000)'
+    family: 'Windows 2000'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/8.0 (compatible; MSIE 6.0; Win2000; WinXP)'
+    family: 'Windows 2000'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla Compatible (MS IE 3.01 WinNT)'
+    family: 'Windows NT'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla Compatible/2.0 (WinNT; I; NCC/2.0)Mozilla/5.0 (Windows; U; WindowsCE 5.2; en-US; rv:1.9.2.2pre) Gecko/20100209 Namoroka/3.6.2pre Fennec/1.1a1'
+    family: 'Windows NT'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (WindowsCE 6.0; rv:2.0.1) Gecko Firefox/5.0.1'
+    family: 'Windows CE'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (WindowsCE; rv:4.0) Gecko/20120320 Firefox/4.0'
+    family: 'Windows CE'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Linux; U; Adr 2.3.4; en-US; LG-P690) U2/1.0.0 UCBrowser/9.0.2.299 U2/1.0.0 Mobile'
+    family: 'Android'
+    major: '2'
+    minor: '3'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Linux; U; Adr 2.3.5; zh-CN; HTC_Incredible_S) U2/1.0.0 UCBrowser/8.8.1.243 U2/1.0.0 Mobile'
+    family: 'Android'
+    major: '2'
+    minor: '3'
+    patch: '5'
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Linux; U; Adr 2.3.6; en-US; GT-I9001) U2/1.0.0 UCBrowser/9.1.0.297 U2/1.0.0 Mobile'
+    family: 'Android'
+    major: '2'
+    minor: '3'
+    patch: '6'
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Linux; U; Adr 4.0.4; en-US; POM727MC) U2/1.0.0 UCBrowser/8.2.0.242 U2/1.0.0 Mobile'
+    family: 'Android'
+    major: '4'
+    minor: '0'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Windows; U; wds 8.0; en-US; NOKIA; RM-821_apac_hong_kong_234) U2/1.0.0 UCBrowser/3.1.1.343 U2/1.0.0 Mobile'
+    family: 'Windows Phone'
+    major: '8'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (Windows; U; wds 7.10; en-US; HTC; TITAN X310e) U2/1.0.0 UCBrowser/3.1.1.343 U2/1.0.0 Mobile'
+    family: 'Windows Phone'
+    major: '7'
+    minor: '10'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (iOS; U; iPad OS 6_1_3; en-US; iPad2,5) U2/1.0.0 UCBrowser/9.0.0.260 U2/1.0.0 Mobile'
+    family: 'iOS'
+    major: '6'
+    minor: '1'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'UCWEB/2.0 (iOS; U; iPh OS 7_0_3; zh-CN; iPh5,2) U2/1.0.0 UCBrowser/9.0.1.284 U2/1.0.0 Mobile'
+    family: 'iOS'
+    major: '7'
+    minor: '0'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 2.1-update1; es-la; MID7015A; 800*480) UCWEB8.6.1.262/145/405'
+    family: 'Android'
+    major: '2'
+    minor: '1'
+    patch: 'update1'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 2.2.1; zh-cn; A100; 320*480) UCWEB7.9.0.94/139/355'
+    family: 'Android'
+    major: '2'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 2.3.6; de-xx; ME722; 480*854) UCWEB7.9.3.103/139/800'
+    family: 'Android'
+    major: '2'
+    minor: '3'
+    patch: '6'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 3.1; zh-cn; Dell Streak 10 Pro; 800*1280) UCWEB8.5.1.179/145/999'
+    family: 'Android'
+    major: '3'
+    minor: '1'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 4.0.3; de-xx; HTC_Sensation_Z710e; 540*960) UCWEB7.9.0.94/139/444'
+    family: 'Android'
+    major: '4'
+    minor: '0'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 4.0.4; de-xx; C1604; 320*480) UCWEB7.9.0.94/139/444'
+    family: 'Android'
+    major: '4'
+    minor: '0'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 4.1.2; zh-cn; HUAWEI C8813Q; 480*854) UCWEB8.7.2.214/145/33815'
+    family: 'Android'
+    major: '4'
+    minor: '1'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'JUC (Linux; U; 4.2.2; zh-cn; HUAWEI P6-U06; 720*1184) UCWEB8.7.2.214/145/33492'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;2.2;Zh_cn;HTC Legend;320*480;)'
+    family: 'Android'
+    major: '2'
+    minor: '2'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;2.3.4;Zh_cn;Nexus One;480*800;)UCWEB7.8.0.87/139/999'
+    family: 'Android'
+    major: '2'
+    minor: '3'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;4.0.3;en;P300(Funbook);480*764;)UCWEB8.0.0.89/139/6500'
+    family: 'Android'
+    major: '4'
+    minor: '0'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;4.1.2;Zh_cn;HUAWEI G525-U00;540*960;)UCWEB7.7.0.85/140/999'
+    family: 'Android'
+    major: '4'
+    minor: '1'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android1.0.3;Zh_cn;A70CHT;480*800;)UCWEB7.8.0.95/139/444'
+    family: 'Android'
+    major: '1'
+    minor: '0'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android1.6;Zh_cn;MA440;240*400;)UCWEB7.8.0.95/139/351'
+    family: 'Android'
+    major: '1'
+    minor: '6'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android2.1-update1-1.0.0;Zh_cn;NXM703U;480*800;)UCWEB7.8.0.95/139/444'
+    family: 'Android'
+    major: '2'
+    minor: '1'
+    patch: 'update1'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android2.1-update1;Zh_cn;XCD35;480*800;)UCWEB7.8.0.95/139/444'
+    family: 'Android'
+    major: '2'
+    minor: '1'
+    patch: 'update1'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android2.2.2;Zh_cn;i-mobile I-Note;480*800;)UCWEB7.8.0.95/139/444'
+    family: 'Android'
+    major: '2'
+    minor: '2'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'JUC(Linux;U;Android4.1.2;Zh_cn;HUAWEI G525-U00;540*960;)UCWEB7.8.0.95/139/444'
+    family: 'Android'
+    major: '4'
+    minor: '1'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (iPad; U; CPU iPhone OS 5_1_1 like Mac OS X; en-US) iHeartRadio/471'
+    family: 'iOS'
+    major: '5'
+    minor: '1'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone Simulator; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A334'
+    family: 'iOS'
+    major: '5'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_0 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A5302b'
+    family: 'iOS'
+    major: '5'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (iPhone; CPU iPhone OS 5_0_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9A406'
+    family: 'iOS'
+    major: '5'
+    minor: '0'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'com.google.ios.youtube/2.2.0.10119 (iPhone6,2; U; CPU iPhone OS 7_0_3 like Mac OS X; de_DE)'
+    family: 'iOS'
+    major: '7'
+    minor: '0'
+    patch: '3'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; GoogleTV 4.0.4; LG Google TV Build/000000) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.77 Safari/534.24'
+    family: 'GoogleTV'
+    major: '4'
+    minor: '0'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Konqueror/3.1; Linux 2.4.19-gentoo-r9)'
+    family: 'Gentoo'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Opera/7.11 (Linux 2.4.20-gentoo-r1 i686; U) [en]'
+    family: 'Gentoo'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Godzilla/5.0 (Linux 2.6) AppleWebKit/532.4 (KHTML, like Gecko) Nutscrape/3.3,gzip(gfe),gzip(gfe)'
+    family: 'Linux'
+    major: '2'
+    minor: '6'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/3.0 (X11; U; Linux 2.4.2-2 i586; en-US; m18) Gecko/20010131 Netscape6/6.01'
+    family: 'Linux'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.0; Linux 2.4.18 ppc) Opera 6.1  [en]'
+    family: 'Linux'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.05 [en] (X11; I; Linux 2.0.34 i586),gzip(gfe),gzip(gfe)'
+    family: 'Linux'
+    major: '2'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (X11; U; Linux 2.4.2-2 i586; en-US; m18) Gecko/20010131 Netscape6/6.01'
+    family: 'Linux'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; Konqueror/3.1; Linux 2.4.22-10mdk; X11; i686; en_GB, en_NZ, en)'
+    family: 'Linux'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Opera/6.11 (Linux 2.4.18-10 i686; U)  [en]'
+    family: 'Linux'
+    major: '2'
+    minor: '4'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Mobile; ZTEOPEN; rv:18.1) Gecko/18.1 Firefox/18.1'
+    family: 'Firefox OS'
+    major: '18'
+    minor: '1'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Mobile; ALCATELOneTouch4012X; rv:18.1) Gecko/18.1 Firefox/18.1'
+    family: 'Firefox OS'
+    major: '18'
+    minor: '1'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Mobile; rv:18.0) Gecko/18.0 Firefox/18.0'
+    family: 'Firefox OS'
+    major: '18'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Mobile; rv:18.1) Gecko/18.1 Firefox/18.1'
+    family: 'Firefox OS'
+    major: '18'
+    minor: '1'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Mobile; rv:26.0) Gecko/26.0 Firefox/26.0'
+    family: 'Firefox OS'
+    major: '26'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 9.0b; Xbox-OS2) Obsidian'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0b; Xbox-OS2) Obsidian'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/3.1; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'XBMC/3.3-DEV-r31572 (Xbox; http://www.xbmc.org)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'XBMC/9.04-beta1 r19639 (Windows; Windows XP Professional Service Pack 2 build 2600; http://www.xbmc.org)'
+    family: 'Windows XP'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'XBMC/9.04 r19840 (Mac OS X; Darwin 9.6.0; http://www.xbmc.org)'
+    family: 'Mac OS X'
+    major: '10'
+    minor: '5'
+    patch: '6'
+    patch_minor:
+
+  - user_agent_string: 'XBMC/3.3-DEV-r31572 (Xbox; http://www.xbmc.org)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/3.1; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'XBMC/3.3-DEV-r31572 (Xbox; http://www.xbmc.org)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'XBMC/9.04 r19840 (Mac OS X; Darwin 9.6.0; http://www.xbmc.org)'
+    family: 'Mac OS X'
+    major: '10'
+    minor: '5'
+    patch: '6'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; Trident/3.1; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 7.0; Windows Phone OS 7.5; Trident/3.1; IEMobile/7.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; Xbox)'
+    family: 'Xbox'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
