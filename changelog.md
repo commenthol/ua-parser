@@ -1,5 +1,12 @@
 # Changelog
 
+## 2013-11-15
+
+### `php`
+
+- Modernize PHP port of User Agent Parser from @lstrojny 
+- brand model device parsing with case insensitive testing
+
 ## 2013-11-14
 
 ### `regexes.yaml`
