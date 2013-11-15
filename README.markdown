@@ -36,7 +36,7 @@ For full changes please check the [Changelog](changelog.md).
 
 **Note:**
 
-Currently only the `js`, `py` and `perl` parser support the presented `regexes.yaml` file.
+Currently only the `js`, `perl`, `php` and `py` parser support the presented `regexes.yaml` file.
 
 It is my aim to migrate all available changes into the mainline.
 

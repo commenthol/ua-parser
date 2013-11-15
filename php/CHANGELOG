@@ -2,6 +2,10 @@ THIS CHANGELOG IS AN ATTEMPT TO DOCUMENT CHANGES TO THIS PROJECT.
 SUPER MINOR REVISION NUMBERS WON'T SHOW UP IN GITHUB BUT IT'LL HELP
 ME ORGANIZE WHEN I MADE A SET OF FIXES
 
+UAP-3.0.0
+ - ADD: PHP refactoring from @lstrojny
+ - ADD: device Parsing with brand model and case insensitive testing
+
 UAP-2.1.1
  - FIX: making sure patch minor is being populated correctly when showing a mismatch
 
