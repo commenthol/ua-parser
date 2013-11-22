@@ -197,7 +197,7 @@ user_agent_parsers:
   - regex: '(Chromium|Chrome)/(\d+)\.(\d+)\.(\d+)'
 
   # Browser/major_version.minor_version
-  - regex: '(Bolt|Jasmine|IceCat|Skyfire|Midori|Maxthon|Lynx|Arora|IBrowse|Dillo|Camino|Shiira|Fennec|Phoenix|Chrome|Flock|Netscape|Lunascape|Epiphany|WebPilot|Opera Mini|Opera|OpenWave|NetFront|Netfront|Konqueror|Googlebot|SeaMonkey|Kazehakase|Vienna|Iceape|Iceweasel|IceWeasel|Iron|K-Meleon|Sleipnir|Galeon|GranParadiso|iCab|NetNewsWire|Space Bison|Stainless|Orca|Dolfin|BOLT|Minimo|Tizen Browser|Polaris|Abrowser|Planetweb|ICE Browser)/(\d+)\.(\d+)'
+  - regex: '(bingbot|Bolt|Jasmine|IceCat|Skyfire|Midori|Maxthon|Lynx|Arora|IBrowse|Dillo|Camino|Shiira|Fennec|Phoenix|Chrome|Flock|Netscape|Lunascape|Epiphany|WebPilot|Opera Mini|Opera|OpenWave|NetFront|Netfront|Konqueror|Googlebot|SeaMonkey|Kazehakase|Vienna|Iceape|Iceweasel|IceWeasel|Iron|K-Meleon|Sleipnir|Galeon|GranParadiso|iCab|NetNewsWire|Space Bison|Stainless|Orca|Dolfin|BOLT|Minimo|Tizen Browser|Polaris|Abrowser|Planetweb|ICE Browser)/(\d+)\.(\d+)'
 
   # Chrome/Chromium/major_version.minor_version
   - regex: '(Chromium|Chrome)/(\d+)\.(\d+)'
@@ -761,13 +761,15 @@ device_parsers:
 
   ######################################################################
   # Android parsers
+  #
+  # @ref: https://support.google.com/googleplay/answer/1727131?hl=en
   ######################################################################
   
   #########
   # 3Q
   # @ref: http://www.3q-int.com/
   #########
-  - regex: '; *([LRQ]C\d{4}[A-Z]) Build/'
+  - regex: '; *([BLRQ]C\d{4}[A-Z]+) Build/'
     device_replacement: '3Q $1'
     brand_replacement: '3Q'
     model_replacement: '$1'
@@ -780,7 +782,7 @@ device_parsers:
   # Acer
   # @ref: http://us.acer.com/ac/en/US/content/group/tablets
   #########
-  - regex: 'Android [34].*; *(A100|A101|A110|A200|A210|A211|A500|A501|A510|A511|A700|A701|B1-A71|A1-\d{3}|B1-\d{3}|W500|W500P|W501|W501P|W510|W511|W700|Slider SL101) Build'
+  - regex: 'Android [34].*; *(A100|A101|A110|A200|A210|A211|A500|A501|A510|A511|A700(?: Lite| 3G)?|A701|B1-A71|A1-\d{3}|B1-\d{3}|W500|W500P|W501|W501P|W510|W511|W700|Slider SL101|DA22[^;/]+) Build'
     device_replacement: '$1'
     brand_replacement: 'Acer'
     model_replacement: '$1'
@@ -818,6 +820,15 @@ device_parsers:
     model_replacement: '$2'
 
   #########
+  # Airpad
+  # @ref: ??
+  #########
+  - regex: '; *Airpad[\-]([^;/]+) Build'
+    device_replacement: 'Airpad $1'
+    brand_replacement: 'Airpad'
+    model_replacement: '$1'
+
+  #########
   # Alcatel - TCT
   # @ref: http://www.alcatelonetouch.com/global-en/products/smartphones.html
   #########
@@ -829,6 +840,10 @@ device_parsers:
     device_replacement: 'Alcatel One Touch $1'
     brand_replacement: 'Alcatel'
     model_replacement: 'One Touch $1'
+  - regex: '; *(TCL)[ _]([^;/]+) Build'
+    device_replacement: '$1 $2'
+    brand_replacement: '$1'
+    model_replacement: '$2'
   # operator specific models  
   - regex: '; *(Vodafone Smart II) Build'
     device_replacement: 'Alcatel $1'
@@ -884,6 +899,15 @@ device_parsers:
     model_replacement: '$1'
     
   #########
+  # Amaway
+  # @ref: http://www.amaway.cn/
+  #########
+  - regex: '; *(A651|A701B?|A702|A703|A705|A706|A707|A711|A712|A713|A717|A722|A785|A801|A802|A803|A901|A902|A1002|A1003|A1006|A1007|A9701|A9703|Q710|Q80) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Amaway'
+    model_replacement: '$1'
+
+  #########
   # Amoi
   # @ref: http://www.amoi.com/en/prd/prd_index.jspx
   #########
@@ -895,7 +919,35 @@ device_parsers:
     device_replacement: 'Amoi $1'
     brand_replacement: 'Amoi'
     model_replacement: '$1'
-  
+
+  #########
+  # Aoc
+  # @ref: http://latin.aoc.com/media_tablet
+  #########
+  - regex: '; *(MW(?:0[789]|10)[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Aoc'
+    model_replacement: '$1'
+
+  #########
+  # Aoson
+  # @ref: http://www.luckystar.com.cn/en/mid.aspx?page=1
+  # @note: brand owned by luckystar
+  #########
+  - regex: '; *(G7|M1013|M1015G|M11[CG]?|M-?12[B]?|M15|M19[G]?|M30[ACQ]?|M31[GQ]|M32|M33[GQ]|M36|M37|M38|M701T|M710|M712B|M713|M715G|M716G|M71(?:G|GS|T)?|M72[T]?|M73[T]?|M75[GT]?|M77G|M79T|M7L|M7LN|M81|M810|M81T|M82|M92|M92KS|M92S|M717G|M721|M722G|M723|M725G|M739|M785|M791|M92SK|M93D) Build'
+    device_replacement: 'Aoson $1'
+    brand_replacement: 'Aoson'
+    model_replacement: '$1'
+
+  #########
+  # Apanda
+  # @ref: http://www.apanda.com.cn/ ??
+  #########
+  - regex: '; *[Aa]panda[ _\-]([^;/]+) Build'
+    device_replacement: 'Apanda $1'
+    brand_replacement: 'Apanda'
+    model_replacement: '$1'
+
   #########
   # Archos
   # @ref: http://archos.com/
@@ -956,7 +1008,7 @@ device_parsers:
   # Asus
   # @ref: http://www.asus.com/uk/Tablets_Mobile/
   #########
-  - regex: '; *(ME17\d[^;/]*|ME3\d{2}[^;/]+|Nexus 10|Nexus 7|PadFone[^;/]*|Transformer[^;/]*|TF101|TF300T|eeepc) Build'
+  - regex: '; *(ME17\d[^;/]*|ME3\d{2}[^;/]+|K00[A-Z]|Nexus 10|Nexus 7|PadFone[^;/]*|Transformer[^;/]*|TF\d{3}[^;/]*|eeepc) Build'
     device_replacement: 'Asus $1'
     brand_replacement: 'Asus'
     model_replacement: '$1'
@@ -978,6 +1030,44 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Attab
+  # @ref: http://www.theattab.com/
+  #########
+  - regex: '; (@TAB-[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Attab'
+    model_replacement: '$1'
+
+  #########
+  # Audiosonic
+  # @ref: ??
+  # @note: Take care with Docomo T-01 Toshiba
+  #########
+  - regex: '; *(T-(?:(?!01)\d{2})[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Audiosonic'
+    model_replacement: '$1'
+
+  #########
+  # Azend
+  # @ref: http://azendcorp.com/index.php/products/portable-electronics
+  #########
+  - regex: '; *(V(?:100|700|800)[^;/]*) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Azend'
+    model_replacement: '$1'
+
+  #########
+  # Bak
+  # @ref: http://www.bakinternational.com/produtos.php?cat=80
+  #########
+  - regex: '; *(IBAK\-[^;/]*) Build'
+    regex_flag: 'i'
+    device_replacement: '$1'
+    brand_replacement: 'Bak'
+    model_replacement: '$1'
+
+  #########
   # Bedove
   # @ref: http://www.bedove.com/product.html
   # @models: HY6501|HY5001|X12|X21|I5
@@ -985,6 +1075,15 @@ device_parsers:
   - regex: '; *(HY5001|HY6501|X12|X21|I5) Build'
     device_replacement: 'Bedove $1'
     brand_replacement: 'Bedove'
+    model_replacement: '$1'
+  
+  #########
+  # Benss
+  # @ref: http://www.benss.net/
+  #########
+  - regex: '; *(JC-[^;/]*) Build'
+    device_replacement: 'Benss $1'
+    brand_replacement: 'Benss'
     model_replacement: '$1'
 
   #########
@@ -1025,6 +1124,27 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Blusens
+  # @ref: http://www.blusens.com/es/?sg=1&sv=al&roc=1
+  #########
+  # tablet
+  - regex: '; *(TOUCH\d[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Blusens'
+    model_replacement: '$1'
+
+  #########
+  # Bmobile
+  # @ref: http://bmobile.eu.com/?categoria=smartphones-2
+  # @note: Might collide with Maxx as AX is used also there.
+  #########
+  # smartphone
+  - regex: '; *(AX5\d+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Bmobile'
+    model_replacement: '$1'
+
+  #########
   # bq 
   # @ref: http://bqreaders.com
   #########
@@ -1035,6 +1155,15 @@ device_parsers:
   - regex: '; *(Maxwell .+) Build'
     device_replacement: '$1'
     brand_replacement: 'bq'
+    model_replacement: '$1'
+
+  #########
+  # Braun Phototechnik
+  # @ref: http://www.braun-phototechnik.de/en/products/list/~pcat.250/Tablet-PC.html
+  #########
+  - regex: '; *((?:B-Tab|B-TAB) ?\d[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Braun'
     model_replacement: '$1'
 
   #########
@@ -1083,6 +1212,29 @@ device_parsers:
     model_replacement: 'Tablet PHOENIX 8.1J0'
 
   #########
+  # Celkon
+  # @ref: http://www.celkonmobiles.com/?_a=products
+  # @models: A10, A19Q, A101, A105, A107, A107\+, A112, A118, A119, A119Q, A15, A19, A20, A200, A220, A225, A22 Race, A27, A58, A59, A60, A62, A63, A64, A66, A67, A69, A75, A77, A79, A8\+, A83, A85, A86, A87, A89 Ultima, A9\+, A90, A900, A95, A97i, A98, AR 40, AR 45, AR 50, ML5
+  #########
+  - regex: '; *(?:Celkon[ _\*]|CELKON[ _\*])([^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Celkon'
+    model_replacement: '$1'
+  - regex: 'Build/(?:Celkon)+_?([^;/_\)]+)'
+    device_replacement: '$1'
+    brand_replacement: 'Celkon'
+    model_replacement: '$1'
+  - regex: '; *(CT)-?(\d+) Build'
+    device_replacement: '$1$2'
+    brand_replacement: 'Celkon'
+    model_replacement: '$1$2'
+  # smartphones 
+  - regex: '; *(A19|A19Q|A105|A107[^;/]*) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Celkon'
+    model_replacement: '$1'
+
+  #########
   # ChangJia 
   # @ref: http://www.cjshowroom.com/eproducts.aspx?classcode=004001001
   # @brief: China manufacturer makes tablets for different small brands 
@@ -1102,6 +1254,15 @@ device_parsers:
     device_replacement: 'CobyKyros $1'
     brand_replacement: 'CobyKyros'
     model_replacement: '$1'
+
+  #########
+  # Coolpad
+  # @ref: ??
+  #########
+  - regex: '; *([^;/]*)Coolpad[ _]([^;/]+) Build'
+    device_replacement: '$1$2'
+    brand_replacement: 'Coolpad'
+    model_replacement: '$1$2'
 
   #########
   # CubeTablet
@@ -1207,7 +1368,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'SonyEricsson'
     model_replacement: '$1'
-  - regex: '; *(T\-\d.+) Build'
+  - regex: '; *(T\-01.+) Build'
     device_replacement: '$1'
     brand_replacement: 'Toshiba'
     model_replacement: '$1'
@@ -1220,7 +1381,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Fly'
     model_replacement: '$1'
-  - regex: '; *(Fly|FLY)[ _](IQ[^;]+);? Build'
+  - regex: '; *(Fly|FLY)[ _](IQ[^;]+|F[34]\d+[^;]*);? Build'
     device_replacement: '$1 $2'
     brand_replacement: 'Fly'
     model_replacement: '$2'
@@ -1266,13 +1427,13 @@ device_parsers:
     model_replacement: '$1'
 
   #########
-  # GSmart
+  # Gigabyte
   # @ref: http://gsmart.gigabytecm.com/en/
   #########
-  - regex: '; *GSmart[ -]([^/]+) Build'
-    device_replacement: 'GSmart $1'
-    brand_replacement: 'GSmart'
-    model_replacement: '$1'
+  - regex: '; *(GSmart)[ -]([^/]+) Build'
+    device_replacement: '$1 $2'
+    brand_replacement: 'Gigabyte'
+    model_replacement: '$1 $2'
 
   #########
   # Freescale development boards
@@ -1323,6 +1484,20 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Hisense
+  # @ref: ??
+  #########
+  - regex: '; *(EG\d{2,}|HS-[^;/]+) Build'
+    device_replacement: 'Hisense $1'
+    brand_replacement: 'Hisense'
+    model_replacement: '$1'
+  - regex: '; *(andromax[^;/]+) Build'
+    regex_flag: 'i'
+    device_replacement: 'Hisense $1'
+    brand_replacement: 'Hisense'
+    model_replacement: '$1'
+
+  #########
   # HP
   # @ref: http://www.hp.com/
   #########
@@ -1339,7 +1514,6 @@ device_parsers:
     brand_replacement: 'HP'
     model_replacement: 'TouchPad'
 
-
   #########
   # Huawei
   # @ref: http://www.huaweidevice.com
@@ -1349,7 +1523,7 @@ device_parsers:
     device_replacement: '$1$2'
     brand_replacement: 'Huawei'
     model_replacement: '$2'
-  - regex: '; *([^;/]+) Build[/ ]Huawei([A-Z]+\d+[^\);]+)\)'
+  - regex: '; *([^;/]+) Build[/ ]Huawei(MT1-U06|[A-Z]+\d+[^\);]+)[^\);]*\)'
     device_replacement: '$1'
     brand_replacement: 'Huawei'
     model_replacement: '$2'
@@ -1593,6 +1767,31 @@ device_parsers:
     model_replacement: '$1 $2'
 
   #########
+  # Intex
+  # @ref: http://intexmobile.in/index.aspx
+  # @note: Zync also offers a "Cloud Z5" device
+  #########
+  # smartphones
+  - regex: '; *(?:Intex[ _])?(AQUA|Aqua)([ _\.\-])([^;/]+) Build'
+    device_replacement: '$1$2$3'
+    brand_replacement: 'Intex'
+    model_replacement: '$1 $3'
+  # matches "INTEX CLOUD X1"
+  - regex: '; *(?:INTEX|Intex)(?:[_ ]([^\ _;/]+))(?:[_ ]([^\ _;/]+))? Build'
+    device_replacement: '$1 $2'
+    brand_replacement: 'Intex'
+    model_replacement: '$1 $2'
+  # tablets
+  - regex: '; *([iI]Buddy)[ _]?(Connect)(?:_|\?_| )?([^;/]*) Build'
+    device_replacement: '$1 $2 $3'
+    brand_replacement: 'Intex'
+    model_replacement: '$1 $2 $3'
+  - regex: '; *(?:(Connect)\-(3G)(?:\-([^;/]+))?|(I-Buddy) ([^;/]+)) Build'
+    device_replacement: '$1 $2 $3 $4 $5'
+    brand_replacement: 'Intex'
+    model_replacement: 'iBuddy $1 $2 $3 $4 $5'
+
+  #########
   # iOCEAN
   # @ref: http://www.iocean.cc/
   #########
@@ -1761,7 +1960,7 @@ device_parsers:
   # @ref: https://en.wikipedia.org/wiki/Kobo_Inc.
   # @ref: http://www.kobo.com/devices#tablets
   #########
-  - regex: '; *(Vox|Arc|K080) Build/'
+  - regex: '; *(Vox|VOX|Arc|K080) Build/'
     regex_flag: 'i'
     device_replacement: '$1'
     brand_replacement: 'Kobo'
@@ -1784,7 +1983,7 @@ device_parsers:
   # Kyocera
   # @ref: http://www.android.com/devices/?country=all&m=kyocera
   #########
-  - regex: '; *(Zio|Hydro|Torque|Event|Echo|Milano|URBANO PROGRESSO) Build/'
+  - regex: '; *(Zio|Hydro|Torque|Event|EVENT|Echo|Milano|Rise|URBANO PROGRESSO|WX04K|WX06K|WX10K|KYL21|101K) Build/'
     device_replacement: '$1'
     brand_replacement: 'Kyocera'
     model_replacement: '$1'
@@ -1806,15 +2005,15 @@ device_parsers:
   # Lenovo
   # @ref: http://support.lenovo.com/en_GB/downloads/default.page?#
   #########
-  - regex: '; *(A1_07|A2107A-H) Build/'
+  - regex: '; *(A1_07|A2107A-H|S2005A-H|S1-37AH0) Build'
     device_replacement: '$1'
     brand_replacement: 'Lenovo'
     model_replacement: '$1'
-  - regex: '; *(Idea[Tp]ab)[ _](.+) Build/'
+  - regex: '; *(Idea[Tp]ab)[ _](.+) Build'
     device_replacement: 'Lenovo $1 $2'
     brand_replacement: 'Lenovo'
     model_replacement: '$1 $2'
-  - regex: '; *(Idea(?:Tab|pad)) ?(.+) Build/'
+  - regex: '; *(Idea(?:Tab|pad)) ?(.+) Build'
     device_replacement: 'Lenovo $1 $2'
     brand_replacement: 'Lenovo'
     model_replacement: '$1 $2'
@@ -1822,7 +2021,7 @@ device_parsers:
     device_replacement: 'Lenovo $1 $2'
     brand_replacement: 'Lenovo'
     model_replacement: '$1 $2'
-  - regex: '; (?:Lenovo )+([^;/]+);? Build/'
+  - regex: '; *(?:LNV-)?(?:Lenovo[ _]|LENOVO[ _])+([^;/]+);? Build'
     device_replacement: 'Lenovo $1'
     brand_replacement: 'Lenovo'
     model_replacement: '$1'
@@ -1834,7 +2033,7 @@ device_parsers:
     device_replacement: 'Lenovo Ideapad K1'
     brand_replacement: 'Lenovo'
     model_replacement: 'Ideapad K1'
-  - regex: '; *(3GW10[01]) Build/'
+  - regex: '; *(3GC101|3GW10[01]) Build/'
     device_replacement: '$1'
     brand_replacement: 'Lenovo'
     model_replacement: '$1'
@@ -2049,6 +2248,15 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # MSI
+  # @ref: http://www.msi.com/product/windpad/
+  #########
+  - regex: '; *((?:Primo|Enjoy) \d{2}) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Msi'
+    model_replacement: '$1'
+
+  #########
   # Mytab
   # @ref: http://www.mytab.eu/en/category/mytab-products/
   #########
@@ -2111,10 +2319,28 @@ device_parsers:
     model_replacement: 'Tablet'
 
   #########
+  # Olivetti
+  # @ref: http://www.olivetti.de/EN/Page/t02/view_html?idp=348
+  #########
+  - regex: '; *(OP110|OliPad[^;/]+) Build'
+    device_replacement: 'Olivetti $1'
+    brand_replacement: 'Olivetti'
+    model_replacement: '$1'
+
+  #########
+  # OpenPeak
+  # @ref: https://support.google.com/googleplay/answer/1727131?hl=en
+  #########
+  - regex: '; *((?:CIUS|cius)[^;/]*) Build'
+    device_replacement: 'Openpeak $1'
+    brand_replacement: 'Openpeak'
+    model_replacement: '$1'
+
+  #########
   # Oppo
   # @ref: http://en.oppo.com/products/
   #########
-  - regex: '; *(Find ?5|R801|R8015|R803|R805|R807|R8111|T703|U701|U7011|U7015|X9015|X9017|X905|X907) Build'
+  - regex: '; *(Find ?5|R8[012]\d{1,2}|T703\d{0,1}|U70\d{1,2}T?|X90\d{1,2}) Build'
     device_replacement: 'Oppo $1'
     brand_replacement: 'Oppo'
     model_replacement: '$1'
@@ -2265,6 +2491,10 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Positivo'
     model_replacement: '$1'
+  - regex: '; *(?:Positivo )?((?:YPY|Ypy)[^;/]+) Build/'
+    device_replacement: '$1'
+    brand_replacement: 'Positivo'
+    model_replacement: '$1'
 
   #########
   # POV
@@ -2334,6 +2564,15 @@ device_parsers:
     model_replacement: '$2'
 
   #########
+  # Quanta
+  # @ref: ?
+  #########
+  - regex: '; *(TA1013) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Quanta'
+    model_replacement: '$1'
+
+  #########
   # Rockchip
   # @ref: http://www.rock-chips.com/a/cn/product/index.html
   # @note: manufacturer sells chipsets - I assume that these UAs are dev-boards
@@ -2351,10 +2590,6 @@ device_parsers:
   # Samsung Android Devices
   # @ref: http://www.samsung.com/us/mobile/cell-phones/all-products
   #########
-  - regex: '; *(SAMSUNG[ \-])?((?:GT-N51\d{2}|GT-N80\d{2}|GT-P\d{4}|SM-[PT]\d{3}|SGH-I957|SCH-I905|SHW-M380|SHW-M480|SHW-M500)[^:\/]*)\/?[^;/]* Build/'
-    device_replacement: '$1$2'
-    brand_replacement: 'Samsung'
-    model_replacement: '$2'
   - regex: '; *(SAMSUNG |Samsung )?((?:Galaxy Note II|GT-I9082|GT-I9205|GT-N7\d{3}|SM-N9005)[^;/]*)\/?[^;/]* Build/'
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
@@ -2367,7 +2602,7 @@ device_parsers:
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
     model_replacement: '$2'
-  - regex: '; *(Galaxy(?: Ace| Nexus| S II|Nexus S| with MCR 1.2| Mini Plus 4G)?) Build/'
+  - regex: '; *(Galaxy(?: Ace| Nexus| S ?II+|Nexus S| with MCR 1.2| Mini Plus 4G)?) Build/'
     device_replacement: '$1'
     brand_replacement: 'Samsung'
     model_replacement: '$1'
@@ -2375,31 +2610,23 @@ device_parsers:
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
     model_replacement: '$2'
-  - regex: '; *(?:SAMSUNG-)?(GT\-[BINPS]\d{4}[^\/]*)(\/[^ ]*) Build/'
+  - regex: '; *(SAMSUNG-)?(GT\-[BINPS]\d{4}[^\/]*)(\/[^ ]*) Build'
+    device_replacement: '$1$2$3'
+    brand_replacement: 'Samsung'
+    model_replacement: '$2'
+  - regex: '; *(GT\-[BINPS]\d{4}[^;/]*);? Build'
+    device_replacement: '$1'
+    brand_replacement: 'Samsung'
+    model_replacement: '$1'
+  - regex: '; (SAMSUNG-)([A-Za-z0-9\-]+).* Build/'
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
-    model_replacement: '$1'
-  - regex: '; *(GT\-[BINPS]\d{4}.*) Build/'
+    model_replacement: '$2'
+  - regex: '; *((?:SCH|SGH|SHV|SHW|SPH|SC|SM)\-[A-Za-z0-9 ]+)(/?[^ ]*)? Build'
     device_replacement: '$1'
     brand_replacement: 'Samsung'
     model_replacement: '$1'
-  - regex: '; SAMSUNG-([A-Za-z0-9\-]+).* Build/'
-    device_replacement: '$1'
-    brand_replacement: 'Samsung'
-    model_replacement: '$1'
-  - regex: '; *((?:SC|SCH|SGH|SM|SHV|SHW|SPH)\-[A-Za-z0-9]+).* Build/'
-    device_replacement: '$1'
-    brand_replacement: 'Samsung'
-    model_replacement: '$1'
-  - regex: '; *(Behold2) Build'
-    device_replacement: 'Samsung $1'
-    brand_replacement: 'Samsung'
-    model_replacement: '$1'
-  - regex: '; *(EK-GC100) Build/'
-    device_replacement: 'Samsung $1'
-    brand_replacement: 'Samsung'
-    model_replacement: '$1'
-  - regex: '; *(YP\-G.+) Build/'
+  - regex: '; *(Behold ?(?:2|II)|YP\-G.+|EK-GC100) Build'
     device_replacement: 'Samsung $1'
     brand_replacement: 'Samsung'
     model_replacement: '$1'
@@ -2409,10 +2636,14 @@ device_parsers:
   # @ref: http://www.sharp-phone.com/en/index.html
   # @ref: http://www.android.com/devices/?country=all&m=sharp
   #########
-  - regex: '; *(SH\-?\d\d.+) Build/'
+  - regex: '; *(SH\-?\d\d.+|SBM\d[^;/]+) Build'
     device_replacement: 'Sharp $1'
     brand_replacement: 'Sharp'
     model_replacement: '$1'
+  - regex: '; *(SHARP[ -])([^;/]+) Build'
+    device_replacement: '$1$2'
+    brand_replacement: 'Sharp'
+    model_replacement: '$2'
 
   #########
   # Simvalley
@@ -2450,6 +2681,16 @@ device_parsers:
     device_replacement: '$1 $2'
     brand_replacement: '$1'
     model_replacement: '$2'
+
+  #########
+  # Smartbitt
+  # @ref: http://www.smartbitt.com/
+  # @missing: SBT Useragents
+  #########
+  - regex: '; *(WF7C|WF10C|SBT[^;/]+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Smartbitt'
+    model_replacement: '$1'
 
   #########
   # Softbank (Operator Branded Devices)
@@ -2567,10 +2808,10 @@ device_parsers:
   # Spice
   # @ref: http://www.spicemobilephones.co.in/
   #########
-  - regex: '; *(CSL_Spice|Spice|CSL)[ _\-](.*) Build/'
-    device_replacement: '$1 $2'
+  - regex: '; *((?:CSL_Spice|Spice|SPICE|CSL)[ _\-]?)?([Mm][Ii])([ _\-])?(\d{3}[^;/]*) Build/'
+    device_replacement: '$1$2$3$4'
     brand_replacement: 'Spice'
-    model_replacement: '$2'
+    model_replacement: 'Mi$4'
 
   #########
   # Tagi
@@ -2580,6 +2821,15 @@ device_parsers:
     device_replacement: '$1$2$3'
     brand_replacement: 'Tagi'
     model_replacement: '$2$3'
+
+  #########
+  # Technicolor
+  # @ref: https://support.google.com/googleplay/answer/1727131?hl=en
+  #########
+  - regex: '; *(T-Hub2) Build'
+    device_replacement: 'Technicolor $1'
+    brand_replacement: 'Technicolor'
+    model_replacement: '$1'
 
   #########
   # Tecmobile 
@@ -2699,6 +2949,7 @@ device_parsers:
   #########
   # Toshiba
   # @ref: http://www.toshiba.co.jp/
+  # @missing: LT170, Thrive 7, TOSHIBA STB10
   #########
   - regex: '\b(TOSHIBA_AC_AND_AZ|TOSHIBA_FOLIO_AND_A|FOLIO_AND_A)'
     device_replacement: '$1'
@@ -2708,7 +2959,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Toshiba'
     model_replacement: 'Folio 100'
-  - regex: '; *(AT[0-9]{2,3}(?:\-A|LE\-A|SE)?) Build/'
+  - regex: '; *(AT[0-9]{2,3}(?:\-A|LE\-A|PE\-A|SE|a)?|AT7-A|AT1S0|Hikari-iFrame/WDPF-[^;/]+) Build/'
     device_replacement: 'Toshiba $1'
     brand_replacement: 'Toshiba'
     model_replacement: '$1'
@@ -2771,14 +3022,19 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Vertu
+  # @ref: ??
+  #########
+  - regex: '(VERTU) (Ti) Build/'
+    device_replacement: '$1 $2'
+    brand_replacement: 'Vertu'
+    model_replacement: '$2'
+
+  #########
   # Viewsonic
   # @ref: http://viewsonic.com
   #########
-  - regex: '; *(ViewPad.+) Build/'
-    device_replacement: '$1'
-    brand_replacement: 'Viewsonic'
-    model_replacement: '$1'
-  - regex: '; *(ViewPhone.+) Build/'
+  - regex: '; *((?:ViewPad|ViewPhone|VSD)[^;/]+) Build/'
     device_replacement: '$1'
     brand_replacement: 'Viewsonic'
     model_replacement: '$1'
@@ -2814,12 +3070,30 @@ device_parsers:
     model_replacement: '$1'
     
   #########
+  # WellcoM
+  # @ref: ??
+  #########
+  - regex: '; *WellcoM-([^;/]+) Build'
+    device_replacement: 'Wellcom $1'
+    brand_replacement: 'Wellcom'
+    model_replacement: '$1'
+    
+  #########
   # Wolfgang
   # @ref: http://wolfgangmobile.com/
   #########
   - regex: '; *(AT-AS[^;/]+) Build'
     device_replacement: 'Wolfgang $1'
     brand_replacement: 'Wolfgang'
+    model_replacement: '$1'
+
+  #########
+  # Woxter
+  # @ref: http://www.woxter.es/es-es/categories/index
+  #########
+  - regex: '; *Woxter.([^;/]+) Build'
+    device_replacement: 'Woxter $1'
+    brand_replacement: 'Woxter'
     model_replacement: '$1'
 
   #########
@@ -2941,6 +3215,11 @@ device_parsers:
     device_replacement: 'ZTE Blade'
     brand_replacement: 'ZTE'
     model_replacement: 'Blade'
+  - regex: '; Avea inTouch 2 Build'
+    regex_flag: 'i'
+    device_replacement: 'ZTE Blade III'
+    brand_replacement: 'ZTE'
+    model_replacement: 'Blade III'
   - regex: '; BASE Tab 7.1 Build/'
     device_replacement: 'ZTE Light Tab 2'
     brand_replacement: 'ZTE'
@@ -3056,11 +3335,11 @@ device_parsers:
   #########
   - regex: 'Android[\- ][\d]+\.[\d]+; [A-Za-z]{2}\-[A-Za-z]{0,2}; WOWMobile (.+) Build'
     model_replacement: '$1'
-  - regex: 'Android[\- ][\d]+\.[\d]+\-update1; [A-Za-z]{2}\-[A-Za-z]{0,2}; (.+) Build'
+  - regex: 'Android[\- ][\d]+\.[\d]+\-update1; [A-Za-z]{2}\-[A-Za-z]{0,2} *; *(.+) Build'
     model_replacement: '$1'
-  - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}; *[A-Za-z]{2}[_\-][A-Za-z]{0,2}; *(.+) Build'
+  - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}; *[A-Za-z]{2}[_\-][A-Za-z]{0,2} *; *(.+) Build'
     model_replacement: '$1'
-  - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}; *[A-Za-z]{0,2}\-; *(.+) Build' 
+  - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}; *[A-Za-z]{0,2}\- *; *(.+) Build' 
     model_replacement: '$1'
   # No build info at all - "Build" follows locale immediately 
   - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}; *[a-z]{0,2}[_\-]?[A-Za-z]{0,2};? Build' 
@@ -3667,7 +3946,7 @@ device_parsers:
   ##########
   # Spiders (this is hack...)
   ##########
-  - regex: '(bot|borg|google(^tv)|yahoo|slurp|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|vortex|voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler)'
+  - regex: '(bingbot|bot|borg|google(^tv)|yahoo|slurp|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|vortex|voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler)'
     regex_flag: 'i'
     device_replacement: 'Spider'
     model_replacement: 'Spider'

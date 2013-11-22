@@ -7,6 +7,7 @@ Additionally the following changes were made to the `regexes.yaml` file:
 user_agent_parsers:
 
 - Vodafone browser removed and corrected to Openwave
+- Bingbot added
 
 os_parsers:
 

@@ -1141,3 +1141,24 @@ test_cases:
     patch: 'r19840'
     patch_minor:
 
+  - user_agent_string: 'Mozilla/5.0 (compatible; bingbot/2.0;  http://www.bing.com/bingbot.htm)'
+    family: 'bingbot'
+    major: '2'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'
+    family: 'bingbot'
+    major: '2'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'bingbot/2.0 (+http://www.bing.com/bingbot.htm)'
+    family: 'bingbot'
+    major: '2'
+    minor: '0'
+    patch:
+    patch_minor:
+

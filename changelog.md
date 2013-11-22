@@ -1,11 +1,27 @@
 # Changelog
 
+## 2013-11-22
+
+### `regexes.yaml`
+
+user_agent_parsers:
+
+- Bingbot PR#311 added
+
+device_parsers:
+
+- Bingbot PR#311 added (detection was already present; added for completness)
+- More Android brands and models 
+- Improvements to previous device detection for some devices
+
+
 ## 2013-11-15
 
 ### `php`
 
 - Modernize PHP port of User Agent Parser from @lstrojny 
 - brand model device parsing with case insensitive testing
+
 
 ## 2013-11-14
 
