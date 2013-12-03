@@ -169,7 +169,7 @@ class Parser
                 return array($regex, $matches + $defaults);
             }
         }
-
+        
         return array(null, null);
     }
 
