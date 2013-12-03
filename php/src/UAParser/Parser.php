@@ -70,34 +70,13 @@ class Parser
     {
         $ua = new UserAgent();
 
-        if (isset($jsParseBits['js_user_agent_family']) && $jsParseBits['js_user_agent_family']) {
+        list($regex, $matches) = $this->tryMatch($this->regexes['user_agent_parsers'], $userAgent);
 
-            $ua->family = $jsParseBits['js_user_agent_family'];
-            $ua->major = $jsParseBits['js_user_agent_v1'];
-            $ua->minor = $jsParseBits['js_user_agent_v2'];
-            $ua->patch = $jsParseBits['js_user_agent_v3'];
-
-        } else {
-
-            list($regex, $matches) = $this->tryMatch($this->regexes['user_agent_parsers'], $userAgent);
-
-            if ($matches) {
-                $ua->family = $this->replaceString($regex, 'family_replacement', $matches[1]);
-                $ua->major = $this->replaceString($regex, 'v1_replacement', $matches[2]);
-                $ua->minor = $this->replaceString($regex, 'v2_replacement', $matches[3]);
-                $ua->patch = $this->replaceString($regex, 'v3_replacement', $matches[4]);
-            }
-        }
-
-        if (isset($jsParseBits['js_user_agent_string'])) {
-            $jsUserAgentString = $jsParseBits['js_user_agent_string'];
-            if (strpos($jsUserAgentString, 'Chrome/') !== false && strpos($userAgent, 'chromeframe') !== false) {
-                $override = $this->parseUserAgent($jsUserAgentString);
-                $ua->family = sprintf('Chrome Frame (%s %s)', $ua->family, $ua->major);
-                $ua->major = $override->major;
-                $ua->minor = $override->minor;
-                $ua->patch = $override->patch;
-            }
+        if ($matches) {
+            $ua->family = $this->replaceString($regex, 'family_replacement', $matches[1]);
+            $ua->major = $this->replaceString($regex, 'v1_replacement', $matches[2]);
+            $ua->minor = $this->replaceString($regex, 'v2_replacement', $matches[3]);
+            $ua->patch = $this->replaceString($regex, 'v3_replacement', $matches[4]);
         }
 
         return $ua;
@@ -156,7 +135,8 @@ class Parser
     {
 
         foreach ($regexes as $regex) {
-            if (preg_match('@' . $regex['regex'] . '@', $userAgent, $matches)) {
+            $flag = isset($regex['regex_flag']) ? $regex['regex_flag'] : '';
+            if (preg_match('@' . $regex['regex'] . '@' . $flag, $userAgent, $matches)) {
 
                 $defaults = array(
                     1 => 'Other',
@@ -208,7 +188,8 @@ class Parser
             },
             $regex[$key]
         );
-        
+        // remove tailing spaces
+        $replacement = preg_replace("|\s*$|", "", $replacement);
         return empty($replacement) ? null : $replacement;
     }
 
