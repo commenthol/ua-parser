@@ -138,7 +138,7 @@ class Parser
         list($regex, $matches) = $this->tryMatch($this->regexes['device_parsers'], $userAgent);
 
         if ($matches) {
-            $device->family = $this->multiReplace($regex, 'device_replacement', $matches[1], $matches);            
+            $device->family = $this->multiReplace($regex, 'device_replacement', $matches[1], $matches);
             $device->brand  = $this->multiReplace($regex, 'brand_replacement' , null, $matches);
             $deviceModelDefault = $matches[1] != 'Other' ? $matches[1] : null;
             $device->model  = $this->multiReplace($regex, 'model_replacement' , $deviceModelDefault, $matches);
@@ -187,7 +187,7 @@ class Parser
 
         return str_replace('$1', $string, $regex[$key]);
     }
-    
+
     /**
      * @param array $regex
      * @param string $key
