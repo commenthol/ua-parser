@@ -4,7 +4,7 @@ var startsWithDigit = require('./helpers').startsWithDigit;
 
 exports.OS = OS;
 
-function OS(family, major, minor, patch, patchMinor, debug) {
+function OS(family, major, minor, patch, patchMinor) {
   this.family = family || 'Other';
   this.major = major || null;
   this.minor = minor || null;

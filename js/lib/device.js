@@ -1,10 +1,9 @@
 exports.Device = Device;
 
-function Device(family, brand, model, debug) {
+function Device(family, brand, model) {
   this.family = family || 'Other';
-  this.brand  = brand  || null;
-  this.model  = model  || null;
-  if (debug) { this.debug = debug; }
+  this.brand = brand || null;
+  this.model = model || null;
 }
 
 Device.prototype.toString = function() {
@@ -21,9 +20,8 @@ exports.makeParser = function(regexes) {
   var parsers = regexes.map(function (obj) {
     var regexp,
         deviceRep = obj.device_replacement,
-        brandRep  = obj.brand_replacement,
-        modelRep  = obj.model_replacement,
-        debug     = obj.debug;
+        brandRep = obj.brand_replacement,
+        modelRep  = obj.model_replacement;
         
     if (obj.regex_flag) {
       regexp = new RegExp(obj.regex, obj.regex_flag);
@@ -39,7 +37,7 @@ exports.makeParser = function(regexes) {
       var family = deviceRep ? multiReplace(deviceRep, m) : m[1];
       var brand  = brandRep  ? multiReplace(brandRep, m)  : null;
       var model  = modelRep  ? multiReplace(modelRep, m)  : m[1];
-      return new Device(family, brand, model, debug);
+      return new Device(family, brand, model);
     }
 
     return parser;

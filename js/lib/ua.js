@@ -3,7 +3,7 @@ var startsWithDigit = require('./helpers').startsWithDigit,
 
 exports.UA = UA;
 
-function UA(family, major, minor, patch, debug) {
+function UA(family, major, minor, patch) {
   this.family = family || 'Other';
   this.major = major || null;
   this.minor = minor || null;
