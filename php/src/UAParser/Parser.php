@@ -204,7 +204,7 @@ class Parser
             $regex->{$key}
         );
         // remove tailing spaces
-        $replacement = preg_replace("|\s*$|", "", $replacement);
+        $replacement = ltrim(rtrim($replacement));
         $replacement = ($replacement == '' ? null : $replacement);
         return $replacement;
     }
