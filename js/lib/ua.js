@@ -8,7 +8,6 @@ function UA(family, major, minor, patch) {
   this.major = major || null;
   this.minor = minor || null;
   this.patch = patch || null;
-  if (debug) { this.debug = debug; }
 }
 
 require('util').inherits(UA, OS);
@@ -18,8 +17,7 @@ function _makeParsers(obj) {
       famRep = obj.family_replacement,
       majorRep = obj.v1_replacement,
       minorRep = obj.v2_replacement,
-      patchRep = obj.v3_replacement,
-      debug = obj.debug;
+      patchRep = obj.v3_replacement;
 
   function parser(str) {
     var m = str.match(regexp);
@@ -30,7 +28,7 @@ function _makeParsers(obj) {
         minor = minorRep || m[3],
         patch = patchRep || m[4];
 
-    return new UA(family, major, minor, patch, debug);
+    return new UA(family, major, minor, patch);
   }
 
   return parser;

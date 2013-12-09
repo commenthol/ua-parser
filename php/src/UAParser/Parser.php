@@ -48,11 +48,11 @@ class Parser
      * @param array $jsParseBits
      * @return Client
      */
-    public function parse($userAgent, array $jsParseBits = array())
+    public function parse($userAgent)
     {
         $result = new Client($userAgent);
 
-        $result->ua = $this->parseUserAgent($userAgent, $jsParseBits);
+        $result->ua = $this->parseUserAgent($userAgent);
         $result->os = $this->parseOperatingSystem($userAgent);
         $result->device = $this->parseDevice($userAgent);
 
@@ -66,7 +66,7 @@ class Parser
      * @param array $jsParseBits
      * @return UserAgent
      */
-    private function parseUserAgent($userAgent, array $jsParseBits = array())
+    private function parseUserAgent($userAgent)
     {
         $ua = new UserAgent();
 

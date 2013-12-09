@@ -10,7 +10,6 @@ function OS(family, major, minor, patch, patchMinor) {
   this.minor = minor || null;
   this.patch = patch || null;
   this.patchMinor = patchMinor || null;
-  if (debug) { this.debug = debug; }
 }
 
 OS.prototype.toVersionString = function() {
@@ -44,8 +43,7 @@ function _makeParsers(obj) {
       majorRep = obj.os_v1_replacement,
       minorRep = obj.os_v2_replacement,
       patchRep = obj.os_v3_replacement,
-      patchMinorRep = obj.os_v4_replacement,
-      debug = obj.debug;
+      patchMinorRep = obj.os_v4_replacement;
 
   function parser(str) {
     var m = str.match(regexp);
@@ -57,7 +55,7 @@ function _makeParsers(obj) {
         patch = patchRep || m[4],
         patchMinor = patchMinorRep || m[5];
 
-    return new OS(family, major, minor, patch, patchMinor, debug);
+    return new OS(family, major, minor, patch, patchMinor);
   }
 
   return parser;

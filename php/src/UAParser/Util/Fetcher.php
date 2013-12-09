@@ -12,6 +12,7 @@ use UAParser\Exception\FetcherException;
 
 class Fetcher
 {
+    //~ private $resourceUri = 'https://raw.github.com/tobie/ua-parser/master/regexes.yaml';
     private $resourceUri = 'https://raw.github.com/commenthol/ua-parser/master/regexes.yaml';
 
     /** @var resource */
