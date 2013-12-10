@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/commenthol/ua-parser.png?branch=master)](https://travis-ci.org/commenthol/ua-parser)
+
 This is a fork from [ua-parser](http://github.com/tobie/ua-parser) which contains the following changes:
 
 The changes contain the currently open PR #285, #292, #293, #300, #301, #302, #303.

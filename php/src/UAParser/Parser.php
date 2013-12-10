@@ -48,7 +48,7 @@ class Parser
      * @param array $jsParseBits
      * @return Client
      */
-    public function parse($userAgent)
+    public function parse($userAgent, array $jsParseBits = array())
     {
         $result = new Client($userAgent);
 
@@ -119,8 +119,8 @@ class Parser
         if ($matches) {
             $device->family = $this->multiReplace($regex, 'device_replacement', $matches[1], $matches);
             $device->brand  = $this->multiReplace($regex, 'brand_replacement' , null, $matches);
-            $mr_default = ($matches[1] != 'Other' ? $matches[1] : null);
-            $device->model  = $this->multiReplace($regex, 'model_replacement' , $mr_default, $matches);
+            $deviceModelDefault = $matches[1] != 'Other' ? $matches[1] : null;
+            $device->model  = $this->multiReplace($regex, 'model_replacement' , $deviceModelDefault, $matches);
         }
 
         return $device;
@@ -159,7 +159,7 @@ class Parser
      * @param string $string
      * @return string
      */
-    private function replaceString($regex, $key, $string)
+    private function replaceString(array $regex, $key, $string)
     {
         if (!isset($regex[$key])) {
             return $string;
@@ -175,22 +175,24 @@ class Parser
      * @param array $matches
      * @return string
      */
-    private function multiReplace($regex, $key, $default, $matches)
+    private function multiReplace(array $regex, $key, $default, array $matches)
     {
         if (!isset($regex[$key])) {
             return $default;
         }
+        
         $replacement = preg_replace_callback(
-            "|\\$(?<key>\d)|",
+            "|\\$(?<key>\d)|", 
             function ($m) use ($matches){
                 return isset($matches[$m['key']]) ? $matches[$m['key']] : "";
             },
             $regex[$key]
         );
-        // remove tailing spaces
+
+        // remove heading and tailing spaces
         $replacement = ltrim(rtrim($replacement));
-        $replacement = ($replacement == '' ? null : $replacement);
-        return $replacement;
+
+        return empty($replacement) ? null : $replacement;
     }
 
     private static function getDefaultFile()

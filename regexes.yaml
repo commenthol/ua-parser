@@ -3933,7 +3933,7 @@ device_parsers:
   ##########
   # Generic Smart Phone
   ##########
-  - regex: '(Symbian|S60|Windows CE|Opera Mobi|Opera Mini|BREW|Brew|Mobile; .+Firefox/|iPhone OS|Android|MobileSafari|^N97\-[14]|\(webOS/|PalmOS)'
+  - regex: '(Symbian|\bS60\b|Windows CE|Opera Mobi|BREW|Brew|Mobile; .+Firefox/|iPhone OS|Android|MobileSafari|^N97\-[14]|\(webOS/|PalmOS)'
     device_replacement: 'Generic Smartphone'
     brand_replacement: 'Generic'
     model_replacement: 'Smartphone'
