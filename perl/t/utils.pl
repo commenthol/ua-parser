@@ -8,6 +8,9 @@ my $resources = 'https://raw.github.com/commenthol/ua-parser/master/test_resourc
 my $load_from_local_file = 0;
 my $dir = "../test_resources/";
 
+my $load_from_local_file = 0;
+my $dir = "../test_resources/";
+
 sub get_test_yaml {
     my $file = shift;
     my $content;

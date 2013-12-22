@@ -8,13 +8,12 @@
  */
 namespace UAParser\Tests;
 
-use PHPUnit_Framework_TestCase as AbstractTestCase;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
 use Symfony\Component\Yaml\Yaml;
 use UAParser\Parser;
 
-class ParserTest extends AbstractTestCase
+class ParserTest extends AbstractParserTest
 {
     /** @var Parser */
     private $parser;
@@ -24,7 +23,7 @@ class ParserTest extends AbstractTestCase
 
     public static function setUpBeforeClass()
     {
-        static::$staticParser = new Parser();
+        static::$staticParser = Parser::create();
     }
 
     public function setUp()
@@ -108,7 +107,7 @@ class ParserTest extends AbstractTestCase
         $rounds = 0;
         for ($a = 0; $a < 1000; $a++) {
             foreach ($userAgents as $userAgent) {
-                $parser = new Parser();
+                $parser = Parser::create();
                 $this->assertNotSame('Other', $parser->parse($userAgent)->ua->family);
                 $rounds++;
             }
@@ -134,6 +133,7 @@ class ParserTest extends AbstractTestCase
         new Parser('invalidFile');
     }
 
+    /** @deprecated */
     public function testExceptionOnFileNotFoundInvalidDefault()
     {
         $this->setExpectedException(
@@ -184,6 +184,18 @@ class ParserTest extends AbstractTestCase
         $this->assertSame($userAgentString, $result->originalUserAgent);
     }
 
+    /** @deprecated */
+    public function testCreateWithDeprecatedConstructorCustom()
+    {
+        $parserClassName = $this->getParserClassName();
+
+        $this->setExpectedException(
+            'PHPUnit_Framework_Error_Deprecated',
+            'Using the constructor is deprecated. Use Parser::create(string $file = null) instead'
+        );
+        new $parserClassName(__DIR__ . '/../../../resources/regexes.php');
+    }
+
     private static function createTestData(Finder $resources)
     {
         $resourcesDirectory = __DIR__ . '/../../../../test_resources';
@@ -214,5 +226,10 @@ class ParserTest extends AbstractTestCase
             isset($testCase['model']) ? $testCase['model'] : null,
             $resource->getFilename()
         );
+    }
+
+    protected function getParserClassName()
+    {
+        return 'UAParser\Parser';
     }
 }
