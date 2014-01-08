@@ -1571,6 +1571,15 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Google
+  # @ref: http://www.google.de/glass/start/
+  #########
+  - regex: '; *(Glass \d+) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Google'
+    model_replacement: '$1'
+
+  #########
   # Gigabyte
   # @ref: http://gsmart.gigabytecm.com/en/
   #########
