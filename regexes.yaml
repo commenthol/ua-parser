@@ -811,10 +811,10 @@ device_parsers:
   # @note: VegaBean and VegaComb (names derived from jellybean, honeycomb) are 
   #   custom ROM builds for Vega
   #########
-  - regex: '; *(Vega(?:Bean|Comb)?).* Build'
-    device_replacement: '$1'
+  - regex: '; *(Advent )?(Vega(?:Bean|Comb)?).* Build'
+    device_replacement: '$1$2'
     brand_replacement: 'Advent'
-    model_replacement: '$1'
+    model_replacement: '$2'
 
   #########
   # Ainol 
@@ -857,7 +857,7 @@ device_parsers:
     device_replacement: 'Alcatel One Touch $2'
     brand_replacement: 'Alcatel'
     model_replacement: 'One Touch $2'
-  - regex: '; *(?:alcatel[ _])?(?:(?:one[ _]?touch[ _])|ot[ \-])([^;/]+) Build'
+  - regex: '; *(?:alcatel[ _])?(?:(?:one[ _]?touch[ _])|ot[ \-])([^;/]+);? Build'
     regex_flag: 'i'
     device_replacement: 'Alcatel One Touch $1'
     brand_replacement: 'Alcatel'
@@ -1167,7 +1167,7 @@ device_parsers:
     brand_replacement: 'Blu'
     model_replacement: '$2'
   # BMOBILE = operator branded device
-  - regex: '; *(?:BMOBILE )?(Blu|BLU|DASH [^;/]+|VIVO 4\.3) Build'
+  - regex: '; *(?:BMOBILE )?(Blu|BLU|DASH [^;/]+|VIVO 4\.3|TANK 4\.5) Build'
     device_replacement: '$1'
     brand_replacement: 'Blu'
     model_replacement: '$1'
@@ -1325,10 +1325,10 @@ device_parsers:
   # @ref: http://cobykyros.com
   # @note: Be careful with MID\d{3} from MpMan or Manta
   #########
-  - regex: '; *(?:CFW-|Kyros )?(MID[0-9]{4}([ABC]|SR|TV)?)( 3G|\(3G\)-4G| GB 8K| 8K| GB)? Build'
-    device_replacement: 'CobyKyros $1'
+  - regex: '; *(?:CFW-|Kyros )?(MID[0-9]{4}(?:[ABC]|SR|TV)?)(\(3G\)-4G| GB 8K| 3G| 8K| GB)? *(?:Build|[;\)])'
+    device_replacement: 'CobyKyros $1$2'
     brand_replacement: 'CobyKyros'
-    model_replacement: '$1'
+    model_replacement: '$1$2'
 
   #########
   # Coolpad
@@ -1540,6 +1540,16 @@ device_parsers:
     model_replacement: '$2'
 
   #########
+  # Gfive
+  # @ref: http://www.gfivemobile.com/en
+  #########
+  #- regex: '; *(G\'?FIVE) ([^;/]+) Build' # there is a problem with python yaml parser here
+  - regex: '; *(G[^F]?FIVE) ([^;/]+) Build'
+    device_replacement: '$1 $2'
+    brand_replacement: 'Gfive'
+    model_replacement: '$2'
+
+  #########
   # Gionee
   # @ref: http://www.gionee.com/
   #########
@@ -1561,7 +1571,7 @@ device_parsers:
   # GoClever
   # @ref: http://www.goclever.com
   #########
-  - regex: '; *(FONE \d+) Build'
+  - regex: '; *((?:FONE|QUANTUM|INSIGNIA) \d+[^;/]*|PLAYTAB) Build'
     device_replacement: 'GoClever $1'
     brand_replacement: 'GoClever'
     model_replacement: '$1'
@@ -1605,6 +1615,10 @@ device_parsers:
   - regex: '; *Haier ([^/]+) Build'
     device_replacement: 'Haier $1'
     brand_replacement: 'Haier'
+    model_replacement: '$1'
+  - regex: '; *(PAD1016) Build'
+    device_replacement: 'Haipad $1'
+    brand_replacement: 'Haipad'
     model_replacement: '$1'
 
   #########
@@ -2324,6 +2338,15 @@ device_parsers:
     model_replacement: '$1'
     
   #########
+  # Lexibook
+  # @ref: http://www.lexibook.com/fr
+  #########
+  - regex: '; *(MFC\d+)[A-Z]{2}([^;,/]*),? Build'
+    device_replacement: '$1$2'
+    brand_replacement: 'Lexibook' 
+    model_replacement: '$1$2'
+
+  #########
   # LG
   # @ref: http://www.lg.com/uk/mobile
   #########
@@ -2410,7 +2433,7 @@ device_parsers:
   # Medion
   # @ref: http://www.medion.com/en/
   #########
-  - regex: '; *(?:MD_)?LIFETAB_([^;/]+) Build'
+  - regex: '; *(?:MD_)?LIFETAB[ _]([^;/]+) Build'
     regex_flag: 'i'
     device_replacement: 'Medion Lifetab $1'
     brand_replacement: 'Medion'
@@ -2651,6 +2674,21 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Omega
+  # @ref: http://omega-technology.eu/en/produkty/346/tablets
+  # @note: MID tablets might get matched by CobyKyros first
+  # @models: (T107|MID(?:700[2-5]|7031|7108|7132|750[02]|8001|8500|9001|971[12])
+  #########
+  - regex: '; *OMEGA[ _\-](MID[^;/]+) Build'
+    device_replacement: 'Omega $1'
+    brand_replacement: 'Omega'
+    model_replacement: '$1'
+  - regex: '^(MID7500|MID\d+) Mozilla/5\.0 \(iPad;'
+    device_replacement: 'Omega $1'
+    brand_replacement: 'Omega'
+    model_replacement: '$1'
+
+  #########
   # OpenPeak
   # @ref: https://support.google.com/googleplay/answer/1727131?hl=en
   #########
@@ -2839,7 +2877,7 @@ device_parsers:
   # Pomp
   # @ref: http://pompmobileshop.com/
   #########
-  - regex: '; *(POMP)[ _\-]([^;/]+) Build'
+  - regex: '; *(POMP)[ _\-]((?:(?!Build|[;/\)]).)+) *(?:Build|[;/\)])'
     device_replacement: '$1 $2'
     brand_replacement: 'Pomp'
     model_replacement: '$2'
@@ -2951,7 +2989,7 @@ device_parsers:
   # Samsung Android Devices
   # @ref: http://www.samsung.com/us/mobile/cell-phones/all-products
   #########
-  - regex: '; *(SAMSUNG |Samsung )?((?:Galaxy Note II|GT-I9082|GT-I9205|GT-N7\d{3}|SM-N9005)[^;/]*)\/?[^;/]* Build/'
+  - regex: '; *(SAMSUNG |Samsung )?((?:Galaxy (?:Note II|S\d)|GT-I9082|GT-I9205|GT-N7\d{3}|SM-N9005)[^;/]*)\/?[^;/]* Build/'
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
     model_replacement: '$2'
@@ -3607,7 +3645,7 @@ device_parsers:
   # ZTE
   # @ref: http://www.ztedevices.com/
   #########
-  - regex: '; *(ARIZONA|(?:ATLAS|Atlas) W|D930|Grand (?:[SX][^;]*|Era|Memo[^;]*)|JOE|(?:Kis|KIS)\b[^;]*|Libra|Light [^;]*|N8[056][01]|N850L|N8000|N9[15]\d{2}|N9810|NX501|Optik|(?:Vip )Racer[^;]*|RacerII|San Francisco[^;]*|V9[AC]|V55|V881|Z[679][0-9]{2}[A-z]?) Build'
+  - regex: '; *(ARIZONA|(?:ATLAS|Atlas) W|D930|Grand (?:[SX][^;]*|Era|Memo[^;]*)|JOE|(?:Kis|KIS)\b[^;]*|Libra|Light [^;]*|N8[056][01]|N850L|N8000|N9[15]\d{2}|N9810|NX501|Optik|(?:Vip )Racer[^;]*|RacerII|RACERII|San Francisco[^;]*|V9[AC]|V55|V881|Z[679][0-9]{2}[A-z]?) Build'
     device_replacement: '$1'
     brand_replacement: 'ZTE'
     model_replacement: '$1'
