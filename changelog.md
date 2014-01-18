@@ -1,5 +1,12 @@
 # Changelog
 
+## 2014-01-xx
+
+**regexes.yaml**
+
+- improvements
+  - MOZILLA FIREBIRD is not from brand Bird
+
 ## 2014-01-18
 
 **regexes.yaml**
@@ -19,6 +26,9 @@
   Airmail,Outlook,Thunderbird new. Lightning updated
 
 ## 2014-01-11
+
+**regexes.yaml**
+
 - improvements 
   - Advent Vega, Alcatel One Touch with ",", Blue Tank 4.5, Medion Lifetab, Pomp, Samsung Galaxy S*, ZTE RACERII fix: CobyKyros MID
 - new 

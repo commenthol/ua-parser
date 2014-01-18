@@ -4154,7 +4154,7 @@ device_parsers:
   ##########
   # Bird
   ##########
-  - regex: 'BIRD[ \-\.]([A-Za-z0-9]+)'
+  - regex: '\bBIRD[ \-\.]([A-Za-z0-9]+)'
     device_replacement: 'Bird $1'
     brand_replacement: 'Bird'
     model_replacement: '$1'
@@ -4162,7 +4162,7 @@ device_parsers:
   ##########
   # Dell
   ##########
-  - regex: 'Dell ([A-Za-z0-9]+)'
+  - regex: '\bDell ([A-Za-z0-9]+)'
     device_replacement: 'Dell $1'
     brand_replacement: 'Dell'
     model_replacement: '$1'
