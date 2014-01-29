@@ -730,7 +730,7 @@ os_parsers:
   ##########
   # Firefox OS
   ##########
-  - regex: '\(Mobile;( [^;]+;)? rv:[^\)]+\) Gecko/[^\/]+ Firefox/(\d+)\.([0-9a-z]+)$'
+  - regex: '\((?:Mobile|Tablet);( [^;]+;)? rv:[^\)]+\) Gecko/[^\/]+ Firefox/(\d+)\.([0-9a-z]+)$'
     os_replacement: 'Firefox OS'
 
   ##########

@@ -9,11 +9,7 @@
 namespace UAParser\Tests;
 
 use PHPUnit_Framework_TestCase as AbstractTestCase;
-use Symfony\Component\Finder\Finder;
-use Symfony\Component\Finder\SplFileInfo;
-use Symfony\Component\Yaml\Yaml;
 use UAParser\AbstractParser;
-use UAParser\Parser;
 
 abstract class AbstractParserTest extends AbstractTestCase
 {
@@ -45,18 +41,26 @@ abstract class AbstractParserTest extends AbstractTestCase
         $parserClassName::create('foo.php');
     }
 
-    /** @deprecated */
     public function testExceptionOnFileNotFoundInvalidDefault()
     {
         $parserClassName = $this->getParserClassName();
 
         $this->setExpectedException(
             'UAParser\Exception\FileNotFoundException',
-            'Please download the "invalidFile" file before using ua-parser by running "php bin/uaparser.php uaparser:update"'
+            'Please download the "invalidFile" file before using ua-parser by running "php bin/uaparser.php ua-parser:update"'
         );
 
         $parserClassName::$defaultFile = 'invalidFile';
         $parserClassName::create();
+    }
+
+    public function testDefaultFileIsAbsolute()
+    {
+        $class = new \ReflectionClass('UAParser\AbstractParser');
+        $method = $class->getMethod('getDefaultFile');
+        $method->setAccessible(true);
+
+        $this->assertNotContains('..', $method->invoke(null));
     }
 
     public function tearDown()

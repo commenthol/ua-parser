@@ -9,6 +9,8 @@
  */
 namespace UAParser;
 
+use UAParser\Exception\FileNotFoundException;
+
 abstract class AbstractParser
 {
     /** @var string */
@@ -142,6 +144,8 @@ abstract class AbstractParser
      */
     protected static function getDefaultFile()
     {
-        return static::$defaultFile ? static::$defaultFile : __DIR__ . '/../../resources/regexes.php';
+        return static::$defaultFile
+            ? static::$defaultFile
+            : realpath(__DIR__ . '/../../resources') . DIRECTORY_SEPARATOR . 'regexes.php';
     }
 }
