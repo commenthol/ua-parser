@@ -2699,6 +2699,16 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Nokia
+  # @ref: http://www.nokia.com
+  #########
+  - regex: '; *(Nokia)([ _\-]*)([^;/]*) Build'
+    regex_flag: 'i'
+    device_replacement: '$1$2$3'
+    brand_replacement: 'Nokia'
+    model_replacement: '$3'
+    
+  #########
   # Nook
   # @ref:
   # TODO nook browser/1.0
@@ -3057,7 +3067,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Samsung'
     model_replacement: '$1'
-  - regex: '; *(SAMSUNG[ _\-] *)([^;/]+) Build'
+  - regex: '; *(SAMSUNG[ _\-] *)+([^;/]+) Build'
     device_replacement: '$1$2'
     brand_replacement: 'Samsung'
     model_replacement: '$2'
@@ -3210,23 +3220,16 @@ device_parsers:
   # @TODO: type!
   #########
   # android matchers
-  - regex: '; SonyEricsson([A-Za-z0-9\-]+) Build/'
-    device_replacement: 'SonyEricsson$1'
+  - regex: '; *(Sony ?Ericsson ?)([^;/]+) Build'
+    device_replacement: '$1$2'
     brand_replacement: 'SonyEricsson'
-    model_replacement: '$1'
-  - regex: '; *(Xperia Tablet S) Build/'
+    model_replacement: '$2'
+  - regex: '; *((?:SK|ST|E|X|LT|MK|MT|WT)\d{2}[a-z0-9]*(?:-o)?|R800i|U20i) Build'
     device_replacement: '$1'
     brand_replacement: 'SonyEricsson'
     model_replacement: '$1'
-  - regex: '; *(Xperia [^;/]+|R800i|U20i) Build/'
-    device_replacement: '$1'
-    brand_replacement: 'SonyEricsson'
-    model_replacement: '$1'
-  - regex: '; *((?:SK|ST|E|X|LT|MK|MT|WT)\d{2}[a-z0-9]*(?:-o)?) Build/'
-    device_replacement: '$1'
-    brand_replacement: 'SonyEricsson'
-    model_replacement: '$1'
-  - regex: '; *(C[0-9]{4}) Build/'
+  - regex: '; *(Xperia (?:A8|Arc|Acro|Active|Live with Walkman|Mini|Neo|Play|Pro|Ray|X\d+)[^;/]*) Build'
+    regex_flag: 'i'
     device_replacement: '$1'
     brand_replacement: 'SonyEricsson'
     model_replacement: '$1'
@@ -3237,23 +3240,31 @@ device_parsers:
   # @ref: http://www.sonymobile.com/global-en/products/phones/
   # @ref: http://www.sony.jp/tablet/
   #########
-  - regex: '; Sony (Tablet[^;/]+) Build/'
+  - regex: '; Sony (Tablet[^;/]+) Build'
     device_replacement: 'Sony $1'
     brand_replacement: 'Sony'
     model_replacement: '$1'
-  - regex: '; Sony ([^;/]+) Build/'
+  - regex: '; Sony ([^;/]+) Build'
     device_replacement: 'Sony $1'
     brand_replacement: 'Sony'
     model_replacement: '$1'
-  - regex: '; *(Sony)([A-Za-z0-9\-]+) Build/'
+  - regex: '; *(Sony)([A-Za-z0-9\-]+) Build'
     device_replacement: '$1$2'
     brand_replacement: '$1'
     model_replacement: '$2'
-  - regex: '; *(SGP\d{3}|SGPT\d{2}) Build/'
+  - regex: '; *(Xperia [^;/]+) Build'
     device_replacement: '$1'
     brand_replacement: 'Sony'
     model_replacement: '$1'
-  - regex: '; *(NW-Z1000Series) Build/'
+  - regex: '; *(C[0-9]{4}|D[25]\d{3}) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Sony'
+    model_replacement: '$1'
+  - regex: '; *(SGP\d{3}|SGPT\d{2}) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Sony'
+    model_replacement: '$1'
+  - regex: '; *(NW-Z1000Series) Build'
     device_replacement: '$1'
     brand_replacement: 'Sony'
     model_replacement: '$1'
@@ -3952,7 +3963,7 @@ device_parsers:
   #########
   # Samsung Windows Phones
   #########
-  - regex: '\(compatible; MSIE [^;]+; Windows Phone [^;]+; Trident/[^;]+; ?(?:ARM; Touch; ?)?IEMobile/[^;]+; ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?)?(?:SAMSUNG)[^;]*; *([^;,\.\)]+)'
+  - regex: '\(compatible; MSIE [^;]+; Windows Phone [^;]+; Trident/[^;]+; ?(?:ARM; Touch; ?)?IEMobile/[^;]+; ?(?:ARM; ?Touch; ?|Touch; ?|WpsLondonTest; ?)?(?:SAMSUNG)[^;]*; *(?:SAMSUNG )?([^;,\.\)]+)'
     device_replacement: 'Samsung $1'
     brand_replacement: 'Samsung'
     model_replacement: '$1'

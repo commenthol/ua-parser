@@ -1,11 +1,18 @@
 # Changelog
 
-## 2014-01-xx
+## 2014-01-29
 
 **regexes.yaml**
 
 - improvements
+  - UAs with doubled Samsung Values get corrected
+  - devices matching brand SonyEricsson ar shifted to Sony for newer Xperia devices
   - MOZILLA FIREBIRD is not from brand Bird
+- new
+  - Nokia Android matchers
+- merge
+  - PR#331 Firefox OS for Tablet
+  - PHP changes
 
 ## 2014-01-18
 
