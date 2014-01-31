@@ -791,19 +791,19 @@ os_parsers:
 device_parsers:
 
   #########
-  # Spider
-  # Catch the google mobile crawler before checking for iPhones / Androids.
+  # Mobile Spiders
+  # Catch the mobile crawler before checking for iPhones / Androids.
   #########
-  - regex: 'http://www\.google\.com/bot\.html'
+  - regex: '(?:iPhone|Windows CE|Android).*(?:(?:Bot|Yeti)-Mobile|YRSpider|bots?/\d|(?:bot|spider)\.html)|AdsBot-Google-Mobile.*iPhone'
     regex_flag: 'i'
-    device_replacement: 'Spider'
-    model_replacement: 'Spider'
-  - regex: 'AdsBot-Google-Mobile'
-    device_replacement: 'Spider'
-    model_replacement: 'Spider'
-  - regex: 'Googlebot-Mobile/(\d+).(\d+)'
-    device_replacement: 'Spider'
-    model_replacement: 'Spider'
+    device_replacement: 'Spider Smartphone'
+    brand_replacement: 'Spider'
+    model_replacement: 'Smartphone'
+  - regex: '(?:DoCoMo|\bMOT\b|\bLG\b|Nokia|Samsung|SonyEricsson).*(?:(?:Bot|Yeti)-Mobile|bots?/\d|(?:bot|crawler)\.html|(?:jump|google|Wukong)bot|ichiro/mobile|/spider|YahooSeeker)'
+    regex_flag: 'i'
+    device_replacement: 'Spider Feature Phone'
+    brand_replacement: 'Spider'
+    model_replacement: 'Feature Phone'
 
   #########
   # WebBrowser for SmartWatch
@@ -4473,7 +4473,8 @@ device_parsers:
   - regex: '(bingbot|bot|borg|google(^tv)|yahoo|slurp|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|vortex|voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler)'
     regex_flag: 'i'
     device_replacement: 'Spider'
-    model_replacement: 'Spider'
+    brand_replacement: 'Spider'
+    model_replacement: 'Desktop'
 
   ##########
   # Generic Feature Phone

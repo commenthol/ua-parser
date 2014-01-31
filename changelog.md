@@ -1,5 +1,12 @@
 # Changelog
 
+## 2014-01-30
+
+**regexes.yaml**
+
+- improvements
+  - distinguish between mobile spiders per smart- or feature phone
+
 ## 2014-01-29
 
 **regexes.yaml**
