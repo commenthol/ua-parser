@@ -53,8 +53,14 @@ There are a few other libraries which make use of ua-parser's patterns. These in
 
 Usage :: [node.js][1]
 ---------------------
+
+[API Documentation](js/doc/uaparser.md)
+
 ```js
-var r = require('ua-parser').parse(navigator.userAgent);
+var r,
+    uaParser = require('ua-parser')();
+
+r = uaParser.parse(navigator.userAgent);
 
 console.log(r.ua.toString());        // -> "Safari 5.0.1"
 console.log(r.ua.toVersionString()); // -> "5.0.1"
@@ -71,18 +77,20 @@ console.log(r.os.minor);             // -> "1"
 console.log(r.os.patch);             // -> null
 
 console.log(r.device.family);        // -> "iPhone"
+console.log(r.device.brand);         // -> "Apple"
+console.log(r.device.model);         // -> "iPhone"
 ```
 
 Note if you're only interested in one of the `ua`, `device` or `os` objects, you will getter better performance by using the more specific methods (`uaParser.parseUA`, `uaParser.parseOS` and `uaParser.parseDevice` respectively), e.g.:
 
 ```js
-var p = require('ua-parser');
+var p = require('ua-parser')();
 
-console.log(p.parseUA(navigator.userAgent).toString());
+console.log(p.parseUA(navigator.ua).toString());
 // -> "Safari 5.0.1"
-console.log(p.parseOS(navigator.userAgent).toString());
+console.log(p.parseOS(navigator.ua).toString());
 // -> "iOS 5.1"
-console.log(p.parseDevice(navigator.userAgent).toString());
+console.log(p.parseDevice(navigator.ua).toString());
 // -> "iPhone"
 ```
 

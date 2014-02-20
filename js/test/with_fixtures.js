@@ -2,7 +2,7 @@ var assert = require('assert'),
     path = require('path'), 
     fs = require('fs'),
     yaml = require('yamlparser'),
-    uaParser = require('../index');
+    uaParser = require('../index')();
 
 function readYAML(fileName) {
   var file = path.join(__dirname, '..', '..', 'test_resources', fileName);
@@ -21,7 +21,7 @@ function msg(name, actual, expected) {
     fixtures.forEach(function(f) {
       if (f.js_ua) return;
       test(f.user_agent_string, function() {
-        var ua = uaParser.parse(f.user_agent_string).userAgent;
+        var ua = uaParser.parse(f.user_agent_string).ua;
         fixFixture(f, ['major', 'minor', 'patch']);
         assert.strictEqual(ua.family, f.family, msg('ua.family', ua.family, f.family));
         assert.strictEqual(ua.major, f.major, msg('ua.major', ua.major, f.major));
@@ -65,6 +65,7 @@ function msg(name, actual, expected) {
     });
   });
 });
+
 
 function fixFixture(f, props) {
   // A bug in the YAML parser makes empty fixture props
