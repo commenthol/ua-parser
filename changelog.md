@@ -1,9 +1,21 @@
 # Changelog
+- 2014-03-01
+  - *regexes.yaml* "user_agent_parsers"
+    - improvements: Opera Mobile, Opera Mini, iBrowser, iRAPP Browsers
+    - change: Symbian OSS and WAP Browser, SymbianOS
+  - *regexes.yaml* "device_parsers"
+    - new: Android Application; Operator specific devices Sprint, Cellular split 
+    - improvements: 3Q spacings, Assistant, Cube, Kyocera, Prestigio, Samsung, Sony C\d{4} separated from Kyocera, Windows Phone added to Generic Smartphone
+    - change: HTC device parser refactored
+  - *test_device.yaml*
+    - url-encoded user-agent strings decoded
+  - *pgts_browser_list.yaml*
+    - Symbian Browser testcases adjusted
 
 - 2014-02-28
   - *js parser*
     - allow async loading
-
+ 
 - 2014-02-20
   - *js parser*
     - new api to allow loading of custom regexes files
