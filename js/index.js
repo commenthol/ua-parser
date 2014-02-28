@@ -21,7 +21,8 @@ module.exports = function(options) {
 		parseOS = dummy,
 		parseDevice = dummy,
 		isParsers = false, // flag to indicate availability of parsers
-		_options = {
+		config = {
+			async: false,
 			backwardsCompatible: false,
 			file: path.join(__dirname, '..', 'regexes.yaml'),
 		};
@@ -69,7 +70,7 @@ module.exports = function(options) {
 			os = uaParser.parseOS(str),
 			device = uaParser.parseDevice(str);
 
-		if (!_options.backwardsCompatible) {
+		if (!config.backwardsCompatible) {
 			return { ua: ua, os: os, device: device, string: str };
 		}
 		else if (ua) {
@@ -117,13 +118,17 @@ module.exports = function(options) {
 	 * @param {Object} options
 	 */
 	var setOptions = function (options) {
+		var i; 
+		
+		options = options || config;
+		options.file = options.file || config.file;
 
-		options = options || _options;
-		options.file = options.file || _options.file;
-
-		if (options && options.backwardsCompatible) {
-			_options.backwardsCompatible = options.backwardsCompatible;
+		for (i in config) {
+			if (i !== "file" && options[i]) {
+				config[i] = options[i];
+			}
 		}
+
 		return options;
 	};
 
@@ -225,7 +230,10 @@ module.exports = function(options) {
 		});
 	};
 
-	uaParser.loadSync(options);
+	options = setOptions(options);
+	if (!config.async) {
+		uaParser.loadSync(options);
+	}
 	
 	return uaParser;
 };
