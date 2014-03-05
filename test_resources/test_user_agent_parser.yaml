@@ -238,6 +238,13 @@ test_cases:
     patch:
     patch_minor:
 
+  - user_agent_string: 'Google (+https://developers.google.com/+/web/snippet/)'
+    family: 'GooglePlusBot'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.1pre) Gecko/20090717 Ubuntu/9.04 (jaunty) Shiretoko/3.5.1pre'
     family: 'Firefox (Shiretoko)'
     major: '3'
