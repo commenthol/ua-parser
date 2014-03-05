@@ -1,4 +1,11 @@
 # Changelog
+
+- 2014-03-05
+	- *regexes.yaml*
+    - Merge #345 (GooglePlusBot)
+	  - Adding Google+ Bot to device_parsers
+	- Merge PR #335
+
 - 2014-03-01
   - *regexes.yaml* "user_agent_parsers"
     - improvements: Opera Mobile, Opera Mini, iBrowser, iRAPP Browsers
