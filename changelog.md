@@ -1,5 +1,10 @@
 # Changelog
 
+- 2014-03-30
+  - *regexes.yaml*
+    - Merge #353 (QQBrowsers) - Simplified regexes
+    - MQQBrowser/Mini added
+
 - 2014-03-05
 	- *regexes.yaml*
     - Merge #345 (GooglePlusBot)
