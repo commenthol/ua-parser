@@ -740,7 +740,7 @@ os_parsers:
   ##########
   # Firefox OS
   ##########
-  - regex: '\((?:Mobile|Tablet);( [^;]+;)? rv:[^\)]+\) Gecko/[^\/]+ Firefox/(\d+)\.([0-9a-z]+)$'
+  - regex: '\((Mobile|Tablet);.+Firefox/(\d+)\.(\d+)'
     os_replacement: 'Firefox OS'
 
   ##########
@@ -757,9 +757,7 @@ os_parsers:
   ##########
   # Google TV
   ##########
-  - regex: '(GoogleTV) (\d+)\.(\d+)(?:\.(\d+))?'
-  # Old style
-  - regex: '(GoogleTV)/[\da-z]+'
+  - regex: '(GoogleTV)(?: (\d+)\.(\d+)(?:\.(\d+))?|/[\da-z]+)'
 
   - regex: '(WebTV)/(\d+).(\d+)'
 
@@ -770,31 +768,24 @@ os_parsers:
     os_replacement: 'webOS'
   - regex: '(VRE);'
 
+  # Opera Mini Bada
+  - regex: '\((Bada);'
+
   ##########
   # Generic patterns
   # since the majority of os cases are very specific, these go last
   ##########
-  # first.second.third.fourth bits
-  - regex: '(Fedora|Red Hat|PCLinuxOS)/(\d+)\.(\d+)\.(\d+)\.(\d+)'
+  - regex: '(Fedora|Red Hat|PCLinuxOS|Puppy|Ubuntu|Kindle|Bada|Lubuntu|BackTrack|Slackware|(?:Free|Open|Net|\b)BSD)[/ ](\d+)\.(\d+)(?:\.(\d+)(?:\.(\d+))?)?'
 
-  # first.second.third bits
-  - regex: '(Red Hat|Puppy|PCLinuxOS)/(\d+)\.(\d+)\.(\d+)'
-
-  # first.second bits
-  - regex: '(Ubuntu|Kindle|Bada|Lubuntu|BackTrack|Red Hat|Slackware)/(\d+)\.(\d+)'
-
-  # Opera Mini Bada
-  - regex: '\((Bada);'
+  # Gentoo Linux + Kernel Version
+  - regex: '(Linux)[ /](\d+)\.(\d+)(?:\.(\d+))?.*gentoo'
+    os_replacement: 'Gentoo'
 
   # just os
-  - regex: '(Windows|OpenBSD|FreeBSD|NetBSD|Android|WeTab)'
-  - regex: '(Ubuntu|Kubuntu|Arch Linux|CentOS|Slackware|Gentoo|openSUSE|SUSE|Red Hat|Fedora|PCLinuxOS|Gentoo|Mageia)'
-  # Gentoo Linux + Kernel Version
-  - regex: '(Linux)[ /](\d+)\.(\d+).*gentoo'
-    os_replacement: 'Gentoo'
+  - regex: '(Windows|Android|WeTab|Maemo)'
+  - regex: '(Ubuntu|Kubuntu|Arch Linux|CentOS|Slackware|Gentoo|openSUSE|SUSE|Red Hat|Fedora|PCLinuxOS|Gentoo|Mageia|(?:Free|Open|Net|\b)BSD)'
   # Linux + Kernel Version
-  - regex: '(Linux)[ /](\d+)\.(\d+)'
-  - regex: '(Linux|BSD)'
+  - regex: '(Linux)(?:[ /](\d+)\.(\d+)(?:\.(\d+))?)?'
   - regex: 'SunOS'
     os_replacement: 'Solaris'
 

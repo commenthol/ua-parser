@@ -1,5 +1,10 @@
 # Changelog
 
+- 2014-03-31
+  - *regexes.yaml*
+    - Simplify GoogleTV
+    - Refactor Linux Distros and Versions
+
 - 2014-03-30
   - *regexes.yaml*
     - Merge #353 (QQBrowsers) - Simplified regexes
