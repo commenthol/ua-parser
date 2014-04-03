@@ -521,7 +521,7 @@ os_parsers:
   # Android
   # can actually detect rooted android os. do we care?
   ##########
-  - regex: '(Android)[ /\-](\d+)\.(\d+)(?:[.\-]([a-z0-9]+))?'
+  - regex: '(Android)[ \-/](\d+)\.(\d+)(?:[.\-]([a-z0-9]+))?'
 
   - regex: '(Android) Donut'
     os_v1_replacement: '1'
@@ -577,8 +577,7 @@ os_parsers:
   - regex: '\b(Xbox)\b'
 
   # @note: These need to come before Windows NT 6.1
-  - regex: '(Windows Phone) (\d+)\.(\d+)'
-  - regex: '(Windows Phone) OS[ /](\d+)\.(\d+)'
+  - regex: '(Windows Phone) (?:OS[ /])?(\d+)\.(\d+)'
   - regex: '(Windows ?Mobile)'
     os_replacement: 'Windows Mobile'
 
@@ -612,7 +611,7 @@ os_parsers:
   - regex: '(WinNT4.0)'
     os_replacement: 'Windows NT 4.0'
 
-  - regex: '(WindowsCE|WINDOWS ?CE)'
+  - regex: '(Windows ?CE)'
     os_replacement: 'Windows CE'
 
   - regex: 'Win ?(95|98|3.1|NT|ME|2000)'
@@ -740,7 +739,7 @@ os_parsers:
   ##########
   # Firefox OS
   ##########
-  - regex: '\((Mobile|Tablet);.+Firefox/(\d+)\.(\d+)'
+  - regex: '\((Mobile|Tablet);.+Firefox/\d+\.\d+'
     os_replacement: 'Firefox OS'
 
   ##########
