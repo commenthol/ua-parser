@@ -4,7 +4,7 @@ This is a fork from [ua-parser](http://github.com/tobie/ua-parser) which contain
 
 **Note:**
 
-Currently only the `js`, `perl`, `php` and `py` parser supports the presented `regexes.yaml` file.
+Currently only the `js`, `java`, `perl`, `php` and `py` parser supports the presented `regexes.yaml` file.
 
 It is my aim to migrate all available changes into the mainline.
 

@@ -1,5 +1,15 @@
 # Changelog
 
+- 2014-04-15
+  - *java parser*
+    - Merging PR #320 from nielsbasjes; multiReplace refactored
+    - mvn test pass
+    
+- 2014-04-14
+  - *regexes.yaml*
+    - Detection of Nokia Series 30Plus added
+    - Detection of Dolphin Browser (Android + iOs)
+
 - 2014-03-31
   - *regexes.yaml*
     - Simplify GoogleTV
