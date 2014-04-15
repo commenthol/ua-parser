@@ -62,10 +62,19 @@ public class DeviceParser {
 
   protected static DevicePattern patternFromMap(Map<String, String> configMap) {
     String regex = configMap.get("regex");
+    String regex_flag = configMap.get("regex_flag");
+    Pattern pattern;
     if (regex == null) {
       throw new IllegalArgumentException("Device is missing regex");
     }
-    return new DevicePattern(Pattern.compile(regex),
+    if (null != regex_flag && regex_flag.equals("i")) {
+      pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+    }
+    else {
+      pattern = Pattern.compile(regex);
+    }
+    
+    return new DevicePattern(pattern,
                              configMap.get("device_replacement"),
                              configMap.get("brand_replacement"),
                              configMap.get("model_replacement"));
@@ -76,6 +85,8 @@ public class DeviceParser {
     private final String familyReplacement;
     private final String brandReplacement;
     private final String modelReplacement;
+    private final Pattern patternCut = Pattern.compile("(?=\\$([0-9]))");
+    private final Pattern patternNum = Pattern.compile(".*\\$([0-9]).*");
 
     public DevicePattern(Pattern pattern,
                          String familyReplacement,
@@ -94,48 +105,46 @@ public class DeviceParser {
       if (!matcher.find()) {
         return null;
       }
-
-      String firstGroup = matcher.group(0);
-      if (matcher.groupCount() > 0) {
-        firstGroup = matcher.group(1);
-      }
+      
       family = multiReplace(familyReplacement, matcher);
       family = "".equals(family) ? null : family;
-      if (family == null){
+      if (familyReplacement == null && matcher.groupCount() > 0 && matcher.group(1) != null){
         family = matcher.group(1);
       }
 
       brand = multiReplace(brandReplacement, matcher);
-      brand  = "".equals(brand)  ? null : brand;
+      brand = "".equals(brand) ? null : brand;
 
       model = multiReplace(modelReplacement, matcher);
-      model  = "".equals(model)  ? null : model;
-      if (model == null){
-        model = "Other".equals(firstGroup) ? firstGroup : null;
+      model = "".equals(model) ? null : model;
+      if (modelReplacement == null && matcher.groupCount() > 0 && matcher.group(1) != null){
+        model = matcher.group(1);
       }
 
-//      System.out.println("MATCHED:\"" + agentString + "\" WITH " + pattern + " RESULTING IN" + new Device(family, brand, model));
+      //System.out.println("MATCHED:\"" + agentString + "\" WITH " + pattern + " RESULTING IN" + new Device(family, brand, model));
       return new Device(family, brand, model);
     }
 
     private String multiReplace(String input, Matcher matcher){
-      String output = singleReplace(input, matcher, "$1", 1);
-      output = singleReplace(output, matcher, "$2", 2);
-      output = singleReplace(output, matcher, "$3", 3);
-      return output;
-    }
-
-    private String singleReplace(String input, Matcher matcher, String marker, int markerPos){
-      String output = input;
-      if (output != null) {
-        if (output.contains(marker) && matcher.groupCount() >= markerPos && matcher.group(markerPos) != null) {
-          output = output.replaceFirst("\\"+marker, Matcher.quoteReplacement(matcher.group(markerPos)));
+      String output = "";
+      
+      if (null != input) {
+        String[] cut = patternCut.split(input);
+        for (int i=0; i<cut.length; i++) {
+          Matcher m = patternNum.matcher(cut[i]);
+          if (m.find()) {
+            int markerPos = Integer.parseInt(m.group(1));
+            if (matcher.find(0) && matcher.groupCount() >= markerPos && matcher.group(markerPos) != null) {
+              cut[i] = cut[i].replaceFirst("\\$"+markerPos, Matcher.quoteReplacement(matcher.group(markerPos)));
+            }
+            else {
+              cut[i] = cut[i].replaceFirst("\\$"+markerPos, "");
+            }
+          }
+          output += cut[i];
         }
       }
-      return output;
+      return output;/*.trim(); // <-- is required later */
     }
   }
-
-
-
 }
