@@ -1,5 +1,11 @@
 # Changelog
 
+- 2014-04-22
+  - *regexes.yaml*
+    - Better detection of Impression ImPad
+    - New Brand Explay
+    - Acer S510
+
 - 2014-04-15
   - *java parser*
     - Merging PR #320 from nielsbasjes; multiReplace refactored

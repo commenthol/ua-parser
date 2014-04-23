@@ -866,7 +866,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Acer'
     model_replacement: '$1'
-  - regex: '; *(Z1[123]0|E320[^/]*|S500|Liquid[^;/]*|Iconia A\d+) Build'
+  - regex: '; *(Z1[123]0|E320[^/]*|S500|S510|Liquid[^;/]*|Iconia A\d+) Build'
     device_replacement: '$1'
     brand_replacement: 'Acer'
     model_replacement: '$1'
@@ -1570,6 +1570,15 @@ device_parsers:
     model_replacement: 'Cross $2'
 
   #########
+  # Explay
+  # @ref: http://explay.ru/
+  #########
+  - regex: '; *Explay[_ ]((?:(?![\)]| Build).)+)'
+    device_replacement: '$1'
+    brand_replacement: 'Explay'
+    model_replacement: '$1'
+
+  #########
   # Fly
   # @ref: http://www.fly-phone.com/
   #########
@@ -1943,10 +1952,10 @@ device_parsers:
   # Impression
   # @ref: http://impression.ua/planshetnye-kompyutery
   #########
-  - regex: '; *(ImPAD \d+) Build'
-    device_replacement: '$1'
+  - regex: '; *(ImPAD) ?(\d+(?:.)*) Build'
+    device_replacement: '$1 $2'
     brand_replacement: 'Impression'
-    model_replacement: '$1'
+    model_replacement: '$1 $2'
 
   #########
   # Infinix
