@@ -1,5 +1,9 @@
 # Changelog
 
+- 2014-04-23
+  - *regexes.yaml*
+    - Detection of CFNetwork and iOS Applications
+
 - 2014-04-22
   - *regexes.yaml*
     - Better detection of Impression ImPad

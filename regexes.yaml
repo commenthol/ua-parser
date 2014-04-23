@@ -330,6 +330,10 @@ user_agent_parsers:
   - regex: '(BonEcho)/(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Bon Echo'
 
+  # @note: iOS / OSX Applications
+  - regex: '(CFNetwork)(?:/(\d+)\.(\d+)\.?(\d+)?)?'
+    family_replacement: 'CFNetwork'
+
   - regex: '(iPod).+Version/(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Mobile Safari'
   - regex: '(iPod).*Version/(\d+)\.(\d+)'
@@ -578,7 +582,8 @@ os_parsers:
     os_replacement: 'Windows Phone'
 
   # @note: Xbox also spoofs NT 6.1/Windows Phone (see http://msdn.microsoft.com/en-us/library/ie/jj883728(v=vs.85).aspx)
-  - regex: '\b(Xbox)\b'
+  # @note: Xbox spoofs "Xbox LIVE/2.5.1704 CFNetwork/672.0.8 Darwin/14.0.0" iPhone App
+  - regex: '\b(Xbox)\b(?:(?!Darwin).)*$'
 
   # @note: These need to come before Windows NT 6.1
   - regex: '(Windows Phone) (?:OS[ /])?(\d+)\.(\d+)'
@@ -639,26 +644,31 @@ os_parsers:
   # @ref: http://www.puredarwin.org/curious/versions
   ##########
   - regex: '(Mac OS X) (\d+)[_.](\d+)(?:[_.](\d+))?'
-
   # Leopard
-  - regex: '(Mac OS X); (Darwin) (9).(\d+)'
+  - regex: ' (Dar)(win)/(9).(\d+).*\((?:i386|x86_64|Power Macintosh)\)'
+    os_replacement: 'Mac OS X'
     os_v1_replacement: '10'
     os_v2_replacement: '5'
-
   # Snow Leopard
-  - regex: '(Mac OS X); (Darwin) (10).(\d+)'
+  - regex: ' (Dar)(win)/(10).(\d+).*\((?:i386|x86_64)\)'
+    os_replacement: 'Mac OS X'
     os_v1_replacement: '10'
     os_v2_replacement: '6'
-
   # Lion
-  - regex: '(Mac OS X); (Darwin) (11).(\d+)'
+  - regex: ' (Dar)(win)/(11).(\d+).*\((?:i386|x86_64)\)'
+    os_replacement: 'Mac OS X'
     os_v1_replacement: '10'
     os_v2_replacement: '7'
-
   # Mountain Lion
-  - regex: '(Mac OS X); (Darwin) (12).(\d+)'
+  - regex: ' (Dar)(win)/(12).(\d+).*\((?:i386|x86_64)\)'
+    os_replacement: 'Mac OS X'
     os_v1_replacement: '10'
     os_v2_replacement: '8'
+  # Mavericks
+  - regex: ' (Dar)(win)/(13).(\d+).*\((?:i386|x86_64)\)'
+    os_replacement: 'Mac OS X'
+    os_v1_replacement: '10'
+    os_v2_replacement: '9'
 
   # IE on Mac doesn't specify version number
   - regex: 'Mac_PowerPC'
@@ -673,7 +683,7 @@ os_parsers:
   # iOS
   # http://en.wikipedia.org/wiki/IOS_version_history
   ##########
-  - regex: '(CPU OS|iPhone OS|CPU iPhone) (\d+)[_\.](\d+)(?:[_\.](\d+))?'
+  - regex: '(CPU OS|iPhone OS|CPU iPhone) +(\d+)[_\.](\d+)(?:[_\.](\d+))?'
     os_replacement: 'iOS'
 
   # remaining cases are mostly only opera uas, so catch opera as to not catch iphone spoofs
@@ -686,6 +696,29 @@ os_parsers:
 
   - regex: '(AppleTV)/(\d+)\.(\d+)'
     os_replacement: 'ATV OS X'
+
+  ##########
+  # CFNetwork iOS Apps
+  # @ref: https://en.wikipedia.org/wiki/Darwin_(operating_system)#Release_history
+  ##########
+  - regex: 'CFNetwork/.* Darwin/(9)\.\d+'
+    os_replacement: 'iOS'
+    os_v1_replacement: '1'
+  - regex: 'CFNetwork/.* Darwin/(10)\.\d+'
+    os_replacement: 'iOS'
+    os_v1_replacement: '4'
+  - regex: 'CFNetwork/.* Darwin/(11)\.\d+'
+    os_replacement: 'iOS'
+    os_v1_replacement: '5'
+  - regex: 'CFNetwork/.* Darwin/(13)\.\d+'
+    os_replacement: 'iOS'
+    os_v1_replacement: '6'
+  - regex: 'CFNetwork/.* Darwin/(14)\.\d+'
+    os_replacement: 'iOS'
+    os_v1_replacement: '7'
+  # iOS Apps
+  - regex: '\b(iOS[ /]|iPhone(?:/| v|[ _]OS[/,]|; | OS : |\d,\d/|\d,\d; )|iPad/)(\d{1,2})[_\.](\d{1,2})(?:[_\.](\d+))?'
+    os_replacement: 'iOS'
 
   ##########
   # Chrome OS
@@ -4070,6 +4103,12 @@ device_parsers:
   #   ipad and ipod must be parsed before iphone
   #   cannot determine specific device type from ua string. (3g, 3gs, 4, etc)
   ##########
+  # @note: on some ua the device can be identified e.g. iPhone5,1
+  - regex: '((?:iPhone|iPad|iPod)\d+,\d+)'
+    device_replacement: '$1'
+    brand_replacement: 'Apple'
+    model_replacement: '$1'
+  # @note: iPad needs to be before iPhone
   - regex: '(iPad)(?:;| Simulator;)'
     device_replacement: '$1'
     brand_replacement: 'Apple'
@@ -4082,6 +4121,16 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Apple'
     model_replacement: '$1'
+  # @note: desktop applications show device info  
+  - regex: 'CFNetwork/.* Darwin/\d.*\(((?:Mac|iMac|PowerMac|PowerBook)[^\d]*)(\d+)(?:,|%2C)(\d+)'
+    device_replacement: '$1$2,$3'
+    brand_replacement: 'Apple'
+    model_replacement: '$1$2,$3'
+  # @note: iOS applications do not show device info
+  - regex: 'CFNetwork/.* Darwin/\d'
+    device_replacement: 'iOS-Device'
+    brand_replacement: 'Apple'
+    model_replacement: 'iOS-Device'
 
   ##########
   # Acer
