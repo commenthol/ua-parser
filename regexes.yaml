@@ -899,7 +899,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Acer'
     model_replacement: '$1'
-  - regex: '; *(Z1[123]0|E320[^/]*|S500|S510|Liquid[^;/]*|Iconia A\d+) Build'
+  - regex: '; *(Z1[1235]0|E320[^/]*|S500|S510|Liquid[^;/]*|Iconia A\d+) Build'
     device_replacement: '$1'
     brand_replacement: 'Acer'
     model_replacement: '$1'
@@ -1461,6 +1461,11 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Cubot'
     model_replacement: '$1'
+  - regex: '; *BOBBY Build'
+    regex_flag: 'i'
+    device_replacement: '$1'
+    brand_replacement: 'Cubot'
+    model_replacement: '$1'
 
   #########
   # Danew
@@ -1820,7 +1825,7 @@ device_parsers:
   # @ref: http://www.huaweidevice.com
   # @note: Needs to be before HTC due to Desire HD Build on U8815
   #########
-  - regex: '; *(HUAWEI |Huawei-)?(U[^;/]+) Build/Huawei(U[^\);]+)\)'
+  - regex: '; *(HUAWEI |Huawei-)?([UY][^;/]+) Build/(?:Huawei|HUAWEI)([UY][^\);]+)\)'
     device_replacement: '$1$2'
     brand_replacement: 'Huawei'
     model_replacement: '$2'
@@ -2746,7 +2751,7 @@ device_parsers:
     brand_replacement: 'Odys'
     model_replacement: '$1 $2 $3'
   # Weltbild - Tablet PC 4 = Cat Phoenix = Odys Tablet PC 4?
-  - regex: '; *(AEON|FUSION|FUSION2IN1|Genio|EOS10|IEOS[^;/]*|IRON|Loox|LOOX|LOOX Plus|Motion|NOON|NOON_PRO|NEXT|OPOS|PEDI[^;/]*|PRIME[^;/]*|STUDYTAB|TABLO|Tablet-PC-4|UNO_X8|XELIO[^;/]*|Xelio ?\d+ ?[Pp]ro|XENO10|XPRESS PRO) Build'
+  - regex: '; *(AEON|BRAVIO|FUSION|FUSION2IN1|Genio|EOS10|IEOS[^;/]*|IRON|Loox|LOOX|LOOX Plus|Motion|NOON|NOON_PRO|NEXT|OPOS|PEDI[^;/]*|PRIME[^;/]*|STUDYTAB|TABLO|Tablet-PC-4|UNO_X8|XELIO[^;/]*|Xelio ?\d+ ?[Pp]ro|XENO10|XPRESS PRO) Build'
     device_replacement: 'Odys $1'
     brand_replacement: 'Odys'
     model_replacement: '$1'
@@ -3986,10 +3991,10 @@ device_parsers:
   #########
   # Firefox OS
   #########
-  - regex: '\(Mobile; ALCATEL(One)(Touch)([^;]+); rv:[^\)]+\) Gecko/[^\/]+ Firefox/'
+  - regex: '\(Mobile; ALCATEL ?(One|ONE) ?(Touch|TOUCH) ?([^;/]+)(?:/[^;]+)?; rv:[^\)]+\) Gecko/[^\/]+ Firefox/'
     device_replacement: 'Alcatel $1 $2 $3'
     brand_replacement: 'Alcatel'
-    model_replacement: '$1 $2 $3'
+    model_replacement: 'One Touch $3'
   - regex: '\(Mobile; ZTE([^;]+); rv:[^\)]+\) Gecko/[^\/]+ Firefox/'
     device_replacement: 'ZTE $1'
     brand_replacement: 'ZTE'

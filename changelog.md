@@ -1,5 +1,9 @@
 # Changelog
 
+- 2014-06-04
+  - *regexes.yaml*
+    - Better detection of Alcatel Fire E, Huawei Y.., Acer Liquid Z150, Cubot Bobby, Odys Bravio
+
 - 2014-06-03
   - *regexes.yaml*
     - Better detection of Sony and Wiko Devices
