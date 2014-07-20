@@ -1,5 +1,9 @@
 # Changelog
 
+- 2014-07-20
+  - *regexes.yaml*
+    - Better detection of Assistant, Thl. Detection of Dex, Enot
+
 - 2014-06-04
   - *regexes.yaml*
     - Better detection of Alcatel Fire E, Huawei Y.., Acer Liquid Z150, Cubot Bobby, Odys Bravio
@@ -22,7 +26,7 @@
   - *java parser*
     - Merging PR #320 from nielsbasjes; multiReplace refactored
     - mvn test pass
-    
+
 - 2014-04-14
   - *regexes.yaml*
     - Detection of Nokia Series 30Plus added
@@ -49,7 +53,7 @@
     - improvements: Opera Mobile, Opera Mini, iBrowser, iRAPP Browsers
     - change: Symbian OSS and WAP Browser, SymbianOS
   - *regexes.yaml* "device_parsers"
-    - new: Android Application; Operator specific devices Sprint, Cellular split 
+    - new: Android Application; Operator specific devices Sprint, Cellular split
     - improvements: 3Q spacings, Assistant, Cube, Kyocera, Prestigio, Samsung, Sony C\d{4} separated from Kyocera, Windows Phone added to Generic Smartphone
     - change: HTC device parser refactored
   - *test_device.yaml*
@@ -60,7 +64,7 @@
 - 2014-02-28
   - *js parser*
     - allow async loading
- 
+
 - 2014-02-20
   - *js parser*
     - new api to allow loading of custom regexes files
@@ -84,11 +88,11 @@
 
 - 2014-01-18
   - *regexes.yaml*
-    - improvements 
+    - improvements
       - os: Windows XP hides Windows Phone 6; Windows Phone OS/; Opera Mini Bada; WindowsCE not detected for Fennec;
       - device: Haier[ _\-]; new HTC Desire models; IconBit NT; Mobistel Cynus; Mobiistar is not a POV brand; Generic_Android matcher; Nokia UCBrowser; Nokia XpressMusic strip SN number; Samsung- matcher;
       - strip trailing spaces
-    - new 
+    - new
       - device: Sony SmartWatch; WeTab;
 
 - 2014-01-14
@@ -98,9 +102,9 @@
 
 - 2014-01-11
   - *regexes.yaml*
-    - improvements 
+    - improvements
       - Advent Vega, Alcatel One Touch with ",", Blue Tank 4.5, Medion Lifetab, Pomp, Samsung Galaxy S*, ZTE RACERII fix: CobyKyros MID
-    - new 
+    - new
       - models: Alcatel One Touch, GoClever QUANTUM, Haier
       - brands: Gfive, Lexibook, Omega
 
@@ -111,29 +115,29 @@
 
 - 2014-01-07
   - *regexes.yaml*
-    - improvements 
+    - improvements
       - better android matchers if "Build" occurs twice; Generic Smart Phone matcher
     - refactored
       - LG matchers; Generic Android Matchers now resolves brand to "Generic_Android"
-    - new 
+    - new
       - models: Acer, Alcatel, Aoson, Arnova, Asus, Blaupunkt, Blu, Casio, Celkon, Cloudfone, Cmx, HTC, Hyundai, Intex, Karbonn, Lenovo, MSI, Nook, Odys, POV, Samsung, Softbank, Terra, Thalia, Thl, Toshiba, Treq, Wiko, Woxter, Yarvik, Xoro, Zopo, ZTE, Hero, HTC Windows Phones, Internet TV Sets, Generic_Inettv, microsoft, Android on Blackberry
       - brand: Airis, Axioo, Cubot, Denver, DNS AirTab, DOOV, Evercoss, Gionee, HCLme, hitech, iBall, IMO, Infinix, Informer, Jaytech, JXD, Kingcom, Lava, Lemon, Mito, Modecom, Multilaser, MyPhone, Papayre, Pipo, Ployer, Pomp, Skytex, Tooky, Videocon, vivo, Walton, Google TV, Generic Tablet
     - changes
       - brand renamed: Hanns is now Hannspree
-      - brand removed: Technicolor: doubled - now part of Telstra 
+      - brand removed: Technicolor: doubled - now part of Telstra
 
 - 2013-11-22
   - *regexes.yaml*
-    - user_agent_parsers: 
+    - user_agent_parsers:
       - Bingbot PR#311 added
     - device_parsers:
       - Bingbot PR#311 added (detection was already present; added for completness)
-      - More Android brands and models 
+      - More Android brands and models
       - Improvements to previous device detection for some devices
 
 - 2013-11-15
   - *php*
-    - Modernize PHP port of User Agent Parser from @lstrojny 
+    - Modernize PHP port of User Agent Parser from @lstrojny
     - brand model device parsing with case insensitive testing
 
 - 2013-11-14

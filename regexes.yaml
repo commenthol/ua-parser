@@ -237,7 +237,7 @@ user_agent_parsers:
   # Chrome/Chromium/major_version.minor_version.beta_version
   - regex: '(Chromium|Chrome)/(\d+)\.(\d+)\.(\d+)'
 
-  # Dolphin Browser 
+  # Dolphin Browser
   # @ref: http://www.dolphin.com
   - regex: '\b(Dolphin)(?: |HDCN/|/INT\-)(\d+)\.(\d+)\.?(\d+)?'
 
@@ -1131,7 +1131,7 @@ device_parsers:
   # Assistant
   # @ref: http://www.assistant.ua
   #########
-  - regex: '; *(?:ASSISTANT )?(AP)-?([1789]\d{2}) Build'
+  - regex: '; *(?:ASSISTANT )?(AP)-?([1789]\d{2}[A-Z]{0,2}|80104) Build'
     device_replacement: 'Assistant $1-$2'
     brand_replacement: 'Assistant'
     model_replacement: '$1-$2'
@@ -1532,6 +1532,15 @@ device_parsers:
     model_replacement: '$1'
 
   #########
+  # Dex
+  # @ref: http://dex.ua/
+  #########
+  - regex: '; *(iP[789]\d{2}(?:-3G)?|IP10\d{2}(?:-8GB)?) Build'
+    device_replacement: '$1'
+    brand_replacement: 'Dex'
+    model_replacement: '$1'
+
+  #########
   # DNS AirTab
   # @ref: http://www.dns-shop.ru/
   #########
@@ -1593,6 +1602,15 @@ device_parsers:
     device_replacement: '$1 $2'
     brand_replacement: 'DOOV'
     model_replacement: '$2'
+
+  #########
+  # Enot
+  # @ref: http://www.enot.ua/
+  #########
+  - regex: '; *(Enot|ENOT)[ -]?([^;/]+) Build'
+    device_replacement: '$1 $2$3'
+    brand_replacement: 'Enot'
+    model_replacement: '$2$3'
 
   #########
   # Evercoss
@@ -1896,7 +1914,7 @@ device_parsers:
     device_replacement: 'HTC $1 $2 $3 $4'
     brand_replacement: 'HTC'
     model_replacement: '$1 $2 $3 $4'
-  # HTC Streaming Player  
+  # HTC Streaming Player
   - regex: 'HTC Streaming Player [^\/]*/[^\/]*/ htc_([^/]+) /'
     device_replacement: 'HTC $1'
     brand_replacement: 'HTC'
@@ -1907,13 +1925,13 @@ device_parsers:
     device_replacement: 'HTC $1'
     brand_replacement: 'HTC'
     model_replacement: '$1'
-  # Android matchers without HTC 
-  - regex: '; *(A6277|ADR6200|ADR6300|ADR6350|ADR6400[A-Z]*|ADR6425[A-Z]*|APX515CKT|ARIA|Desire[^_ ]*|Dream|EndeavorU|Eris|Evo|Flyer|HD2|Hero|HERO200|Hero CDMA|HTL21|Incredible|Inspire[A-Z0-9]*|Legend|Liberty|Nexus ?(?:One|HD2)|One|One S C2|One[ _]?(?:S|V|X\+?)\w*|PC36100|PG06100|PG86100|S31HT|Sensation|Wildfire)(?: Build|[/;\(\)])'  
+  # Android matchers without HTC
+  - regex: '; *(A6277|ADR6200|ADR6300|ADR6350|ADR6400[A-Z]*|ADR6425[A-Z]*|APX515CKT|ARIA|Desire[^_ ]*|Dream|EndeavorU|Eris|Evo|Flyer|HD2|Hero|HERO200|Hero CDMA|HTL21|Incredible|Inspire[A-Z0-9]*|Legend|Liberty|Nexus ?(?:One|HD2)|One|One S C2|One[ _]?(?:S|V|X\+?)\w*|PC36100|PG06100|PG86100|S31HT|Sensation|Wildfire)(?: Build|[/;\(\)])'
     regex_flag: 'i'
     device_replacement: 'HTC $1'
     brand_replacement: 'HTC'
     model_replacement: '$1'
-  - regex: '; *(ADR6200|ADR6400L|ADR6425LVW|Amaze|DesireS?|EndeavorU|Eris|EVO|Evo\d[A-Z]+|HD2|IncredibleS?|Inspire[A-Z0-9]*|Inspire[A-Z0-9]*|Sensation[A-Z0-9]*|Wildfire)(?:(?:[ _/\-])((?:(?![ _/;\(\)]|Build|MIUI).)+))(?:[ _/]((?:(?![ _/;\(\)]|Build|MIUI|1\.0).)+))?(?:[ _/]((?:(?![ _/;\(\)]|Build|MIUI|1\.0).)+))?(?:[ _/]((?:(?![/;\)]|Build|MIUI|1\.0).)+))?'  
+  - regex: '; *(ADR6200|ADR6400L|ADR6425LVW|Amaze|DesireS?|EndeavorU|Eris|EVO|Evo\d[A-Z]+|HD2|IncredibleS?|Inspire[A-Z0-9]*|Inspire[A-Z0-9]*|Sensation[A-Z0-9]*|Wildfire)(?:(?:[ _/\-])((?:(?![ _/;\(\)]|Build|MIUI).)+))(?:[ _/]((?:(?![ _/;\(\)]|Build|MIUI|1\.0).)+))?(?:[ _/]((?:(?![ _/;\(\)]|Build|MIUI|1\.0).)+))?(?:[ _/]((?:(?![/;\)]|Build|MIUI|1\.0).)+))?'
     regex_flag: 'i'
     device_replacement: 'HTC $1 $2 $3 $4'
     brand_replacement: 'HTC'
@@ -2669,7 +2687,7 @@ device_parsers:
     device_replacement: '$1$2$3'
     brand_replacement: 'Nokia'
     model_replacement: '$3'
-    
+
   #########
   # Nook
   # @ref:
@@ -3257,7 +3275,7 @@ device_parsers:
 
   #########
   # Sprint (Operator Branded Devices)
-  # @ref: 
+  # @ref:
   #########
   #~ - regex: '; *(Sprint)? ?(HTC_?)?(X515E|ATP515CKIT|APA7373KT|PG06100|APC715CKT|APX515CKT|PG86100|EVOV4G|APA9292KT|PC36100) Build'
     #~ debug: '#0399'
@@ -3356,7 +3374,7 @@ device_parsers:
   # @ref: http://en.thl.com.cn/Mobile
   # @ref: http://thlmobilestore.com
   #########
-  - regex: '; *(?:CJ[ -])?(ThL|THL) ([^;/]+) Build/'
+  - regex: '; *(?:CJ[ -])?(ThL|THL)[ -]([^;/]+) Build/'
     device_replacement: '$1 $2'
     brand_replacement: 'Thl'
     model_replacement: '$2'
@@ -3841,7 +3859,7 @@ device_parsers:
 
   #########
   # Cellular
-  # @ref: 
+  # @ref:
   # @note: Operator branded devices
   #########
   - regex: '\bUSCC[_\-]?([^ ;/\)]+)'
@@ -4126,7 +4144,7 @@ device_parsers:
     device_replacement: '$1'
     brand_replacement: 'Apple'
     model_replacement: '$1'
-  # @note: desktop applications show device info  
+  # @note: desktop applications show device info
   - regex: 'CFNetwork/.* Darwin/\d.*\(((?:Mac|iMac|PowerMac|PowerBook)[^\d]*)(\d+)(?:,|%2C)(\d+)'
     device_replacement: '$1$2,$3'
     brand_replacement: 'Apple'
