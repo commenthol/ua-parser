@@ -3,6 +3,7 @@
 - 2014-07-20
   - *regexes.yaml*
     - Better detection of Assistant, Thl. Detection of Dex, Enot
+    - Better detection of Opera Mobi, Chimera, Bon Echo (Credits to keshonok)
 
 - 2014-06-04
   - *regexes.yaml*

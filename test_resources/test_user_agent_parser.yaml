@@ -1686,3 +1686,109 @@ test_cases:
     minor: '0'
     patch: '2'
     patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; S60; SymbOS; Opera Mobi/447; en-US) Opera 10.00'
+    family: 'Opera Mobile'
+    major: '10'
+    minor: '00'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows CE; SHARP/WS020SH; PPC; 480x800) Opera Mobi; Opera 9.5 [ja]'
+    family: 'Opera Mobile'
+    major: '9'
+    minor: '5'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 8.0; Android 2.3.3; Linux; Opera Mobi/ADR-1105231029; ru) Opera 11.00'
+    family: 'Opera Mobile'
+    major: '11'
+    minor: '00'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 8.0; Linux armv7l; Maemo; Opera Mobi/9; es-ES) Opera 11.00'
+    family: 'Opera Mobile'
+    major: '11'
+    minor: '00'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'SAMSUNG-GT-B7300/1.0 (Windows CE; Opera Mobi; U; en) Opera 9.5/'
+    family: 'Opera Mobile'
+    major: '9'
+    minor: '5'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'SAMSUNG-GT-i8000/NXXJA5 profile/MIDP-2.0 configuration/CLDC-1.1 (Windows CE; Opera Mobi; U; en) Opera 9.5'
+    family: 'Opera Mobile'
+    major: '9'
+    minor: '5'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'SAMSUNG-GT-i8000V/NXXJG5 (Windows CE; Opera Mobi; U; en) Opera 9.5'
+    family: 'Opera Mobile'
+    major: '9'
+    minor: '5'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1a3) Gecko/20060526 BonEcho/2.0a3'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'a3'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1b2) Gecko/20060913 BonEcho/2.0b2'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'b2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.8.1b1) Gecko/20060729 BonEcho/2.0b1'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'b1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8) Gecko/20060427 BonEcho/2.0a1 (.NET CLR 3.5.30729)'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'a1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1a2) Gecko/20060512 BonEcho/2.0a2'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'a2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; es-ES; rv:1.8.1b2) Gecko/20060831 BonEcho/2.0b2'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'b2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1b2) Gecko/20060601 BonEcho/2.0b2 (Ubuntu-edgy)'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'b2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; nl; rv:1.8.1b2) Gecko/20060821 BonEcho/2.0b2 (Debian-1.99 2.0b2 dfsg-1)'
+    family: 'Bon Echo'
+    major: '2'
+    minor: '0'
+    patch: 'b2'
+    patch_minor:
+
