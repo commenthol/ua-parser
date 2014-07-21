@@ -18,6 +18,7 @@ module.exports = function(options) {
 		uaParser = {},
 		dummy = function(){}, // prevent exception if parsers are not yet fully loaded
 		parseUA = dummy,
+		parseEngine = dummy,
 		parseOS = dummy,
 		parseDevice = dummy,
 		isParsers = false, // flag to indicate availability of parsers
@@ -35,6 +36,16 @@ module.exports = function(options) {
 	 */
 	uaParser.parseUA = function (str) {
 		return parseUA(str);
+	};
+
+	/**
+	 * Parse the User-Agent string `str` for Engine
+	 *
+	 * @param {string} str - Browsers User-Agent string
+	 * @return {Object} - { family:, major:, minor:, patch: }
+	 */
+	uaParser.parseEngine = function (str) {
+		return parseEngine(str);
 	};
 
 	/**
@@ -90,16 +101,19 @@ module.exports = function(options) {
 
 		if (regexes && regexes.user_agent_parsers && regexes.os_parsers && regexes.device_parsers ) {
 
-			var _parseUA = require('./lib/ua').makeParser(regexes.user_agent_parsers);
-			var _parseOS = require('./lib/os').makeParser(regexes.os_parsers);
-			var _parseDevice = require('./lib/device').makeParser(regexes.device_parsers);
+			var
+				_parseUA     = require('./lib/ua').makeParser(regexes.user_agent_parsers),
+				_parseEngine = require('./lib/engine').makeParser(regexes.engine_parsers),
+				_parseOS     = require('./lib/os').makeParser(regexes.os_parsers),
+				_parseDevice = require('./lib/device').makeParser(regexes.device_parsers);
 
 			// assign parsers only if everything went ok
-			if (_parseUA && _parseOS && _parseDevice) {
-				parseUA = _parseUA;
-				parseOS = _parseOS;
+			if (_parseUA && _parseOS && _parseDevice && _parseEngine) {
+				parseUA     = _parseUA;
+				parseEngine = _parseEngine;
+				parseOS     = _parseOS;
 				parseDevice = _parseDevice;
-				isParsers = true;
+				isParsers   = true;
 			}
 			else {
 				error = new Error('could not make parsers');

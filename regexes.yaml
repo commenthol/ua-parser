@@ -446,7 +446,7 @@ user_agent_parsers:
   - regex: '(Phantom)/V(\d+)\.(\d+)'
     family_replacement: 'Phantom Browser'
 
-  - regex: 'Trident(.*)rv.(\d+)\.(\d+)'
+  - regex: 'Trident(.*)rv:(\d+)\.(\d+)'
     family_replacement: 'IE'
 
  # Apple Mail
@@ -466,6 +466,39 @@ user_agent_parsers:
 
   - regex: '(python-requests)/(\d+)\.(\d+)'
     family_replacement: 'Python Requests'
+
+
+engine_parsers:
+
+  - regex: '(Trident|Presto)[ /](\d+)\.(\d+)\.?(\d+)?'
+
+  - regex: '(Chrome)[/](\d+)\.(\d+)\.?(\d+)?\.?(\d+)?.*OPR/\d+'
+    family_replacement: 'Chrome-Opera'
+  
+  - regex: '(Chrome)[/](\d+)\.(\d+)\.?(\d+)?\.?(\d+)?'
+
+  - regex: '(Silk)/(\d+)\.(\d+)'
+
+  - regex: '(NokiaBrowser|BrowserNG)/(\d+)\.(\d+)\.(\d+)\.?(\d+)?'
+    family_replacement: 'NokiaBrowser'
+
+  - regex: 'Android\b.*(AppleWeb[Kk]it)/?(\d+)\.?(\d+)?'
+    family_replacement: 'AndroidWebkit'
+
+  - regex: '(rv:)(\d+)\.(\d+[ab]?)\.?([ab]?\d+[a-z]*)?\.?(\d+[a-z]*)?[;\)].* Gecko(?:[ /]|$)'
+    family_replacement: 'Gecko'
+
+  - regex: '(AppleWeb[Kk]it)(?:/(\d+)\.?(\d+)?\.?(\d+)?|[ ,]|$)'
+    family_replacement: 'AppleWebkit'
+
+  - regex: '(Web[Kk]it)(?:/(\d+)\.?(\d+)?\.?(\d+)?|[ ,]|$)'
+    family_replacement: 'Webkit'
+
+  - regex: '(Net[Ff]ront)[ /]?(\d+)\.(\d+)'
+    family_replacement: 'Netfront'
+
+  - regex: '(Gecko)/20\d{6}'
+
 
 os_parsers:
   ##########
