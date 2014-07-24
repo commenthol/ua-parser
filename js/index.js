@@ -79,10 +79,11 @@ module.exports = function(options) {
 		var
 			ua = uaParser.parseUA(str),
 			os = uaParser.parseOS(str),
+			engine = uaParser.parseEngine(str),
 			device = uaParser.parseDevice(str);
 
 		if (!config.backwardsCompatible) {
-			return { ua: ua, os: os, device: device, string: str };
+			return { ua: ua, engine: engine, os: os, device: device, string: str };
 		}
 		else if (ua) {
 			return new Results(str, ua, os, device);
