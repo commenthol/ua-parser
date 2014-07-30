@@ -35,7 +35,7 @@ function _makeParsers(obj) {
 }
 
 exports.makeParser = function(regexes) {
-  var parsers = regexes.map(_makeParsers);
+  var parsers = (regexes||[]).map(_makeParsers);
 
   function parser(str) {
     var obj;

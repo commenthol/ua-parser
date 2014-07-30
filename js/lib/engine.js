@@ -15,11 +15,11 @@ require('util').inherits(Engine, OS);
 function multiReplace(str, m) {
 	return str.replace(/\$(\d)/g, function(tmp, i) {
 		return m[i] || '';
-	}).replace(/^\s+|\s+$/gm, '');
+	}).trim();
 }
 
 exports.makeParser = function(regexes) {
-	var parsers = regexes.map(function (obj) {
+	var parsers = (regexes||[]).map(function (obj) {
 		var regexp,
 				famRep   = obj.family_replacement,
 				majorRep = obj.v1_replacement,

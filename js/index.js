@@ -8,7 +8,7 @@ var path = require('path'),
 /**
  * ua-parser
  * 
- * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string than file is used following.
+ * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string is given than that file is used.
  * @property {string} options.file - filename used as regexes file.
  * @property {Boolean} options.backwardsCompatible - set "true" if backwardsCompatible interface is desired
  */ 
@@ -100,7 +100,7 @@ module.exports = function(options) {
 
 		isParsers = false;
 
-		if (regexes && regexes.user_agent_parsers && regexes.os_parsers && regexes.device_parsers ) {
+		if (regexes) {
 
 			var
 				_parseUA     = require('./lib/ua').makeParser(regexes.user_agent_parsers),
@@ -150,7 +150,7 @@ module.exports = function(options) {
 	/**
 	 * Synchronously load the ua-parsers regexes file
 	 *
-	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string than file is used following.
+	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string is given than that file is used.
 	 * @property {string} options.file - filename used as regexes file.
 	 * @property {Boolean} options.backwardsCompatible - set "true" if backwardsCompatible interface is desired
 	 * @return {Boolean} true if file was loaded otherwise false.
@@ -188,7 +188,7 @@ module.exports = function(options) {
 	/**
 	 * Asynchronously load the ua-parsers regexes file
 	 *
-	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string than file is used following.
+	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string is given than that file is used.
 	 * @property {string} options.file - filename used as regexes file.
 	 * @property {Boolean} options.backwardsCompatible - set "true" if backwardsCompatible interface is desired
 	 * @param {Function} callback - callback(error)
@@ -219,7 +219,7 @@ module.exports = function(options) {
 	/**
 	 * Watch a regexes file and reload if there are any changes
 	 *
-	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string than file is used following.
+	 * @param {Object|string} options - (optional) if "undefined" than default file is choosen. If string is given than that file is used.
 	 * @property {string} options.file - filename used as regexes file.
 	 * @property {Boolean} options.backwardsCompatible - set "true" if backwardsCompatible interface is desired
 	 * @param {Function} callback - callback(error)
