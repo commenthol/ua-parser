@@ -13,11 +13,11 @@ Device.prototype.toString = function() {
 function multiReplace(str, m) {
   return str.replace(/\$(\d)/g, function(tmp, i) {
     return m[i] || '';
-  }).replace(/^\s+|\s+$/gm, '');
+  }).trim();
 }
 
 exports.makeParser = function(regexes) {
-  var parsers = regexes.map(function (obj) {
+  var parsers = (regexes||[]).map(function (obj) {
     var regexp,
         deviceRep = obj.device_replacement,
         brandRep = obj.brand_replacement,
