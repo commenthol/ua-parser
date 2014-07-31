@@ -151,16 +151,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/3.04 (compatible; ANTFresco/2.13; RISC OS 4.02)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'ANTFresco'
+    major: '2'
+    minor: '13'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/3.04 (compatible; NCBrowser/2.35 (1.45.2.1); ANTFresco/2.17; RISC OS-NC 5.13 Laz1UK1802)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'ANTFresco'
+    major: '2'
+    minor: '17'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; ANTFresco 2.20; RISC OS 3.11)'
     family: 'Other'
@@ -63845,10 +63847,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Netscape (Windows; U; Windows NT 5.0; en-US; rv:1.7.5) Navigator/6.2'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Netscape'
+    major: '6'
+    minor: '2'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Netscape 1.22 (Win16; I)'
     family: 'Other'
@@ -67870,10 +67873,11 @@ test_cases:
     patch: '1'
 
   - user_agent_string: 'Mozilla/4.5 (compatible; OmniWeb/4.3-v435; Mac_PowerPC)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'OmniWeb'
+    major: '4'
+    minor: '3'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Opera'
     family: 'Other'
@@ -74853,4 +74857,53 @@ test_cases:
     major:
     minor:
     patch:
+
+  - user_agent_string: 'ALCATEL-OT510A/382 ObigoInternetBrowser/Q05A'
+    family: 'Obigo'
+    major:
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'HbbTV/1.1.1 (;Panasonic;VIERA 2012;1.261;0071-3103 2000-0000;)'
+    family: 'HbbTV'
+    major: '1'
+    minor: '1'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/21.0.025; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413'
+    family: 'Nokia Browser'
+    major: '7'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.2; Galaxy Nexus Build/JOP40C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19'
+    family: 'Chrome Mobile'
+    major: '18'
+    minor: '0'
+    patch: '1025'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC Vision Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC_One Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HUAWEI G610-U00 Build/HuaweiG610-U00) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
 

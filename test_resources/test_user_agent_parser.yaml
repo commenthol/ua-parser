@@ -1737,58 +1737,121 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1a3) Gecko/20060526 BonEcho/2.0a3'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'a3'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.1b2) Gecko/20060913 BonEcho/2.0b2'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'b2'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.8.1b1) Gecko/20060729 BonEcho/2.0b1'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'b1'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8) Gecko/20060427 BonEcho/2.0a1 (.NET CLR 3.5.30729)'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'a1'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1a2) Gecko/20060512 BonEcho/2.0a2'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'a2'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; es-ES; rv:1.8.1b2) Gecko/20060831 BonEcho/2.0b2'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'b2'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1b2) Gecko/20060601 BonEcho/2.0b2 (Ubuntu-edgy)'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'b2'
     patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; nl; rv:1.8.1b2) Gecko/20060821 BonEcho/2.0b2 (Debian-1.99 2.0b2 dfsg-1)'
-    family: 'Bon Echo'
+    family: 'Firefox (BonEcho)'
     major: '2'
     minor: '0'
     patch: 'b2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; U; InfiNet 0.1; Haiku) AppleWebKit/527+ (KHTML, like Gecko) WebPositive/527+ Safari/527+,gzip(gfe),gzip(gfe)'
+    family: 'WebPositive'
+    major: '527'
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (compatible; U; InfiNet 0.1; Haiku) AppleWebKit/528+ (KHTML, like Gecko) WebPositive/528+ Safari/528+'
+    family: 'WebPositive'
+    major: '528'
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Maemo; Linux; U; Jolla; Sailfish; Mobile; rv:26.0) Gecko/26.0 Firefox/26.0 SailfishBrowser/1.0 like Safari/538.1'
+    family: 'SailfishBrowser'
+    major: '1'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0 CometBird/11.0'
+    family: 'CometBird'
+    major: '11'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 5.1; rv:15.0) Gecko/20100101 Firefox/15.0.2.0 IceDragon/15.0.2.0'
+    family: 'IceDragon'
+    major: '15'
+    minor: '0'
+    patch: '2'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.4; en-US; rv:1.9.0.19) Gecko/2010062819 Firefox/3.0.19 Flock/2.6.1'
+    family: 'Flock'
+    major: '2'
+    minor: '6'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Little Flock/5 CFNetwork/609.1.4 Darwin/13.0.0'
+    family: 'CFNetwork'
+    major: '609'
+    minor: '1'
+    patch: '4'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NTNT 6.0) AppleWebKit/534.30 (KHTML,%2ike Gecko) Comodo_Dragon/12.1.0.0 Chrome/12.0.742.91 Safari/534.30'
+    family: 'Comodo Dragon'
+    major: '12'
+    minor: '1'
+    patch: '0'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.110 Safari/537.36 CoolNovo/2.0.9.20'
+    family: 'CoolNovo'
+    major: '2'
+    minor: '0'
+    patch: '9'
     patch_minor:
 
