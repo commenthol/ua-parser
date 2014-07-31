@@ -1,5 +1,11 @@
 # Changelog
 
+- 2014-07-30
+  - *regexes.yaml*
+    - Reorganisation of user_agent_parsers to better detect browsers, feedreasers, apps
+    - amaya, AmigaVoyager, ANTFresco, Amiga-AWeb, IBrowse, curl, Java, Firebird, NetPositive, WebPositive, Bunjalloo, CometBird, IceDragon, Flock, Comodo Dragon, CoolNovo, Espial, EspialTVBrowser, Puffin, Baidu Spark, Palm WebPro, Fireweb Navigator, NetSurf, NCSA Mosaic, ABrowse, Beonex, ChromePlus, Dolphin, Dolphin http client, HotJava, Xiino
+    - Update regexes for ELinks, Galeon, Netscape, OmniWeb, Obigo, Teleca
+
 - 2014-07-20
   - *regexes.yaml*
     - Better detection of Assistant, Thl. Detection of Dex, Enot

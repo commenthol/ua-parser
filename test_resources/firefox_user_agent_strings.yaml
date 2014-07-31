@@ -1,13 +1,3 @@
-# http://people.mozilla.com/~dwitte/ua.txt
-#
-# The following are some example User Agent strings for various versions of
-# Firefox and other Gecko-based browsers. Many of these have been modified by
-# extensions, external applications, distributions, and users. The version number
-# for Firefox 5.0 (and the corresponding Gecko version) is tentative. See
-# https://developer.mozilla.org/En/Gecko_User_Agent_String_Reference for more
-# details. Credit to http://useragentstring.com/ for providing some of these
-# strings.
-
 test_cases:
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en; rv:1.8.1.6) Gecko/20070809 Camino/1.5.1'
@@ -106,12 +96,6 @@ test_cases:
     minor: '0'
     patch: 'b6pre'
 
-  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.0; rv:2.0b6pre) Gecko/20100907 Firefox/4.0b6pre'
-    family: 'Firefox Beta'
-    major: '4'
-    minor: '0'
-    patch: 'b6pre'
-
   - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0b6pre) Gecko/20100903 Firefox/4.0b6pre'
     family: 'Firefox Beta'
     major: '4'
@@ -131,30 +115,6 @@ test_cases:
     patch: 'b6pre'
 
   - user_agent_string: 'Mozilla/5.0 (X11; Linux i686; rv:2.0b6pre) Gecko/20100907 Firefox/4.0b6pre'
-    family: 'Firefox Beta'
-    major: '4'
-    minor: '0'
-    patch: 'b6pre'
-
-  - user_agent_string: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0b6pre) Gecko/20100907 Firefox/4.0b6pre'
-    family: 'Firefox Beta'
-    major: '4'
-    minor: '0'
-    patch: 'b6pre'
-
-  - user_agent_string: 'Mozilla/5.0 (X11; Linux i686; rv:2.0b6pre) Gecko/20100907 Firefox/4.0b6pre'
-    family: 'Firefox Beta'
-    major: '4'
-    minor: '0'
-    patch: 'b6pre'
-
-  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0b6pre) Gecko/20100903 Firefox/4.0b6pre'
-    family: 'Firefox Beta'
-    major: '4'
-    minor: '0'
-    patch: 'b6pre'
-
-  - user_agent_string: 'Mozilla/5.0 (Windows NT 6.1; rv:2.0b6pre) Gecko/20100903 Firefox/4.0b6pre Firefox/4.0b6pre'
     family: 'Firefox Beta'
     major: '4'
     minor: '0'
@@ -1263,36 +1223,42 @@ test_cases:
     major: '2'
     minor: '0'
     patch: '4'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.9) Gecko/20100317 SUSE/2.0.4-3.2 Lightning/1.0b1 SeaMonkey/2.0.4'
     family: 'SeaMonkey'
     major: '2'
     minor: '0'
     patch: '4'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.9) Gecko/20100317 Lightning/1.0b1 SeaMonkey/2.0.4'
     family: 'SeaMonkey'
     major: '2'
     minor: '0'
     patch: '4'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; de; rv:1.9.1.10) Gecko/20100504 Lightning/1.0b1 Mnenhy/0.8.2 SeaMonkey/2.0.5'
     family: 'SeaMonkey'
     major: '2'
     minor: '0'
     patch: '5'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 6.1; ru; rv:1.9.1.10) Gecko/20100504 Lightning/1.0b1 SeaMonkey/2.0.5'
     family: 'SeaMonkey'
     major: '2'
     minor: '0'
     patch: '5'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US; rv:1.9.1.10) Gecko/20100504 Lightning/1.0b1 SeaMonkey/2.0.5'
     family: 'SeaMonkey'
     major: '2'
     minor: '0'
     patch: '5'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.1.11) Gecko/20100721 SeaMonkey/2.0.6'
     family: 'SeaMonkey'
@@ -1311,6 +1277,7 @@ test_cases:
     major: '2'
     minor: '0'
     patch: '6'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.11) Gecko/20100722 SeaMonkey/2.0.6'
     family: 'SeaMonkey'
@@ -1467,3 +1434,60 @@ test_cases:
     major: '2'
     minor: '1'
     patch: 'a3pre'
+
+  - user_agent_string: 'ALCATEL-OT510A/382 ObigoInternetBrowser/Q05A'
+    family: 'Obigo'
+    major: '5'
+    minor:
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'HbbTV/1.1.1 (;Panasonic;VIERA 2012;1.261;0071-3103 2000-0000;)'
+    family: 'HbbTV'
+    major: '1'
+    minor: '1'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (SymbianOS/9.4; U; Series60/5.0 Nokia5800d-1/21.0.025; Profile/MIDP-2.1 Configuration/CLDC-1.1 ) AppleWebKit/413 (KHTML, like Gecko) Safari/413'
+    family: 'Nokia Browser'
+    major: '7'
+    minor: '0'
+    patch:
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; Android 4.2; Galaxy Nexus Build/JOP40C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19'
+    family: 'Chrome Mobile'
+    major: '18'
+    minor: '0'
+    patch: '1025'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC Vision Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC_One Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HUAWEI G610-U00 Build/HuaweiG610-U00) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 4.01; Windows NT)'
+    family: 'IE'
+    major: '4'
+    minor: '01'
+    patch:
+    patch_minor:
+
