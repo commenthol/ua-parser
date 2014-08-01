@@ -14,6 +14,14 @@ suite('Device object', function() {
     assert.strictEqual(device.family, 'Foo');
     assert.strictEqual(device.toString(), 'Foo');
   });
+
+  test('Device constructor with valid Brand Model arguments', function() {
+    var device = new Device('Sang', 'Gum', 'Sang A');
+    assert.strictEqual(device.family, 'Sang');
+    assert.strictEqual(device.brand, 'Gum');
+    assert.strictEqual(device.model, 'Sang A');
+    assert.strictEqual(device.toString(), 'Gum Sang A');
+  });
 });
 
 suite('Device parser', function() {

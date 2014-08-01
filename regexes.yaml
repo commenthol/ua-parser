@@ -1,21 +1,9 @@
+#### Browser ####
 user_agent_parsers:
   #### SPECIAL CASES TOP ####
 
-  # Feed Readers
-  - regex: '\b(AideRSS|Akregator|Apple-PubSub|FeedDa?emon|Feeddler|Feedreader|JetBrains Omea Reader|Liferea|NetNewsWire|NewsBlur|newsbeuter|Pulp|ReadKit|Reeder|(?:RSS|Rss)Bandit|RssBar|RSS Junkie|RSS Menu|RSSOwl|SimplePie|SimpleRSS|Tiny Tiny RSS|UniversalFeedParser|Wizz RSS News Reader|Windows-RSS-Platform)(?:[ /](\d+)(?:\.(\d+))?(?:\.(\d+))?)?'
-    family_replacement: 'feedreader|$1'
-
-  # iOS / OSX Applications
-  - regex: '^([^/]+)/(\d+)(?:\.(\d+))+ \((?:iPhone|iPad|iPod); iOS [0-9\.]+; Scale/[0-9\.]+\)'
-    family_replacement: 'app|$1'
-
-  - regex: '^((?:(?! CFNetwork|/).)+)(?:/(\d+)(?:\.([a-z\d]+))*|.*)? CFNetwork/.*'
-    family_replacement: 'app|$1'
-  - regex: '(CFNetwork)(?:/(\d+)(?:\.(\d+))+)?'
-    family_replacement: 'CFNetwork'
-
   # Browsers using Gecko; must go before Firefox
-  - regex: '\b(Beonex|Camino|Chimera|CometBird|Firebird(?: Browser)?|Fireweb Navigator|Flock|IceDragon|Lightning|SailfishBrowser|SeaMonkey)/(\d+)(?:\.(\d+)(?:\.?([ab]?\d+[a-z]*))?)?'
+  - regex: 'Mozilla.*\b(Beonex|Camino|Chimera|CometBird|Firebird(?: Browser)?|Fireweb Navigator|Flock|IceDragon|SailfishBrowser|SeaMonkey)/(\d+)(?:\.(\d+)(?:\.?([ab]?\d+[a-z]*))?)?'
 
   # Firefox
   - regex: '(Pale[Mm]oon)/(\d+)\.(\d+)\.?(\d+)?'
@@ -96,8 +84,11 @@ user_agent_parsers:
   - regex: '(Comodo[ _]Dragon)/(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Comodo Dragon'
 
+<<<<<<< HEAD
   # Bots
   - regex: '(BingPreview|BrowserMob|Catchpoint bot|GomezA|Google SketchUp|HttpMonitor|PagePeeker|Read%20Later|Slurp|ThumbShotsBot|URL2PNG|WebThumb|Willow Internet Crawler|YandexBot|YottaaMonitor|ZooShot)'
+=======
+>>>>>>> generic parser
 
   - regex: '(Symphony) (\d+).(\d+)'
 
@@ -148,30 +139,6 @@ user_agent_parsers:
   - regex: '(QQBrowser)(?:/(\d+)(?:\.(\d+)\.(\d+)(?:\.(\d+))?)?)?'
     family_replacement: 'QQ Browser'
 
-  # Pingdom
-  - regex: '(Pingdom.com_bot_version_)(\d+)\.(\d+)'
-    family_replacement: 'PingdomBot'
-
-  # Facebook
-  - regex: '(facebookexternalhit)/(\d+)\.(\d+)'
-    family_replacement: 'FacebookBot'
-
-  # LinkedIn
-  - regex: '(LinkedInBot)/(\d+)\.(\d+)'
-    family_replacement: 'LinkedInBot'
-
-  # Twitterbot
-  - regex: '(Twitterbot)/(\d+)\.(\d+)'
-    family_replacement: 'TwitterBot'
-
-  # Google Plus
-  - regex: 'Google.*/\+/web/snippet'
-    family_replacement: 'GooglePlusBot'
-
-  # Rackspace Monitoring
-  - regex: '(Rackspace Monitoring)/(\d+)\.(\d+)'
-    family_replacement: 'RackspaceBot'
-
   # PyAMF
   - regex: '(PyAMF)/(\d+)\.(\d+)\.(\d+)'
 
@@ -202,6 +169,7 @@ user_agent_parsers:
 
   # iOS Versions of Browsers
   - regex: '(Mercury|Puffin)/(\d{3,5})'
+<<<<<<< HEAD
 
   # Must come before Chrome
   - regex: '(Chromium|ChromePlus|CoolNovo|Puffin|Sleipnir)[/ ](\d+)(?:\.(\d+)(?:\.(\d+))?)?'
@@ -213,29 +181,27 @@ user_agent_parsers:
  
   - regex: '(Openwave)(?:/(\d+)(?:\.(\d+)(?:\.(\d+))?)?)?'
     family_replacement: 'UP.Browser'
+=======
+>>>>>>> generic parser
 
-  # Outlook 2007
-  - regex: 'MSOffice 12'
-    family_replacement: 'Outlook'
-    v1_replacement: '2007'
+  - regex: '\b(AideRSS|Akregator|Apple-PubSub|FeedDa?emon|Feeddler|Feedreader|JetBrains Omea Reader|Liferea|NetNewsWire|NewsBlur|newsbeuter|Pulp|ReadKit|Reeder|(?:RSS|Rss)Bandit|RssBar|RSS Junkie|RSS Menu|RSSOwl|SimplePie|SimpleRSS|Tiny Tiny RSS|UniversalFeedParser|Wizz RSS News Reader|Windows-RSS-Platform)(?:[ /](\d+)(?:\.(\d+))?(?:\.(\d+))?)?'
+    type_replacement: 'feedreader'
 
-  # Outlook 2010
-  - regex: 'MSOffice 14'
-    family_replacement: 'Outlook'
-    v1_replacement: '2010'
 
-  # Outlook 2013
-  - regex: 'Microsoft Outlook 15\.\d+\.\d+'
-    family_replacement: 'Outlook'
-    v1_replacement: '2013'
+  # Must come before Chrome
+  - regex: '(Chromium|ChromePlus|CoolNovo|Puffin|Sleipnir)[/ ](\d+)(?:\.(\d+)(?:\.(\d+))?)?'
 
-  # Apple Air Mail
-  - regex: '(Airmail) (\d+)\.(\d+)(?:\.(\d+))?'
+  # Browser/major_version.minor_version(.beta_version)
+  - regex: '(Abrowser|AdobeAIR|amaya|Amiga-AWeb|AmigaVoyager|ANTFresco|ANTGalio|Arora|bingbot|Bolt|BOLT|Bunjalloo|Crazy Browser|Chrome|(?:lib)?curl|Demeter|Dillo|Dolfin|Dolphin http client|Epiphany|EspialTVBrowser|Espial|Fennec|FireWeb|Fluid|Fresco|Galeon|Googlebot|Google Earth(?: EC)?|HbbTV|HotJava|IBrowse|iCab|Iceape|ICE Browser|IceCat|Iceweasel|IceWeasel|iRider|Iris|Iron|Jasmine|Kapiko|Kazehakase|Kindle|K-Meleon|Lobo|Lunascape|Lynx|Maemo Browser|Maxthon|mDolphin|Mercury|Midori|Minimo|Net[Ff]ront|NetFrontLifeBrowser|NetPositive|Netscape|NetSurf|OmniWeb|Opera|Opera Mini|Orca|PaleMoon|Phoenix|Planetweb|Polaris|Raven for Mac|RockMelt|SailfishBrowser|SeaMonkey|Shiira|SkipStone|Skyfire|Snowshoe|Space Bison|Stainless|Sunrise|ThunderBrowse|UP\.Browser|Vienna|WebPilot|Xiino)[/ ](\d+)\.(\d+)(?:\.(\d+))?'
 
-  # Thunderbird
-  - regex: '(Thunderbird)/(\d+)\.(\d+)\.(\d+(?:pre)?)'
-    family_replacement: 'Thunderbird'
+<<<<<<< HEAD
+=======
+  - regex: '(Galeon|UP\.Browser)(?:[ /](\d+)(?:\.(\d+)(?:\.(\d+))?)?)?'
+ 
+  - regex: '(Openwave)(?:/(\d+)(?:\.(\d+)(?:\.(\d+))?)?)?'
+    family_replacement: 'UP.Browser'
 
+>>>>>>> generic parser
   # Dolphin Browser
   # @ref: http://www.dolphin.com
   - regex: '\b(Dolphin)(?: |/|HDCN/|/INT\-)(\d+)\.(\d+)\.?(\d+)?'
@@ -357,6 +323,18 @@ user_agent_parsers:
   # Browser major_version.minor_version (space instead of slash)
   - regex: '(Android) (\d+)\.(\d+)\.?(\d+)?'
 
+<<<<<<< HEAD
+=======
+  # iOS / OSX Applications
+  - regex: '^([^/]+)/(\d+)(?:\.(\d+))+ \((?:iPhone|iPad|iPod); iOS [0-9\.]+; Scale/[0-9\.]+\)'
+    type_replacement: 'app'
+  - regex: '^((?:(?! CFNetwork|/).)+)(?:/(\d+)(?:\.([a-z\d]+))*|.*)? CFNetwork/.*'
+    type_replacement: 'app'
+  - regex: '(CFNetwork)(?:/(\d+)(?:\.(\d+))+)?'
+    family_replacement: 'CFNetwork'
+    type_replacement: 'app'
+
+>>>>>>> generic parser
   # iOS
   - regex: '(iPod).+Version/(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Mobile Safari'
@@ -414,11 +392,43 @@ user_agent_parsers:
   - regex: 'Trident(.*)rv.(\d+)\.(\d+)'
     family_replacement: 'IE'
 
+<<<<<<< HEAD
   # Apple Mail
+=======
+>>>>>>> generic parser
 
-  # apple mail - not directly detectable, have it after Safari stuff
-  - regex: '(AppleWebKit)/(\d+)\.(\d+)\.(\d+)'
-    family_replacement: 'AppleMail'
+  # Lightning
+  - regex: '\b(Lightning)/(\d+)(?:\.(\d+)(?:\.?([ab]?\d+[a-z]*))?)?'
+    type_replacement: 'mail'
+  # Outlook 2007
+  - regex: 'MSOffice 12'
+    family_replacement: 'Outlook'
+    v1_replacement: '2007'
+    type_replacement: 'mail'
+  # Outlook 2010
+  - regex: 'MSOffice 14'
+    family_replacement: 'Outlook'
+    v1_replacement: '2010'
+    type_replacement: 'mail'
+  # Outlook 2013
+  - regex: 'Microsoft Outlook 15\.\d+\.\d+'
+    family_replacement: 'Outlook'
+    v1_replacement: '2013'
+    type_replacement: 'mail'
+
+  - regex: '(Lotus-Notes|Microsoft Outlook|Outlook-Express)(?:/(\d+)(?:\.(\d+))?)?'
+    type_replacement: 'mail'
+
+  # Apple Air Mail
+  - regex: '(Airmail) (\d+)\.(\d+)(?:\.(\d+))?'
+    type_replacement: 'mail'
+  # Thunderbird
+  - regex: '(Thunderbird|Icedove)/(\d+)\.(\d+)\.(\d+(?:pre)?)'
+    family_replacement: 'Thunderbird'
+    type_replacement: 'mail'
+
+  - regex: '(Barca(?:Pro)?|Postbox|The Bat!(?: Voyager)?)(?:[/ ](\d+[\.\d]+))?'
+    type_replacement: 'mail'
 
   # AFTER THE EDGE CASES ABOVE!
   # AFTER IE11
@@ -433,6 +443,71 @@ user_agent_parsers:
 
   - regex: '(?:^|[ ;])(Java)[ /]?(\d+)(?:\.(\d+)(?:\.(\d+))?)?'
 
+<<<<<<< HEAD
+=======
+  # Bots
+  - regex: '(BingPreview|BrowserMob|Catchpoint bot|GomezA|Google SketchUp|HttpMonitor|PagePeeker|Read%20Later|Slurp|ThumbShotsBot|URL2PNG|WebThumb|Willow Internet Crawler|YandexBot|YottaaMonitor|ZooShot)'
+    type_replacement: 'bot'
+
+  # Pingdom
+  - regex: '(Pingdom.com_bot_version_)(\d+)\.(\d+)'
+    family_replacement: 'PingdomBot'
+    type_replacement: 'bot'
+  # Facebook
+  - regex: '(facebookexternalhit)/(\d+)\.(\d+)'
+    family_replacement: 'FacebookBot'
+    type_replacement: 'bot'
+  # LinkedIn
+  - regex: '(LinkedInBot)/(\d+)\.(\d+)'
+    family_replacement: 'LinkedInBot'
+    type_replacement: 'bot'
+  # Twitterbot
+  - regex: '(Twitterbot)/(\d+)\.(\d+)'
+    family_replacement: 'TwitterBot'
+    type_replacement: 'bot'
+  # Google Plus
+  - regex: 'Google.*/\+/web/snippet'
+    family_replacement: 'GooglePlusBot'
+    type_replacement: 'bot'
+  # Rackspace Monitoring
+  - regex: '(Rackspace Monitoring)/(\d+)\.(\d+)'
+    family_replacement: 'RackspaceBot'
+    type_replacement: 'bot'
+
+#### Engine ####
+engine_parsers:
+
+  - regex: '(Trident|Presto)[ /](\d+)\.(\d+)\.?(\d+)?'
+
+  - regex: '(Chrome)[/](\d+)\.(\d+)\.?(\d+)?\.?(\d+)?.*OPR/\d+'
+    family_replacement: 'Chrome-Opera'
+  
+  - regex: '(Chrome)[/](\d+)\.(\d+)\.?(\d+)?\.?(\d+)?'
+
+  - regex: '(Silk)/(\d+)\.(\d+)'
+
+  - regex: '(NokiaBrowser|BrowserNG)/(\d+)\.(\d+)\.(\d+)\.?(\d+)?'
+    family_replacement: 'NokiaBrowser'
+
+  - regex: 'Android\b.*(AppleWeb[Kk]it)/?(\d+)\.?(\d+)?'
+    family_replacement: 'AndroidWebkit'
+
+  - regex: '(rv:)(\d+)\.(\d+[ab]?)\.?([ab]?\d+[a-z]*)?\.?(\d+[a-z]*)?[;\)].* Gecko(?:[ /]|$)'
+    family_replacement: 'Gecko'
+
+  - regex: '(AppleWeb[Kk]it)(?:/(\d+)\.?(\d+)?\.?(\d+)?|[ ,]|$)'
+    family_replacement: 'AppleWebkit'
+
+  - regex: '(Web[Kk]it)(?:/(\d+)\.?(\d+)?\.?(\d+)?|[ ,]|$)'
+    family_replacement: 'Webkit'
+
+  - regex: '(Net[Ff]ront)[ /]?(\d+)\.(\d+)'
+    family_replacement: 'Netfront'
+
+  - regex: '(Gecko)/20\d{6}'
+
+#### OS ####
+>>>>>>> generic parser
 os_parsers:
   ##########
   # HbbTV vendors
@@ -793,6 +868,7 @@ os_parsers:
   - regex: 'SunOS'
     os_replacement: 'Solaris'
 
+#### Device ####
 device_parsers:
 
   #########

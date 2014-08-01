@@ -1918,3 +1918,31 @@ test_cases:
     patch: '2'
     patch_minor:
 
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC Vision Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HTC_One Build/JOP40D) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/5.0 (Linux; U; Android 4.2.1; de-de; HUAWEI G610-U00 Build/HuaweiG610-U00) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30'
+    family: 'Android'
+    major: '4'
+    minor: '2'
+    patch: '1'
+    patch_minor:
+
+  - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 4.01; Windows NT)'
+    family: 'Windows'
+    major:
+    minor:
+    patch:
+    patch_minor:
+

@@ -532,6 +532,7 @@ test_cases:
     major: '1'
     minor: '1'
     patch:
+    type: 'app'
 
   - user_agent_string: 'SonyEricssonP900/R101 Profile/MIDP-2.0 Configuration/CLDC-1.0'
     family: 'Other'
@@ -4792,16 +4793,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Lotus-Notes'
+    major: '5'
+    minor: '0'
     patch:
+    type: 'mail'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Lotus-Notes'
+    major: '6'
+    minor: '0'
     patch:
+    type: 'mail'
 
   - user_agent_string: 'LTH/3.02a (http://www.learntohack.nil)'
     family: 'Other'
@@ -6286,18 +6289,20 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/125.5.6 (KHTML, like Gecko) NetNewsWire/2.0b10'
-    family: 'feedreader|NetNewsWire'
+    family: 'NetNewsWire'
     major: '2'
     minor: '0'
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/125.5.6 (KHTML, like Gecko) NetNewsWire/2.0b22'
-    family: 'feedreader|NetNewsWire'
+    family: 'NetNewsWire'
     major: '2'
     minor: '0'
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en)'
     family: 'Other'
@@ -32837,11 +32842,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Wanadoo 6.0; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98) WebWasher 3.3'
     family: 'IE'
@@ -38683,11 +38689,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; FREE)'
     family: 'IE'
@@ -40976,11 +40983,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Avant Browser [avantbrowser.com]; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Avant Browser [avantbrowser.com]; i-NavFourF; NetCaptor 7.2.2)'
     family: 'Avant'
@@ -42213,39 +42221,44 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Feedreader; Alexa Toolbar)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322; Alexa Toolbar)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Flow Systems)'
     family: 'IE'
@@ -44798,11 +44811,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; FunWebProducts)'
     family: 'IE'
@@ -46065,11 +46079,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; T312461; Infowalker v1.01; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; T312461; iOpus-I-M; FunWebProducts)'
     family: 'IE'
@@ -48910,11 +48925,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; AT&T CSM7.0; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; AT&T CSM7.0; FunWebProducts; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -49037,11 +49053,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; MyIE2; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; MyIE2; .NET CLR 1.1.4322)'
     family: 'MyIE2'
@@ -51324,32 +51341,36 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Feedreader; .NET CLR 1.0.3705)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; {FF25C218-3C07-491B-BFCA-D6C5557A414F}; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -53236,18 +53257,20 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; i-NavFourF; Feedreader; Alexa Toolbar)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; i-NavFourF; Feedreader; .NET CLR 1.1.4322; Alexa Toolbar)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; i-NavFourF; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -53520,11 +53543,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; iRider 2.07.0018; SV1; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; isp1057; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -53917,11 +53941,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Maxthon; SV1; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Maxthon; SV1; .NET CLR 1.1.4322)'
     family: 'Maxthon'
@@ -54386,18 +54411,20 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; FunWebProducts)'
     family: 'MyIE2'
@@ -54670,11 +54697,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; SV1; Maxthon; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; SV1; Maxthon; .NET CLR 1.0.3705; .NET CLR 1.1.4322; .NET CLR 2.0.40607)'
     family: 'MyIE2'
@@ -56213,18 +56241,20 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; Feedreader; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; FunWebProducts)'
     family: 'IE'
@@ -58783,39 +58813,44 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Feedreader; .NET CLR 1.0.3705)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Feedreader; .NET CLR 1.1.4322)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Feedreader; .NET CLR 1.1.4322; Alexa Toolbar)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Feedreader; .NET CLR 1.1.4322; .NET CLR 1.0.3705)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; Feedreader; (R1 1.5); .NET CLR 1.1.4322; .NET CLR 1.0.3705)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; formsPlayer 1.3; nxforms/1.00; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -62514,11 +62549,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; YComp 5.0.2.6; Feedreader)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; YComp 5.0.2.6; FunWebProducts)'
     family: 'IE'
@@ -63247,11 +63283,12 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; Feedreader; .NET CLR 1.1.4322; .NET CLR 1.0.3705)'
-    family: 'feedreader|Feedreader'
+    family: 'Feedreader'
     major:
     minor:
     patch:
     patch_minor:
+    type: 'feedreader'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; FunWebProducts-MyWay; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -75209,11 +75246,12 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Little Flock/5 CFNetwork/609.1.4 Darwin/13.0.0'
-    family: 'app|Little Flock'
+    family: 'Little Flock'
     major: '5'
     minor:
     patch:
     patch_minor:
+    type: 'app'
 
   - user_agent_string: 'Mozilla/5.0 (Windows NTNT 6.0) AppleWebKit/534.30 (KHTML,%2ike Gecko) Comodo_Dragon/12.1.0.0 Chrome/12.0.742.91 Safari/534.30'
     family: 'Comodo Dragon'
@@ -75244,21 +75282,21 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Mercury/7.2 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'app|Mercury'
+    family: 'Mercury'
     major: '7'
     minor: '2'
     patch:
     patch_minor:
 
   - user_agent_string: 'Mercury/7.2 CFNetwork/672.0.8 Darwin/14.0.0'
-    family: 'app|Mercury'
+    family: 'Mercury'
     major: '7'
     minor: '2'
     patch:
     patch_minor:
 
   - user_agent_string: 'Mercury/800 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'app|Mercury'
+    family: 'Mercury'
     major: '800'
     minor:
     patch:
@@ -75286,14 +75324,14 @@ test_cases:
     patch_minor:
 
   - user_agent_string: 'Puffin/10110 CFNetwork/548.1.4 Darwin/11.0.0'
-    family: 'app|Puffin'
+    family: 'Puffin'
     major: '10110'
     minor:
     patch:
     patch_minor:
 
   - user_agent_string: 'Puffin/9638 CFNetwork/672.0.2 Darwin/14.0.0'
-    family: 'app|Puffin'
+    family: 'Puffin'
     major: '9638'
     minor:
     patch:

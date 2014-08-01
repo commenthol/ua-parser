@@ -16,7 +16,18 @@ suite('UA object', function() {
     assert.strictEqual(ua.family, 'Firefox');
     assert.strictEqual(ua.major, '16');
     assert.strictEqual(ua.minor, '3');
+    assert.strictEqual(ua.patch, 'beta');    
+    assert.ok(!('patchMinor' in ua));
+    assert.ok(!('type' in ua));
+  });
+
+  test('UA constructor with valid arguments and type', function() {
+    var ua = new UA('Firefox', '16', '3', 'beta', '', 'browser');
+    assert.strictEqual(ua.family, 'Firefox');
+    assert.strictEqual(ua.major, '16');
+    assert.strictEqual(ua.minor, '3');
     assert.strictEqual(ua.patch, 'beta');
+    assert.strictEqual(ua.type, 'browser');
   });
 
   test('UA#toVersionString with only numerical args', function() {

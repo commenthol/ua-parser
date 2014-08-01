@@ -1,6 +1,11 @@
 var assert = require('assert'),
-    OS = require('../lib/os').OS,
-    makeParser = require('../lib/os').makeParser;
+    OS = require('../lib/ua').UA,
+    makeParser = require('../lib/ua').makeParser;
+
+var options = {
+    prefix: 'os',
+    usePatchMinor: true
+  };
 
 suite('os object', function() {
   test('OS constructor with no arguments', function() {
@@ -9,7 +14,7 @@ suite('os object', function() {
     assert.strictEqual(os.major, null);
     assert.strictEqual(os.minor, null);
     assert.strictEqual(os.patch, null);
-    assert.strictEqual(os.patchMinor, null);
+    //~ assert.strictEqual(os.patchMinor, null);
   });
 
   test('OS constructor with valid arguments', function() {
@@ -49,7 +54,7 @@ suite('OS parser', function() {
   });
 
   test('Unexpected args don\'t throw', function() {
-    var parse = makeParser([]);
+    var parse = makeParser([], options);
     assert.doesNotThrow(function() { parse('Foo'); });
     assert.doesNotThrow(function() { parse(''); });
     assert.doesNotThrow(function() { parse(); });
@@ -59,22 +64,22 @@ suite('OS parser', function() {
   });
 
   test('Parser returns an instance of OS when unsuccessful at parsing', function() {
-    var parse = makeParser([]);
+    var parse = makeParser([], options);
     assert.ok(parse('foo') instanceof OS);
   });
 
   test('Parser returns an instance of OS when sucessful', function() {
-    var parse = makeParser([{regex: 'foo'}]);
+    var parse = makeParser([{regex: 'foo'}], options);
     assert.ok(parse('foo') instanceof OS);
   });
 
   test('Parser correctly identifies OS name', function() {
-    var parse = makeParser([{regex: '(foo)'}]);
+    var parse = makeParser([{regex: '(foo)'}], options);
     assert.strictEqual(parse('foo').family, 'foo');
   });
 
   test('Parser correctly identifies version numbers', function() {
-    var parse = makeParser([{regex: '(foo) (\\d)\\.(\\d).(\\d)\\.(\\d)'}]),
+    var parse = makeParser([{regex: '(foo) (\\d)\\.(\\d).(\\d)\\.(\\d)'}], options),
         os = parse('foo 1.2.3.4');
     assert.strictEqual(os.family, 'foo');
     assert.strictEqual(os.major, '1');
@@ -91,7 +96,7 @@ suite('OS parser', function() {
       os_v2_replacement: 'b',
       os_v3_replacement: 'c',
       os_v4_replacement: 'd'
-    }]);
+    }], options);
 
     var os = parse('foo 1.2.3.4');
     assert.strictEqual(os.family, 'foobar');

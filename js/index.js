@@ -18,9 +18,9 @@ module.exports = function(options) {
 		uaParser = {},
 		dummy = function(){}, // prevent exception if parsers are not yet fully loaded
 		parseUA = dummy,
+		parseEngine = dummy,
 		parseOS = dummy,
 		parseDevice = dummy,
-		isParsers = false, // flag to indicate availability of parsers
 		config = {
 			async: false,
 			backwardsCompatible: false,
@@ -35,6 +35,16 @@ module.exports = function(options) {
 	 */
 	uaParser.parseUA = function (str) {
 		return parseUA(str);
+	};
+
+	/**
+	 * Parse the User-Agent string `str` for Operating System
+	 *
+	 * @param {string} str - Browsers User-Agent string
+	 * @return {Object} - { family:, major:, minor:, patch:, patchMinor: }
+	 */
+	uaParser.parseEngine = function (str) {
+		return parseEngine(str);
 	};
 
 	/**
@@ -66,12 +76,14 @@ module.exports = function(options) {
 	uaParser.parse = function (str) {
 
 		var
+      res,
 			ua = uaParser.parseUA(str),
+			engine = uaParser.parseEngine(str),
 			os = uaParser.parseOS(str),
 			device = uaParser.parseDevice(str);
 
 		if (!config.backwardsCompatible) {
-			return { ua: ua, os: os, device: device, string: str };
+			return { ua: ua, engine: engine, os: os, device: device, string: str };
 		}
 		else if (ua) {
 			return new Results(str, ua, os, device);
@@ -86,25 +98,11 @@ module.exports = function(options) {
 	var createParsers = function (regexes) {
 		var error = null;
 
-		isParsers = false;
-
 		if (regexes) {
-
-			var 
-				_parseUA = require('./lib/ua').makeParser(regexes.user_agent_parsers),
-				_parseOS = require('./lib/os').makeParser(regexes.os_parsers),
-				_parseDevice = require('./lib/device').makeParser(regexes.device_parsers);
-
-			// assign parsers only if everything went ok
-			if (_parseUA && _parseOS && _parseDevice) {
-				parseUA     = _parseUA;
-				parseOS     = _parseOS;
-				parseDevice = _parseDevice;
-				isParsers   = true;
-			}
-			else {
-				error = new Error('could not make parsers');
-			}
+      parseUA     = require('./lib/ua').makeParser(regexes.user_agent_parsers) || dummy;
+      parseEngine = require('./lib/ua').makeParser(regexes.engine_parsers) || dummy;
+      parseOS     = require('./lib/ua').makeParser(regexes.os_parsers, { prefix: 'os', usePatchMinor: true }) || dummy;
+      parseDevice = require('./lib/device').makeParser(regexes.device_parsers) || dummy;
 		}
 		else {
 			error = new Error('bad regexes');

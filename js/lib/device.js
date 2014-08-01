@@ -1,3 +1,7 @@
+'use strict';
+
+var replaceMatches = require('./replacematches');
+
 exports.Device = Device;
 
 function Device(family, brand, model) {
@@ -7,14 +11,18 @@ function Device(family, brand, model) {
 }
 
 Device.prototype.toString = function() {
-  return this.family;
+  var output = '';
+	if (this.brand !== null) {
+		output += this.brand;
+		if (this.model !== null) {
+			output += ' ' + this.model;
+		}
+	}
+	else if (this.family) {
+		output = this.family;
+	}
+	return output;
 };
-
-function multiReplace(str, m) {
-  return str.replace(/\$(\d)/g, function(tmp, i) {
-    return m[i] || '';
-  }).trim();
-}
 
 exports.makeParser = function(regexes) {
   var parsers = (regexes||[]).map(function (obj) {
@@ -34,9 +42,9 @@ exports.makeParser = function(regexes) {
       var m = str.match(regexp);
       if (!m) { return null; }
 
-      var family = deviceRep ? multiReplace(deviceRep, m) : m[1];
-      var brand  = brandRep  ? multiReplace(brandRep, m)  : null;
-      var model  = modelRep  ? multiReplace(modelRep, m)  : m[1];
+      var family = deviceRep ? replaceMatches(deviceRep, m) : m[1];
+      var brand  = brandRep  ? replaceMatches(brandRep, m)  : null;
+      var model  = modelRep  ? replaceMatches(modelRep, m)  : m[1];
       return new Device(family, brand, model);
     }
 
