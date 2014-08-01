@@ -76,7 +76,6 @@ module.exports = function(options) {
 	uaParser.parse = function (str) {
 
 		var
-      res,
 			ua = uaParser.parseUA(str),
 			engine = uaParser.parseEngine(str),
 			os = uaParser.parseOS(str),
