@@ -1,8 +1,8 @@
+"use strict";
+
 /* global suite, test */
 
 // Note: These tests here cannot be executed together with the other tests as mocha does not have a defined execution order
-
-"use strict";
 
 var 
 	assert = require('assert'),
@@ -33,27 +33,27 @@ function copySync(src, dest) {
 	fs.writeFileSync(dest, content, 'utf-8');
 }
 
-suite("load regexes", function(){
+describe("load regexes", function(){
 	
-	test('- load custom regexes file', function(){
+	it('- load custom regexes file', function(){
 		var error = uaParser.loadSync({ file: file, backwardsCompatible: false });
 		assert.equal(error, null);
 		run();
 	}); 
 
-	test("- not existing", function(){
+	it("- not existing", function(){
 		var error = uaParser.loadSync(testfileNotExists);
 		assert.ok(/ENOENT/.test(error.message));
 	});
 	
-	test("- async load not existing", function(done){
+	it("- async load not existing", function(done){
 		uaParser.load(testfileNotExists, function(error){
 			assert.ok(/ENOENT/.test(error.message));
 			done();
 		});
 	});
 
-	test("- async load existing", function(done){
+	it("- async load existing", function(done){
 		uaParser.load(testfile , function(error){
 			assert.equal(error, null);
 			run();
@@ -62,8 +62,8 @@ suite("load regexes", function(){
 	});
 });
 
-suite ("watch tests", function(){
-	test("- async watch existing", function(done){
+describe ("watch tests", function(){
+	it("- async watch existing", function(done){
 		this.timeout(10000);
 
 		copySync(file, testfileWatch);

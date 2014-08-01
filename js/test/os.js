@@ -1,14 +1,18 @@
+'use strict';
+
+/* global describe, it */
+
 var assert = require('assert'),
-    OS = require('../lib/ua').UA,
-    makeParser = require('../lib/ua').makeParser;
+    OS = require('../lib/ua'),
+    makeParser = require('../lib/parser');
 
 var options = {
     prefix: 'os',
     usePatchMinor: true
   };
 
-suite('os object', function() {
-  test('OS constructor with no arguments', function() {
+describe('os object', function() {
+  it('OS constructor with no arguments', function() {
     var os = new OS();
     assert.strictEqual(os.family, 'Other');
     assert.strictEqual(os.major, null);
@@ -17,7 +21,7 @@ suite('os object', function() {
     //~ assert.strictEqual(os.patchMinor, null);
   });
 
-  test('OS constructor with valid arguments', function() {
+  it('OS constructor with valid arguments', function() {
     var os = new OS('Bar', '4', '3', '2', '1');
     assert.strictEqual(os.family, 'Bar');
     assert.strictEqual(os.major, '4');
@@ -26,7 +30,7 @@ suite('os object', function() {
     assert.strictEqual(os.patchMinor, '1');
   });
 
-  test('OS#toVersionString with only numerical args', function() {
+  it('OS#toVersionString with only numerical args', function() {
     assert.strictEqual(new OS('Bar', '4', '3', '2', '1').toVersionString(), '4.3.2.1');
     assert.strictEqual(new OS('Bar', '4', '3', '2').toVersionString(), '4.3.2');
     assert.strictEqual(new OS('Bar', '4', '3').toVersionString(), '4.3');
@@ -34,27 +38,27 @@ suite('os object', function() {
     assert.strictEqual(new OS('Bar').toVersionString(), '');
   });
 
-  test('OS#toVersionString with non numerical args', function() {
+  it('OS#toVersionString with non numerical args', function() {
     assert.strictEqual(new OS('Bar', '4', '3', '2', 'beta').toVersionString(), '4.3.2beta');
     assert.strictEqual(new OS('Bar', '4', '3', 'beta').toVersionString(), '4.3beta');
   });
 
-  test('OS#toString for known OS', function() {
+  it('OS#toString for known OS', function() {
     assert.strictEqual(new OS('Bar', '4', '3', '2', '1').toString(), 'Bar 4.3.2.1');
   });
 
-  test('OS#toString for unknown OS', function() {
+  it('OS#toString for unknown OS', function() {
     assert.strictEqual(new OS().toString(), 'Other');
   });
 });
 
-suite('OS parser', function() {
-  test('makeParser returns a function', function() {
-    assert.equal(typeof makeParser([]), 'function');
+describe('OS parser', function() {
+  it('makeParser returns a function', function() {
+    assert.equal(typeof makeParser([]).parse, 'function');
   });
 
-  test('Unexpected args don\'t throw', function() {
-    var parse = makeParser([], options);
+  it('Unexpected args don\'t throw', function() {
+    var parse = makeParser([], options).parse;
     assert.doesNotThrow(function() { parse('Foo'); });
     assert.doesNotThrow(function() { parse(''); });
     assert.doesNotThrow(function() { parse(); });
@@ -63,23 +67,23 @@ suite('OS parser', function() {
     assert.doesNotThrow(function() { parse(123); });
   });
 
-  test('Parser returns an instance of OS when unsuccessful at parsing', function() {
-    var parse = makeParser([], options);
+  it('Parser returns an instance of OS when unsuccessful at parsing', function() {
+    var parse = makeParser([], options).parse;
     assert.ok(parse('foo') instanceof OS);
   });
 
-  test('Parser returns an instance of OS when sucessful', function() {
-    var parse = makeParser([{regex: 'foo'}], options);
+  it('Parser returns an instance of OS when sucessful', function() {
+    var parse = makeParser([{regex: 'foo'}], options).parse;
     assert.ok(parse('foo') instanceof OS);
   });
 
-  test('Parser correctly identifies OS name', function() {
-    var parse = makeParser([{regex: '(foo)'}], options);
+  it('Parser correctly identifies OS name', function() {
+    var parse = makeParser([{regex: '(foo)'}], options).parse;
     assert.strictEqual(parse('foo').family, 'foo');
   });
 
-  test('Parser correctly identifies version numbers', function() {
-    var parse = makeParser([{regex: '(foo) (\\d)\\.(\\d).(\\d)\\.(\\d)'}], options),
+  it('Parser correctly identifies version numbers', function() {
+    var parse = makeParser([{regex: '(foo) (\\d)\\.(\\d).(\\d)\\.(\\d)'}], options).parse,
         os = parse('foo 1.2.3.4');
     assert.strictEqual(os.family, 'foo');
     assert.strictEqual(os.major, '1');
@@ -88,7 +92,7 @@ suite('OS parser', function() {
     assert.strictEqual(os.patchMinor, '4');
   });
 
-  test('Parser correctly processes replacements', function() {
+  it('Parser correctly processes replacements', function() {
     var parse = makeParser([{
       regex: '(foo) (\\d)\\.(\\d)\\.(\\d)\\.(\\d)',
       os_replacement: '$1bar',
@@ -96,7 +100,7 @@ suite('OS parser', function() {
       os_v2_replacement: 'b',
       os_v3_replacement: 'c',
       os_v4_replacement: 'd'
-    }], options);
+    }], options).parse;
 
     var os = parse('foo 1.2.3.4');
     assert.strictEqual(os.family, 'foobar');

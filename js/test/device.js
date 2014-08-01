@@ -1,21 +1,21 @@
 var assert = require('assert'),
-    Device = require('../lib/device').Device,
-    makeParser = require('../lib/device').makeParser;
+    Device = require('../lib/device'),
+    makeParser = require('../lib/parserdevice');
 
-suite('Device object', function() {
-  test('Device constructor with no arguments', function() {
+describe('Device object', function() {
+  it('Device constructor with no arguments', function() {
     var device = new Device();
     assert.strictEqual(device.family, 'Other');
     assert.strictEqual(device.toString(), 'Other');
   });
 
-  test('Device constructor with valid arguments', function() {
+  it('Device constructor with valid arguments', function() {
     var device = new Device('Foo');
     assert.strictEqual(device.family, 'Foo');
     assert.strictEqual(device.toString(), 'Foo');
   });
 
-  test('Device constructor with valid Brand Model arguments', function() {
+  it('Device constructor with valid Brand Model arguments', function() {
     var device = new Device('Sang', 'Gum', 'Sang A');
     assert.strictEqual(device.family, 'Sang');
     assert.strictEqual(device.brand, 'Gum');
@@ -24,13 +24,13 @@ suite('Device object', function() {
   });
 });
 
-suite('Device parser', function() {
-  test('makeParser returns a function', function() {
-    assert.equal(typeof makeParser([]), 'function');
+describe('Device parser', function() {
+  it('makeParser returns a function', function() {
+    assert.equal(typeof makeParser([]).parse, 'function');
   });
 
-  test('Unexpected args don\'t throw', function() {
-    var parse = makeParser([]);
+  it('Unexpected args don\'t throw', function() {
+    var parse = makeParser([]).parse;
     assert.doesNotThrow(function() { parse('Foo'); });
     assert.doesNotThrow(function() { parse(''); });
     assert.doesNotThrow(function() { parse(); });
@@ -39,26 +39,26 @@ suite('Device parser', function() {
     assert.doesNotThrow(function() { parse(123); });
   });
 
-  test('Parser returns an instance of Device when unsuccessful at parsing', function() {
-    var parse = makeParser([{regex: 'foo'}]);
+  it('Parser returns an instance of Device when unsuccessful at parsing', function() {
+    var parse = makeParser([{regex: 'foo'}]).parse;
     assert.ok(parse('bar') instanceof Device);
   });
 
-  test('Parser returns an instance of Device when sucessful', function() {
-    var parse = makeParser([{regex: 'foo'}]);
+  it('Parser returns an instance of Device when sucessful', function() {
+    var parse = makeParser([{regex: 'foo'}]).parse;
     assert.ok(parse('foo') instanceof Device);
   });
 
-  test('Parser correctly identifies Device name', function() {
-    var parse = makeParser([{regex: '(foo)'}]);
+  it('Parser correctly identifies Device name', function() {
+    var parse = makeParser([{regex: '(foo)'}]).parse;
     assert.strictEqual(parse('foo').family, 'foo');
   });
 
-  test('Parser correctly processes replacements', function() {
+  it('Parser correctly processes replacements', function() {
     var parse = makeParser([{
       regex: '(foo)',
       device_replacement: '$1bar'
-    }]);
+    }]).parse;
   
     var device = parse('foo');
     assert.strictEqual(device.family, 'foobar');

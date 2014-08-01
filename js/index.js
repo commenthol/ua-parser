@@ -2,9 +2,8 @@
 
 var path = require('path'),
 		fs = require('fs'),
-		yaml = require('yamlparser'),
-		Results = require('./lib/results').BackwardsCompatResults;
-
+		yaml = require('yamlparser');
+		
 /**
  * ua-parser
  * 
@@ -76,17 +75,12 @@ module.exports = function(options) {
 	uaParser.parse = function (str) {
 
 		var
-			ua = uaParser.parseUA(str),
+			ua     = uaParser.parseUA(str),
 			engine = uaParser.parseEngine(str),
-			os = uaParser.parseOS(str),
+			os     = uaParser.parseOS(str),
 			device = uaParser.parseDevice(str);
 
-		if (!config.backwardsCompatible) {
-			return { ua: ua, engine: engine, os: os, device: device, string: str };
-		}
-		else if (ua) {
-			return new Results(str, ua, os, device);
-		}
+		return { ua: ua, engine: engine, os: os, device: device, string: str };
 	};
 
 	/*
@@ -98,10 +92,10 @@ module.exports = function(options) {
 		var error = null;
 
 		if (regexes) {
-      parseUA     = require('./lib/ua').makeParser(regexes.user_agent_parsers) || dummy;
-      parseEngine = require('./lib/ua').makeParser(regexes.engine_parsers) || dummy;
-      parseOS     = require('./lib/ua').makeParser(regexes.os_parsers, { prefix: 'os', usePatchMinor: true }) || dummy;
-      parseDevice = require('./lib/device').makeParser(regexes.device_parsers) || dummy;
+			parseUA     = require('./lib/parser')(regexes.user_agent_parsers).parse || dummy;
+			parseEngine = require('./lib/parser')(regexes.engine_parsers).parse || dummy;
+			parseOS     = require('./lib/parser')(regexes.os_parsers, { prefix: 'os', usePatchMinor: true }).parse || dummy;
+			parseDevice = require('./lib/parserdevice')(regexes.device_parsers).parse || dummy;
 		}
 		else {
 			error = new Error('bad regexes');
