@@ -8,6 +8,7 @@
     - New Spider regex definitions
     - Refined descriptions of CFNetwork versions of iOS. Added PlayStation 4 UA
     - New entries for Spiders, Espial Smart TV, plus fixes for Windows Phones with Android in the UA string
+    - Amiga Voyager is not a robot
 
 - 2014-07-20
   - *regexes.yaml*

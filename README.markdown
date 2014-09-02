@@ -1,6 +1,6 @@
 [![Build Status](https://secure.travis-ci.org/commenthol/ua-parser.png?branch=master)](https://travis-ci.org/commenthol/ua-parser)
 
-This is a fork from [ua-parser](http://github.com/tobie/ua-parser) which contains the following changes documented in the [Changelog](changelog.md).
+This is a fork from [ua-parser](http://github.com/tobie/ua-parser) which contains the following changes documented in the [Changelog](CHANGELOG.md).
 
 **Note:**
 
