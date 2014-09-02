@@ -1,5 +1,14 @@
 # Changelog
 
+- 2014-09-02
+  - *runtest.sh*
+    - script to run tests for all supported parsers
+  - Merging changes from `tobie/master`
+  - *regexes.yaml*
+    - New Spider regex definitions
+    - Refined descriptions of CFNetwork versions of iOS. Added PlayStation 4 UA
+    - New entries for Spiders, Espial Smart TV, plus fixes for Windows Phones with Android in the UA string
+
 - 2014-07-20
   - *regexes.yaml*
     - Better detection of Assistant, Thl. Detection of Dex, Enot
