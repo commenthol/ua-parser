@@ -63,41 +63,49 @@ Usage :: [node.js][1]
 [API Documentation](js/doc/uaparser.md)
 
 ```js
-var r,
-    uaParser = require('ua-parser')();
+var http = require('http');
 
-r = uaParser.parse(navigator.userAgent);
+http.createServer(function (req, res) {
 
-console.log(r.ua.toString());        // -> "Safari 5.0.1"
-console.log(r.ua.toVersionString()); // -> "5.0.1"
-console.log(r.ua.family)             // -> "Safari"
-console.log(r.ua.major);             // -> "5"
-console.log(r.ua.minor);             // -> "0"
-console.log(r.ua.patch);             // -> "1"
+  var r = require('ua-parser').parse(req.headers['user-agent']);
 
-console.log(r.os.toString());        // -> "iOS 5.1"
-console.log(r.os.toVersionString()); // -> "5.1"
-console.log(r.os.family)             // -> "iOS"
-console.log(r.os.major);             // -> "5"
-console.log(r.os.minor);             // -> "1"
-console.log(r.os.patch);             // -> null
+  console.log(r.ua.toString());        // -> "Safari 5.0.1"
+  console.log(r.ua.toVersionString()); // -> "5.0.1"
+  console.log(r.ua.family)             // -> "Safari"
+  console.log(r.ua.major);             // -> "5"
+  console.log(r.ua.minor);             // -> "0"
+  console.log(r.ua.patch);             // -> "1"
 
-console.log(r.device.family);        // -> "iPhone"
-console.log(r.device.brand);         // -> "Apple"
-console.log(r.device.model);         // -> "iPhone"
+  console.log(r.os.toString());        // -> "iOS 5.1"
+  console.log(r.os.toVersionString()); // -> "5.1"
+  console.log(r.os.family)             // -> "iOS"
+  console.log(r.os.major);             // -> "5"
+  console.log(r.os.minor);             // -> "1"
+  console.log(r.os.patch);             // -> null
+
+  console.log(r.device.family);        // -> "iPhone"
+
+}).listen(3000);
 ```
 
 Note if you're only interested in one of the `ua`, `device` or `os` objects, you will getter better performance by using the more specific methods (`uaParser.parseUA`, `uaParser.parseOS` and `uaParser.parseDevice` respectively), e.g.:
 
 ```js
-var p = require('ua-parser')();
+var http = require('http'),
+    p = require('ua-parser');
 
-console.log(p.parseUA(navigator.ua).toString());
-// -> "Safari 5.0.1"
-console.log(p.parseOS(navigator.ua).toString());
-// -> "iOS 5.1"
-console.log(p.parseDevice(navigator.ua).toString());
-// -> "iPhone"
+http.createServer(function (req, res) {
+
+  var userAgent = req.headers['user-agent'];
+
+  console.log(p.parseUA(userAgent).toString());
+  // -> "Safari 5.0.1"
+  console.log(p.parseOS(userAgent).toString());
+  // -> "iOS 5.1"
+  console.log(p.parseDevice(userAgent).toString());
+  // -> "iPhone"
+
+}).listen(3000);
 ```
 
 Usage :: python
