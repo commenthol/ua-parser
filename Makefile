@@ -1,6 +1,8 @@
 PWD = $(shell pwd)
 
-all: test-js test-py test-php test-perl test-java
+all: test
+
+test: test-js test-py test-php test-perl test-java
 
 test-js:
 	npm test
