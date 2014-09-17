@@ -4555,7 +4555,7 @@ device_parsers:
   ##########
   # Spiders (this is hack...)
   ##########
-  - regex: '(bingbot|bot|borg|yahoo|slurp|^NING|MsnBot-Media|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|Google.*/\+/web/snippet|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|^vortex|^voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler|Netvibes|Sogou Pic Spider|ICC\-Crawler|Innovazion Crawler|Daumoa|EtaoSpider|A6\-Indexer|YisouSpider|Riddler)'
+  - regex: '(bingbot|borg|yahoo|slurp|^NING|MsnBot-Media|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|Google.*/\+/web/snippet|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|^vortex|^voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler|Netvibes|Sogou Pic Spider|ICC\-Crawler|Innovazion Crawler|Daumoa|EtaoSpider|A6\-Indexer|YisouSpider|Riddler|DBot|wsr\-agent|bot)'
     regex_flag: 'i'
     device_replacement: 'Spider'
     brand_replacement: 'Spider'
