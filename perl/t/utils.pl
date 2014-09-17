@@ -5,10 +5,7 @@ use LWP::UserAgent;
 ##my $resources = 'https://raw.github.com/tobie/ua-parser/master/test_resources/';
 my $resources = 'https://raw.github.com/commenthol/ua-parser/master/test_resources/';
 
-my $load_from_local_file = 0;
-my $dir = "../test_resources/";
-
-my $load_from_local_file = 0;
+my $load_from_local_file = 1;
 my $dir = "../test_resources/";
 
 sub get_test_yaml {
