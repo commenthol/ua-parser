@@ -4495,24 +4495,12 @@ device_parsers:
     model_replacement: '$1'
 
   ##########
-  # Google TV
+  # Sony
   ##########
-  - regex: '(GoogleTV)'
-    brand_replacement: 'Generic_Inettv'
-    model_replacement: '$1'
-
-  ##########
-  # SONY   #
-  ##########
-  - regex: 'Sony([^ ]+) '
-    device_replacement: 'Sony $1'
-    
-  ##########
-  # WebTV
-  ##########
-  - regex: '(WebTV)/\d+.\d+'
-    brand_replacement: 'Generic_Inettv'
-    model_replacement: '$1'
+  - regex: '(Sony)([^ ]+) '
+    device_replacement: '$1 $2'
+    brand_replacement: '$1'
+    model_replacement: '$2'
 
   #########
   # Android General Device Matching (far from perfect)
@@ -4538,6 +4526,20 @@ device_parsers:
     model_replacement: '$1'
   - regex: 'Android[\- ][\d]+(?:\.[\d]+){1,2}(?:;.*)?; *((?:(?! Build).)+) Build'
     brand_replacement: 'Generic_Android'
+    model_replacement: '$1'
+
+  ##########
+  # Google TV
+  ##########
+  - regex: '(GoogleTV)'
+    brand_replacement: 'Generic_Inettv'
+    model_replacement: '$1'
+
+  ##########
+  # WebTV
+  ##########
+  - regex: '(WebTV)/\d+.\d+'
+    brand_replacement: 'Generic_Inettv'
     model_replacement: '$1'
 
   ##########
