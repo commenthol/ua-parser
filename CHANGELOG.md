@@ -3,6 +3,7 @@
 **2014-09-24**
 
 - regexes
+  - Oppo Find7a
   - ZTE OpenC
   - Fix for Archos/ Arnova Tablets
 
