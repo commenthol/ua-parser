@@ -1,5 +1,11 @@
 # Changelog
 
+**2014-09-24**
+
+- regexes
+  - ZTE OpenC
+  - Fix for Archos/ Arnova Tablets
+
 - 2014-09-02
   - *runtest.sh*
     - script to run tests for all supported parsers

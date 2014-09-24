@@ -1141,19 +1141,23 @@ device_parsers:
   # @ref: http://www.archos.com/de/products/tablets.html
   # @ref: http://www.archos.com/de/products/smartphones/index.html
   #########
-  - regex: '; *(?:ARCHOS|Archos) ?(A\d+|GAMEPAD) Build'
+  - regex: '; *(?:ARCHOS|Archos) ?(GAMEPAD(?:(?! Build|[;/\(\)\-]).)*)'
     device_replacement: 'Archos $1'
     brand_replacement: 'Archos'
     model_replacement: '$1'
-  - regex: '; *(?:ARCHOS|Archos)[ _]?([^;/]+) Build'
-    device_replacement: 'Archos $1 $2'
-    brand_replacement: 'Archos'
-    model_replacement: '$1 $2'
-  - regex: '; *(A28|A32|A43) Build'
+  - regex: '(?:ARCHOS|Archos)[ _]?((?:(?! Build|[;/\(\)\-]).)+)'
     device_replacement: 'Archos $1'
     brand_replacement: 'Archos'
     model_replacement: '$1'
-  - regex: '; *(A70(?:BHT|CHT|HB|S)|A7EB|A7EB-WK|101G9|80G9|A101IT) Build'
+  - regex: 'ARCHOS; GOGI; ([^;]+);'
+    device_replacement: 'Archos $1'
+    brand_replacement: 'Archos'
+    model_replacement: '$1'
+  - regex: '; *(AN(?:7|8|9|10|13)[A-Z0-9]{1,4}) Build'
+    device_replacement: 'Archos $1'
+    brand_replacement: 'Archos'
+    model_replacement: '$1'
+  - regex: '; *(A28|A32|A43|A70(?:BHT|CHT|HB|S|X)|A101(?:B|C|IT)|A7EB|A7EB-WK|101G9|80G9)
     device_replacement: 'Archos $1'
     brand_replacement: 'Archos'
     model_replacement: '$1'
@@ -4070,10 +4074,10 @@ device_parsers:
     device_replacement: 'Alcatel $1 $2 $3'
     brand_replacement: 'Alcatel'
     model_replacement: 'One Touch $3'
-  - regex: '\(Mobile; ZTE([^;]+); rv:[^\)]+\) Gecko/[^\/]+ Firefox/'
-    device_replacement: 'ZTE $1'
+  - regex: '\(Mobile; (?:ZTE([^;]+)|(OpenC)); rv:[^\)]+\) Gecko/[^\/]+ Firefox/'
+    device_replacement: 'ZTE $1$2'
     brand_replacement: 'ZTE'
-    model_replacement: '$1'
+    model_replacement: '$1$2'
 
   ##########
   # NOKIA
