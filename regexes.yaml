@@ -1157,7 +1157,7 @@ device_parsers:
     device_replacement: 'Archos $1'
     brand_replacement: 'Archos'
     model_replacement: '$1'
-  - regex: '; *(A28|A32|A43|A70(?:BHT|CHT|HB|S|X)|A101(?:B|C|IT)|A7EB|A7EB-WK|101G9|80G9)'
+  - regex: '; *(A28|A32|A43|A70(?:BHT|CHT|HB|S|X)|A101(?:B|C|IT)|A7EB|A7EB-WK|101G9|80G9) Build'
     device_replacement: 'Archos $1'
     brand_replacement: 'Archos'
     model_replacement: '$1'
@@ -3755,10 +3755,10 @@ device_parsers:
   # Zopo
   # @ref: http://www.zopomobiles.com/products.html
   #########
-  - regex: '; *(?:ZOPO )?(ZP\d{2}[^;/]+) Build'
-    device_replacement: '$1'
+  - regex: '; *(?:(?:ZOPO|Zopo)[ _]([^;/]+)|(ZP ?(?:\d{2}[^;/]+|C2))|(C[2379])) Build'
+    device_replacement: '$1$2$3'
     brand_replacement: 'Zopo'
-    model_replacement: '$1'
+    model_replacement: '$1$2$3'
 
   #########
   # ZiiLabs

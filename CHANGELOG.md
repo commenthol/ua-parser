@@ -1,5 +1,10 @@
 # Changelog
 
+**2014-09-25**
+
+- regexes
+  - Zopo devices
+
 **2014-09-24**
 
 - regexes
