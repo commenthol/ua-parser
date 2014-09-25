@@ -4217,10 +4217,15 @@ device_parsers:
   ##########
   # Asus
   ##########
-  - regex: '(?:Asus|ASUS)\-([A-Za-z0-9]+)'
+  - regex: '(?:; |\/|^)((?:Transformer (?:Pad|Prime) |Transformer |PadFone[ _]?)[A-Za-z0-9]*)'
     device_replacement: 'Asus $1'
     brand_replacement: 'Asus'
     model_replacement: '$1'
+  - regex: '(?:asus.*?ASUS|Asus|ASUS|asus)[\- ;]*((?:Transformer (?:Pad|Prime) |Transformer |Padfone |Nexus[ _])?[A-Za-z0-9]+)'
+    device_replacement: 'Asus $1'
+    brand_replacement: 'Asus'
+    model_replacement: '$1'
+
 
   ##########
   # Bird
