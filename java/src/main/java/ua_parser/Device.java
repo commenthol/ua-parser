@@ -59,9 +59,9 @@ public class Device {
 
   @Override
   public String toString() {
-    return String.format("{family: %s, brand: %s, model: %s}",
-                         family == null ? null : '"' + family + '"',
-                         brand  == null ? null : '"' + brand  + '"',
-                         model  == null ? null : '"' + model  + '"');
-  }
+    return String.format("{\"family\": %s, \"brand\": %s, \"model\": %s}",
+                         family == null ? Constants.EMPTY_STRING : '"' + family + '"',
+                         brand  == null ? Constants.EMPTY_STRING : '"' + brand  + '"',
+                         model  == null ? Constants.EMPTY_STRING : '"' + model  + '"');
+  }  
 }
