@@ -49,10 +49,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'aipbot/1.0 (aipbot; http://www.aipbot.com; aipbot@aipbot.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'aipbot'
+    major: '1'
+    minor: '0'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Alizee iPod 2005 (Beta; Mac OS X)'
     family: 'Mobile Safari'
@@ -265,10 +266,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/2.0 (compatible; Ask Jeeves/Teoma; +http://sp.ask.com/docs/about/tech_crawling.html)'
-    family: 'Other'
+    family: 'tech_crawl'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Astra/1.0 (WinNT; I)'
     family: 'Other'
@@ -439,16 +441,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'boitho.com-dc/0.70 ( http://www.boitho.com/dcbot.html )'
-    family: 'Other'
-    major:
-    minor:
+    family: 'boitho.com-dc'
+    major: '0'
+    minor: '70'
     patch:
+    patch_minor:
 
   - user_agent_string: 'boitho.com-dc/0.71 ( http://www.boitho.com/dcbot.html )'
-    family: 'Other'
-    major:
-    minor:
+    family: 'boitho.com-dc'
+    major: '0'
+    minor: '71'
     patch:
+    patch_minor:
 
   - user_agent_string: '$BotName/$BotVersion [en] (UNIX; U)'
     family: 'Other'
@@ -481,10 +485,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'CacheBot/0.445 (compatible, http://www.cachebot.com)'
-    family: 'Other'
+    family: 'cachebot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'CDM-8900'
     family: 'Other'
@@ -583,10 +588,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Clushbot/3.31-BinaryFury (+http://www.clush.com/bot.html)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'lushbot'
+    major: '3'
+    minor: '31'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/2.0 (compatible; MSIE 1.0; Commodore64)'
     family: 'IE'
@@ -607,10 +613,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'ConveraMultiMediaCrawler/0.1 (+http://www.authoritativeweb.com/crawl)'
-    family: 'Other'
+    family: 'crawl'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'CosmixCrawler/0.1'
     family: 'Other'
@@ -619,10 +626,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'crawler (ISSpider-3.0; http://www.yoururlgoeshere.com)'
-    family: 'Other'
+    family: 'crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Crawler0.1'
     family: 'Other'
@@ -1237,10 +1245,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'dloader(NaverRobot)/1.1'
-    family: 'Other'
+    family: 'averRobot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; DLW 2.0; Win32)'
     family: 'Other'
@@ -1531,10 +1540,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'findlinks/0.901e (+http://wortschatz.uni-leipzig.de/findlinks/)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'findlinks'
+    major: '0'
+    minor: '901'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Firefox/1.0 (Windows; U; Win98; en-US; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)'
     family: 'Netscape'
@@ -2503,22 +2513,25 @@ test_cases:
     patch:
 
   - user_agent_string: 'googlebot/2.1 (+http://www.googlebot.com/bot.html'
-    family: 'Other'
-    major:
-    minor:
+    family: 'googlebot'
+    major: '2'
+    minor: '1'
     patch:
+    patch_minor:
 
   - user_agent_string: 'googlebot/2.1; +http://www.google.com/bot.html'
-    family: 'Other'
-    major:
-    minor:
+    family: 'googlebot'
+    major: '2'
+    minor: '1'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Googlebot (+http://www.google.com/bot.html)'
-    family: 'Other'
+    family: 'Googlebot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Googlebot/2.1 (compatible; MSIE; Windows)'
     family: 'Googlebot'
@@ -2539,16 +2552,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (MobilePhone SCP-5500/US/1.0) NetFront/3.0 MMP/2.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
-    family: 'NetFront'
-    major: '3'
-    minor: '0'
+    family: 'Googlebot'
+    major: '2'
+    minor: '1'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (MobilePhone SCP-5500/US/1.0) NetFront/3.0 MMP/2.0 FAKE (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
-    family: 'NetFront'
-    major: '3'
-    minor: '0'
+    family: 'Googlebot'
+    major: '2'
+    minor: '1'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot'
     family: 'Googlebot'
@@ -2569,10 +2584,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Googlebot-Image/1.0 (+http://www.googlebot.com/bot.html'
-    family: 'Other'
+    family: 'Googlebot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; grub-client-2.6.0)'
     family: 'Other'
@@ -2593,22 +2609,25 @@ test_cases:
     patch:
 
   - user_agent_string: 'grub crawler'
-    family: 'Other'
+    family: 'grub crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'grub crawler(http://www.grub.org)'
-    family: 'Other'
+    family: 'grub crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'gsa-crawler (Enterprise; GID-01742;gsatesting@rediffmail.com)'
-    family: 'Other'
+    family: 'gsa-crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Happy-Browser'
     family: 'Other'
@@ -2629,10 +2648,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'HooWWWer/2.1.0 (+http://cosco.hiit.fi/search/hoowwwer/ | mailto:crawler-info<at>hiit.fi)'
-    family: 'Other'
+    family: 'crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Hop 0.7 (Windows NT 5.1; U)'
     family: 'Other'
@@ -2659,10 +2679,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'ia_archiver-web.archive.org'
-    family: 'Other'
+    family: 'archiver'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'alpha/06 (compatible; IBrowse; AmigaOS)'
     family: 'Other'
@@ -4123,10 +4144,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Kurzor/1.0 (Kurzor; http://adcenter.hu/docs/en/bot.html; cursor@easymail.hu)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Kurzor'
+    major: '1'
+    minor: '0'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Lament/7.8 (compatible; Netscape 5.0)'
     family: 'Other'
@@ -4135,16 +4157,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'larbin_2.6.3 (larbin-2.6.3@unspecified.mail)'
-    family: 'Other'
+    family: 'larbin'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'larbin_2.6.3 larbin-2.6.3@unspecified.mail'
-    family: 'Other'
+    family: 'larbin'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'LB-Crawler/1.0'
     family: 'Other'
@@ -4705,10 +4729,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'lmspider (lmspider@scansoft.com)'
-    family: 'Other'
+    family: 'lmspider'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)'
     family: 'Other'
@@ -5329,10 +5354,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozdex/0.06-dev (Mozdex; http://www.mozdex.com/bot.html; spider@mozdex.com)'
-    family: 'Other'
+    family: 'spider'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'mozilla (compatible; MSIE 3.0; Mac_PowerPC)'
     family: 'IE'
@@ -5845,10 +5871,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (stat 0.12) (statbot@gmail.com)'
-    family: 'Other'
+    family: 'statbot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (SunOS 5.8)'
     family: 'Other'
@@ -10724,10 +10751,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla (larbin2.6.3@unspecified.mail)'
-    family: 'Other'
+    family: 'larbin'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla Windows'
     family: 'Other'
@@ -12142,16 +12170,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.4) Larbin/2.6.3 (larbin@unspecified.mail)'
-    family: 'Other'
+    family: 'larbin'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.4) Larbin/2.6.3 larbin@unspecified.mail'
-    family: 'Other'
+    family: 'larbin'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (X11; U; Linux i686; es-ES; rv:1.4) Gecko/20030630'
     family: 'Other'
@@ -14806,10 +14836,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040707 Lightningspider/0.9.2'
-    family: 'Other'
-    major:
-    minor:
-    patch:
+    family: 'ightningspider'
+    major: '0'
+    minor: '9'
+    patch: '2'
+    patch_minor:
 
   - user_agent_string: 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7) Gecko/20040707 Telnet/4.0'
     family: 'Other'
@@ -29435,10 +29466,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.0; Windows 95) VoilaBot BETA 1.2 (http://www.voila.com/)'
-    family: 'IE'
-    major: '5'
-    minor: '0'
+    family: 'voila'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.0; Windows 95; ZDNetSL)'
     family: 'IE'
@@ -31043,10 +31075,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; T-Online Internatinal AG; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '01'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0;  WebTap)'
     family: 'IE'
@@ -32129,10 +32162,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; DT; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; DT; T312461)'
     family: 'IE'
@@ -32471,10 +32505,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; QXW0338t; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; QXW0530g)'
     family: 'IE'
@@ -32807,10 +32842,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90; FunWebProducts; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90; FunWebProducts; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -32909,10 +32945,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90; MSN 6.0)'
     family: 'IE'
@@ -33455,10 +33492,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0; .NET CLR 1.0.3705; Googlebot; .NET CLR 1.1.4322; .NET CLR 1.0.3705; Googlebot)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'Googlebot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -34493,10 +34531,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; T312461; MSIECrawler)'
-    family: 'IE'
-    major: '5'
-    minor: '5'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; T312461; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -39389,10 +39428,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows compatible LesnikBot)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'LesnikBot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows ME)'
     family: 'IE'
@@ -39581,10 +39621,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 4.0; Girafabot; girafabot at girafa dot com; http://www.girafa.com)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'irafabot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 4.0; H010818)'
     family: 'IE'
@@ -42377,10 +42418,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Googlebot)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'Googlebot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; GPM - MSIE 6.0 SP1)'
     family: 'IE'
@@ -42935,10 +42977,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; http://www.pregnancycrawler.com)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'pregnancycrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; HWT; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -43697,10 +43740,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; MSN 6.1; MSNbMSFT; MSNmen-ca; MSNc00)'
     family: 'IE'
@@ -43985,10 +44029,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.0.3705; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.0.3705; .NET CLR 1.0.2914)'
     family: 'IE'
@@ -44075,10 +44120,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.1.4322; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -49469,10 +49515,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; CDSource=v9e.03; .NET CLR 1.0.3705; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; CDSource=v9e.05)'
     family: 'IE'
@@ -51587,10 +51634,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FunWebProducts; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FunWebProducts; MSN 6.1; MSNbMSFT; MSNmen-au; MSNc00; v5m)'
     family: 'IE'
@@ -51713,10 +51761,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FunWebProducts-MyWay; .NET CLR 1.0.3705; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FunWebProducts-MyWay; .NET CLR 1.0.3705; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -52133,10 +52182,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Googlebot)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'Googlebot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Googlebot/2.1 (+http://www.googlebot.com/bot.html))'
     family: 'Googlebot'
@@ -54725,10 +54775,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; Googlebot; .NET CLR 1.1.4322)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'Googlebot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; Hotbar 4.6.1)'
     family: 'IE'
@@ -54743,10 +54794,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; MSN 6.1; MSNbMSFT; MSNmen-au; MSNc00; v5m)'
     family: 'IE'
@@ -54827,10 +54879,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; .NET CLR 1.1.4322; MSN 6.1; MSNbMSFT; MSNmen-us; MSNc00; v5m)'
     family: 'IE'
@@ -54995,10 +55048,11 @@ test_cases:
     patch: '1'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.1.4322; MSN 6.1; MSNbMSFT; MSNmde-de; MSNc00; v5m)'
     family: 'IE'
@@ -56999,10 +57053,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Roadrunner; .NET CLR 1.0.3705; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Roadrunner; .NET CLR 1.1.4322)'
     family: 'IE'
@@ -57347,10 +57402,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SC/5.60/1.01/FS-Internett; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; School of Business and Computing; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -57761,10 +57817,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; stokeybot)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'stokeybot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Stonehenge School)'
     family: 'IE'
@@ -58463,10 +58520,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; DigExt; FunWebProducts; Media Center PC 3.0; .NET CLR 1.0.3705; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; digit_may2002)'
     family: 'IE'
@@ -59345,10 +59403,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MSN 6.1; MSNbDELL; MSNmen-us; MSNc00; v5m)'
     family: 'IE'
@@ -59963,10 +60022,11 @@ test_cases:
     patch: '1'
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; MSN 6.1; MSNbMSFT; MSNmde-at; MSNc00; v5m)'
     family: 'IE'
@@ -60179,10 +60239,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.40607; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.40607; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -63209,10 +63270,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.1.4322; MSIECrawler)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'MSIECrawler'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; .NET CLR 1.1.4322; .NET CLR 1.0.3705)'
     family: 'IE'
@@ -63389,10 +63451,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT; MS Search 4.0 Robot)'
-    family: 'IE'
-    major: '6'
-    minor: '0'
+    family: 'Robot'
+    major:
+    minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows XP)'
     family: 'IE'
@@ -67714,10 +67777,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'NP/0.1 (NP; http://www.nameprotect.com; npbot@nameprotect.com)'
-    family: 'Other'
+    family: 'npbot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/3.01 (compatible; NPT 0.0 beta)'
     family: 'Other'
@@ -67726,64 +67790,74 @@ test_cases:
     patch:
 
   - user_agent_string: 'NutchCVS'
-    family: 'Other'
+    family: 'NutchCVS'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.01-beta (Nutch; http://www.nutch.org/docs/en/bot.html; nutch-agent@lists.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '01'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.03-dev (Nutch; http://www.nutch.org/docs/bot.html; nutch-agent@lists.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '03'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.03-dev (Nutch; http://www.nutch.org/docs/en/bot.html; nutch-agent@lists.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '03'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.06-dev (bot; http://www.nebel.de:8080/en/bot.html; nutch-agent@nebel.de)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.06-dev (bot; http://www.nebel.de/bot.html; nutch-agent@nebel.de)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.06-dev (Nutch; http://www.nutch.org/docs/en/bot.html; jagdeepssandhu@hotmail.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.06-dev (Nutch; http://www.nutch.org/docs/en/bot.html; nutch-agent@lists.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchCVS/0.06-dev (Nutch; http://www.s14g.com/en/search.html; travelbot@s14g.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchCVS'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'NutchOSUOSL/0.05-dev (Nutch; http://www.nutch.org/docs/en/bot.html; nutch-agent@lists.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'NutchOSUOSL'
+    major: '0'
+    minor: '05'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Nutscrape/1.0 (CP/M; 8-bit)'
     family: 'Other'
@@ -67810,22 +67884,25 @@ test_cases:
     patch:
 
   - user_agent_string: 'ObjectsSearch/0.01 (ObjectsSearch; http://www.ObjectsSearch.com/bot.html; support@thesoftwareobjects.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'ObjectsSearch'
+    major: '0'
+    minor: '01'
     patch:
+    patch_minor:
 
   - user_agent_string: 'ObjectsSearch/0.06 (ObjectsSearch; http://www.ObjectsSearch.com/bot.html; support@thesoftwareobjects.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'ObjectsSearch'
+    major: '0'
+    minor: '06'
     patch:
+    patch_minor:
 
   - user_agent_string: 'ObjectsSearch/0.07 (ObjectsSearch; http://www.ObjectsSearch.com/bot.html; support@thesoftwareobjects.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'ObjectsSearch'
+    major: '0'
+    minor: '07'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.7 (compatible; OffByOne; Windows 2000)'
     family: 'Other'
@@ -72484,10 +72561,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'PhpDig/PHPDIG_VERSION (+http://www.phpdig.net/robot.php)'
-    family: 'Other'
+    family: 'robot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'PHP version tracker'
     family: 'Other'
@@ -72604,22 +72682,25 @@ test_cases:
     patch:
 
   - user_agent_string: 'Python-urllib/1.15'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Python-urllib'
+    major: '1'
+    minor: '15'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Python-urllib/2.0a1'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Python-urllib'
+    major: '2'
+    minor: '0'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Python-urllib/2.0a1, Dowser/0.26 (http://dowser.sourceforge.net)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Python-urllib'
+    major: '2'
+    minor: '0'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Qarp-1.0'
     family: 'Other'
@@ -72640,10 +72721,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Reaper/2.07 (+http://www.sitesearch.ca/reaper)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Reaper'
+    major: '2'
+    minor: '07'
     patch:
+    patch_minor:
 
   - user_agent_string: 'RPT-HTTPClient/0.3-3E'
     family: 'Other'
@@ -73924,10 +74006,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'savvybot/0.2'
-    family: 'Other'
-    major:
-    minor:
+    family: 'savvybot'
+    major: '0'
+    minor: '2'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Search-Channel'
     family: 'Other'
@@ -74026,10 +74109,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Simpy/1.1 (Simpy; http://www.simpy.com/?ref=bot; feedback at simpy dot com)'
-    family: 'Other'
+    family: '=bot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'SISLink'
     family: 'Other'
@@ -74194,10 +74278,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Steeler/2.0 (http://www.tkl.iis.u-tokyo.ac.jp/~crawler/)'
-    family: 'Other'
+    family: 'crawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Mozilla/4.0 (compatible; SuperCleaner 2.81; Windows NT 5.1)'
     family: 'Other'
@@ -74446,10 +74531,11 @@ test_cases:
     patch: '2'
 
   - user_agent_string: 'VM4050/132.037 UP.Browser/6.2.2.4.e.1.100 (GUI) MMP/2.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
-    family: 'UP.Browser'
-    major: '6'
-    minor: '2'
-    patch: '2'
+    family: 'Googlebot'
+    major: '2'
+    minor: '1'
+    patch:
+    patch_minor:
 
   - user_agent_string: 'LGE-VX7000/1.0 UP.Browser/6.2.3.1.174 (GUI) MMP/2.0 (Google WAP Proxy/1.0)'
     family: 'UP.Browser'
@@ -74476,10 +74562,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Uptimebot'
-    family: 'Other'
+    family: 'ptimebot'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'UptimeBot'
     family: 'Other'
@@ -74735,10 +74822,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'WebZIP/4.1 (http://www.spidersoft.com)'
-    family: 'Other'
+    family: 'spider'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'wget 1.1'
     family: 'Other'
@@ -74765,10 +74853,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'WinHTTP Example/1.0'
-    family: 'Other'
+    family: 'WinHTTP'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'WinWAP-PRO/3.1 (3.1.5.190) UP.Link/5.1.2.5 (Google WAP Proxy/1.0)'
     family: 'Other'
@@ -74783,10 +74872,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'WordPress/1.2.1 PHP/4.3.9-1'
-    family: 'Other'
-    major:
-    minor:
-    patch:
+    family: 'WordPress'
+    major: '1'
+    minor: '2'
+    patch: '1'
+    patch_minor:
 
   - user_agent_string: 'WorldWideWeb-X/3.2 (+<a href="http://www.worldwideweb-x.com/">Web Directory</a>)'
     family: 'Other'
@@ -74795,16 +74885,18 @@ test_cases:
     patch:
 
   - user_agent_string: 'Wotbox/0.7-alpha (bot@wotbox.com; http://www.wotbox.com)'
-    family: 'Other'
-    major:
-    minor:
+    family: 'Wotbox'
+    major: '0'
+    minor: '7'
     patch:
+    patch_minor:
 
   - user_agent_string: 'Wotbox/alpha0.6 (bot@wotbox.com; http://www.wotbox.com)'
-    family: 'Other'
+    family: 'Wotbox'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'www.WebSearch.com.au'
     family: 'Other'
@@ -74837,10 +74929,11 @@ test_cases:
     patch:
 
   - user_agent_string: 'Yahoo-MMAudVid/1.0 (mms dash mmaudvidcrawler dash support at yahoo dash inc dot com)'
-    family: 'Other'
+    family: 'mms dash mmaudvidcrawler'
     major:
     minor:
     patch:
+    patch_minor:
 
   - user_agent_string: 'Yandex/1.01.001 (compatible; Win16; I)'
     family: 'Other'

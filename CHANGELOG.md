@@ -4,6 +4,7 @@
 
 - *regexes*
   - Puffin browser added
+  - Better detection of bots
 
 **2014-09-25**
 

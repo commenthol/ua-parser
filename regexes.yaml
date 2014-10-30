@@ -120,7 +120,8 @@ user_agent_parsers:
     family_replacement: 'Comodo Dragon'
 
   # Bots
-  - regex: '(YottaaMonitor|BrowserMob|HttpMonitor|YandexBot|Slurp|BingPreview|PagePeeker|ThumbShotsBot|WebThumb|URL2PNG|ZooShot|GomezA|Catchpoint bot|Willow Internet Crawler|Google SketchUp|Read%20Later)'
+  - regex: "(BoardReader Favicon Fetcher *|Flamingo_SearchEngine|Google-HTTP-Java-Client|Peeplo Screenshot Bot|IlTrovatore(?:-Setaccio)?|Mediapartners-Google|PlantyNet_WebRobot|Daumoa(?:-feedfetcher)?|Innovazion Crawler|semanticdiscovery|Apache-HttpClient|Xenu(?:.s)? Link Sleuth|AppEngine-Google|InternetArchive|PagesInventory|archive.*?\.org_bot|1470\.net crawler|AdsBot-Google(?:-[a-z]+)?|fast-webcrawler|Google SketchUp|ConveraCrawler|dataparksearch|PaxleFramework|ObjectsSearch|8bo Crawler Bot|ZeBot_www.ze.bz|Yahoo[a-z]*Seeker|Catchpoint bot|FollowSite Bot|ThumbShotsBot|YottaaMonitor|Feed Seeker Bot|(?:[a-z]+-)?Googlebot(?:-[a-z]+)?|masidani_bot|Sogou \w+ Spider|ichiro(?:/mobile)?|http%20client|Python-urllib|Microsoft .*? Bot|Thumbshots\.ru|TheUsefulbot|Sogou \w+ Robot|robotgenius|BoardReader|msnbot(?:-media *)?|\b\w*favicon\w*\b|boitho.com-dc|Read%20Later|WASALive.Bot|BingPreview|HttpMonitor|LinkedInBot|MSIECrawler|netresearch|searchsight|Yahoo! Slurp|BlogBridge|Checklinks|PagePeeker|TwitterBot|Linguee Bot|Mail\.RU_Bot|RedCarpet|A6-Indexer|Squrl Java|altavista|Altresium|charlotte|findlinks|Retreiver|TLSProber|WordPress|NewsGator[^/]*|LesnikBot|archiver|Votay bot|teoma(?!bar)?|archiver|blitzbot|clumboot|heritrix|Icarus6j|IconSurf|InfuzApp|mogimogi|Netvibes|WebThumb|IP2[a-z]+Bot|voila(?:bot)?|Lite Bot|Riddler|Orbiter|\bYeti(?:-[a-z]+)?|Yandex\w+|^voyager|bingbot|furlbot|gigabot|openbot|polybot|Riddler|scooter|scrubby|seekbot|URL2PNG|WhatWeb|WinHTTP|ZooShot|BotSeer|mozDex|Reaper|^vortex|Genieo|GomezA|holmes|Kraken|Kurzor|larbin|m65bot|msrbot|pompos|Scrapy|snappy|speedy|ZyBorg|Wotbox|^Nutch[^/]*|Argus|htdig|Llaut|lycos|Slurp|jbot\b|50\.nu|WIRE|^NING|JNLP|^zao|baidu[a-z]*(?:spider|Mobaider)|(?:[a-z\.']+[ _-]){0,3}[a-z_]*(?:crawler|crawl|scraper|spider|indexer|webbot|robot\b|(?:(?!cubot)[\w-]{2})bot\b| bot(?=@)\b)|[^ \/]\bbot\b)(?:[ /](\d+)(?:\.(\d+))?(?:\.(\d+))?)?(?:(?!CFNetwork).)*$"
+    regex_flag: 'i'
 
   - regex: '(Symphony) (\d+).(\d+)'
 
@@ -4600,7 +4601,7 @@ device_parsers:
   ##########
   # Spiders (this is hack...)
   ##########
-  - regex: '(bingbot|borg|yahoo|slurp|^NING|MsnBot-Media|msnbot|msrbot|openbot|archiver|netresearch|lycos|scooter|altavista|teoma|Google.*/\+/web/snippet|gigabot|baiduspider|blitzbot|oegp|charlotte|furlbot|http%20client|polybot|htdig|ichiro|mogimogi|larbin|pompos|scrubby|searchsight|seekbot|semanticdiscovery|silk|snappy|speedy|spider|voila|^vortex|^voyager|zao|zeal|fast\-webcrawler|converacrawler|dataparksearch|findlinks|crawler|Netvibes|Sogou Pic Spider|ICC\-Crawler|Innovazion Crawler|Daumoa|EtaoSpider|A6\-Indexer|YisouSpider|Riddler|DBot|wsr\-agent|Xenu|SeznamBot|PaperLiBot|SputnikBot|CCBot|ProoXiBot|Scrapy|bot)'
+  - regex: '(bot|zao|borg|DBot|oegp|silk|Xenu|zeal|^NING|^Java/|^JNLP/|CCBot|crawl|htdig|lycos|slurp|teoma|voila|yahoo|Sogou|Daumoa|Genieo|ichiro|larbin|pompos|Scrapy|snappy|speedy|spider|^vortex|crawler|favicon|indexer|Riddler|scooter|scraper|scrubby|WhatWeb|WinHTTP|^voyager|archiver|Icarus6j|mogimogi|Netvibes|wsr\-agent|altavista|charlotte|findlinks|Retreiver|TLSProber|WordPress|Squrl Java|A6\-Indexer|netresearch|searchsight|http%20client|Python-urllib|dataparksearch|AppEngine-Google|Google.*/\+/web/snippet|semanticdiscovery|facebookexternalhit|Google-HTTP-Java-Client)'
     regex_flag: 'i'
     device_replacement: 'Spider'
     brand_replacement: 'Spider'
