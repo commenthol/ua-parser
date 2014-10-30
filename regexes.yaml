@@ -135,6 +135,10 @@ user_agent_parsers:
   - regex: '(Silk)/(\d+)\.(\d+)(?:\.([0-9\-]+))?'
     family_replacement: 'Amazon Silk'
 
+
+  # @ref: http://www.puffinbrowser.com
+  - regex: '(Puffin)/(\d+)\.(\d+)'
+
   # Chrome Mobile
   - regex: '(CrMo)/(\d+)\.(\d+)\.(\d+)\.(\d+)'
     family_replacement: 'Chrome Mobile'
@@ -4509,6 +4513,28 @@ device_parsers:
     device_replacement: '$1 $2'
     brand_replacement: '$1'
     model_replacement: '$2'
+
+  #########
+  # Puffin Browser Device detect
+  # A=Android, I=iOS, P=Phone, T=Tablet
+  # AT=Android+Tablet
+  #########
+  - regex: 'Puffin/[\d\.]+IT'
+    device_replacement: 'iPad'
+    brand_replacement: 'Apple'
+    model_replacement: 'iPad'
+  - regex: 'Puffin/[\d\.]+IP'
+    device_replacement: 'iPhone'
+    brand_replacement: 'Apple'
+    model_replacement: 'iPhone'
+  - regex: 'Puffin/[\d\.]+AT'
+    device_replacement: 'Generic Tablet'
+    brand_replacement: 'Generic'
+    model_replacement: 'Tablet'
+  - regex: 'Puffin/[\d\.]+AP'
+    device_replacement: 'Generic Smartphone'
+    brand_replacement: 'Generic'
+    model_replacement: 'Smartphone'
 
   #########
   # Android General Device Matching (far from perfect)

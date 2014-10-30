@@ -1,8 +1,13 @@
 # Changelog
 
+**2014-10-30**
+
+- *regexes*
+  - Puffin browser added
+
 **2014-09-25**
 
-- regexes
+- *regexes*
   - Zopo devices
   - Asus Transformer, PadFone
 
