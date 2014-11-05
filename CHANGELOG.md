@@ -1,5 +1,10 @@
 # Changelog
 
+**2014-11-05**
+
+- *regexes*
+  - Better detection of bots
+
 **2014-10-30**
 
 - *regexes*
